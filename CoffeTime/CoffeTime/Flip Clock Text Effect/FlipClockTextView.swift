@@ -15,7 +15,7 @@ struct FlipClockTextView: View {
         NavigationStack {
             VStack {
                 FlipClockTextEffect(
-                    value: count,
+                    value: $count,
                     size: CGSize(
                         width: 100,
                         height: 150

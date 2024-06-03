@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FlipClockTextEffect: View {
-    var value: Int
+    @Binding var value: Int
     /// Config
     var size: CGSize
     var fontSize: CGFloat
@@ -33,7 +33,7 @@ struct FlipClockTextEffect: View {
                 bottomTrailingRadius: 0,
                 topTrailingRadius: cornerRadius
             )
-            .fill(background.shadow(.inner(radius: 0)))
+            .fill(background.shadow(.inner(radius: 1)))
             .frame(height: halfHeight)
             .overlay(alignment: .top) {
                 TextView(nextValue)
@@ -53,7 +53,7 @@ struct FlipClockTextEffect: View {
                 bottomTrailingRadius: 0,
                 topTrailingRadius: cornerRadius
             )
-            .fill(background.shadow(.inner(radius: 0)))
+            .fill(background.shadow(.inner(radius: 1)))
             .frame(height: halfHeight)
             .modifier(
                 RotationModifier(
@@ -86,7 +86,7 @@ struct FlipClockTextEffect: View {
                 bottomTrailingRadius: cornerRadius,
                 topTrailingRadius: 0
             )
-            .fill(background.shadow(.inner(radius: 0)))
+            .fill(background.shadow(.inner(radius: 1)))
             .frame(height: halfHeight)
             .overlay(alignment: .bottom) {
                 TextView(currentValue)
@@ -116,7 +116,7 @@ struct FlipClockTextEffect: View {
                 rotation = -180
             } completion: {
                 rotation = 0
-                currentValue = newValue
+                currentValue = value
             }
         }
     }
