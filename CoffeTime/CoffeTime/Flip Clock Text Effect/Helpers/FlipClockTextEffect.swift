@@ -15,10 +15,12 @@ struct FlipClockTextEffect: View {
     var cornerRadius: CGFloat
     var foreground: Color
     var background: Color
+    var animationDuration: CGFloat = 0.8
 
     /// View Properties
     @State private var nextValue: Int = 1
     @State private var currentValue: Int = 0
+    @State private var rotation: CGFloat = 0
 
     var body: some View {
         let halfHeight = size.height * 0.5
@@ -54,7 +56,7 @@ struct FlipClockTextEffect: View {
             .frame(height: halfHeight)
             .modifier(
                 RotationModifier(
-                    rotation: 0,
+                    rotation: rotation,
                     fontSize: fontSize,
                     currentValue: currentValue,
                     nextValue: nextValue,
@@ -64,7 +66,7 @@ struct FlipClockTextEffect: View {
             )
             .clipped()
             .rotation3DEffect(
-                .init(degrees: 0),
+                .init(degrees: rotation),
                 axis: (
                     x: 1.0,
                     y: 0.0,
@@ -96,6 +98,24 @@ struct FlipClockTextEffect: View {
 
         }
         .frame(width: size.width, height: size.height)
+        .onChange(of: value, initial: true) { oldValue, newValue in
+            currentValue = oldValue
+            nextValue = newValue
+
+            guard rotation == 0 else {
+                currentValue = newValue
+                return
+            }
+
+            guard oldValue != newValue else { return }
+
+            withAnimation(.easeInOut(duration: animationDuration), completionCriteria: .logicallyComplete) {
+                rotation = 180
+            } completion: {
+                rotation = 0
+                currentValue = newValue
+            }
+        }
     }
 
     /// Reusable View
