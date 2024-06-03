@@ -14,6 +14,7 @@
 		8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55D2C08ADE3003C3511 /* RSContent.swift */; };
 		8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */; };
 		8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5612C08B674003C3511 /* Interpolation.swift */; };
+		8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8A9AC55D2C08ADE3003C3511 /* RSContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSContent.swift; sourceTree = "<group>"; };
 		8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderView.swift; sourceTree = "<group>"; };
 		8A9AC5612C08B674003C3511 /* Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
 				8A9AC55C2C08ADC9003C3511 /* RangeSlider */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
@@ -82,6 +85,22 @@
 				8A9AC5612C08B674003C3511 /* Interpolation.swift */,
 			);
 			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA1CEB2C0DEAC200EC7A39 /* Helpers */,
+			);
+			path = "Flip Clock Text Effect";
+			sourceTree = "<group>";
+		};
+		8AFA1CEB2C0DEAC200EC7A39 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
+				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
 				8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */,
