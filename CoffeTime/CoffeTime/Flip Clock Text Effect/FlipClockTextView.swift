@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct FlipClockTextView: View {
+
+    @State private var count: Int = 0
+
     var body: some View {
         NavigationStack {
             VStack {
                 FlipClockTextEffect(
-                    value: 0,
+                    value: count,
                     size: CGSize(
                         width: 100,
                         height: 150
@@ -22,7 +25,13 @@ struct FlipClockTextView: View {
                     foreground: .white,
                     background: .red
                 )
+
+                Button("Update") {
+                    count += 1
+                }
+                .padding(.top, 45)
             }
+            .padding()
         }
     }
 }

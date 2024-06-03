@@ -31,14 +31,17 @@ struct RotationModifier: ViewModifier, Animatable {
                             .foregroundStyle(foreground)
                             .scaleEffect(x: 1, y: -1)
                             .transition(.identity)
+                            .lineLimit(1)
                     } else {
                         Text("\(currentValue)")
                             .font(.system(size: fontSize).bold())
                             .foregroundStyle(foreground)
                             .transition(.identity)
+                            .lineLimit(1)
                     }
                 }
                 .frame(width: size.width, height: size.height)
+                .drawingGroup()
             }
     }
 }
