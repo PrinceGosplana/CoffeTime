@@ -52,16 +52,19 @@ struct FlipClockTextEffect: View {
             )
             .fill(background.gradient.shadow(.inner(radius: 1)))
             .frame(height: halfHeight)
-            .overlay(alignment: .top) {
-                TextView(currentValue)
-                    .frame(
-                        width: size.width,
-                        height: size.height
-                    )
-            }
+            .modifier(
+                RotationModifier(
+                    rotation: 0,
+                    fontSize: fontSize,
+                    currentValue: currentValue,
+                    nextValue: nextValue,
+                    foreground: foreground,
+                    size: size
+                )
+            )
             .clipped()
             .rotation3DEffect(
-                .init(degrees: -165),
+                .init(degrees: 0),
                 axis: (
                     x: 1.0,
                     y: 0.0,
