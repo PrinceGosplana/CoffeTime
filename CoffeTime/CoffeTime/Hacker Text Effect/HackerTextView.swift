@@ -21,6 +21,7 @@ struct HackerTextView: View {
         let string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-?/#$%@!^&*()="
         return Array(string)
     }()
+    @State private var animationID: String = UUID().uuidString
 
     var body: some View {
         Text(animatedText)
@@ -38,6 +39,7 @@ struct HackerTextView: View {
             }
             .customOnChange(value: text) { newValue in
                 animatedText = text
+                animationID = UUID().uuidString
                 setRandomCharacters()
                 animateText()
             }
@@ -46,20 +48,28 @@ struct HackerTextView: View {
     /// the code that animates the text to create the hacker effect
     /// Each character in the text view will have a timer that will update the text character with a random character at a given speed, and when the estimated delay time is reached, the text character will be set to the real character, resulting in the hacker text effect
     private func animateText() {
+        let currentID = animationID
         for index in text.indices {
             let delay = CGFloat.random(in: 0...duration)
-            let timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true) { _ in
-                guard let randomCharacter = randomCharacters.randomElement() else { return }
-                replaceCharacter(at: index, character: randomCharacter)
+            var timerDuration: CGFloat = 0
+            let timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true) { timer in
+                if currentID != animationID {
+                    timer.invalidate()
+                } else {
+                    timerDuration += speed
+                    if timerDuration >= delay {
+                        if text.indices.contains(index) {
+                            let actualCharacter = text[index]
+                            replaceCharacter(at: index, character: actualCharacter)
+                        }
+                        timer.invalidate()
+                    } else {
+                        guard let randomCharacter = randomCharacters.randomElement() else { return }
+                        replaceCharacter(at: index, character: randomCharacter)
+                    }
+                }
             }
             timer.fire()
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                if text.indices.contains(index) {
-                    let actualCharacter = text[index]
-                    replaceCharacter(at: index, character: actualCharacter)
-                }
-                timer.invalidate()
-            }
         }
     }
 
