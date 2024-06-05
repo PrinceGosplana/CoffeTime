@@ -27,17 +27,35 @@ struct HackerTextView: View {
             .fontDesign(.monospaced)
             .truncationMode(.tail)
             .contentTransition(transition)
+            .animation(.easeInOut(duration: 0.1), value: animatedText)
             .onAppear {
                 guard animatedText.isEmpty else { return }
                 setRandomCharacters()
+                animateText()
             }
             .customOnChange(value: trigger) { newValue in
                 animateText()
             }
     }
 
+    /// the code that animates the text to create the hacker effect
+    /// Each character in the text view will have a timer that will update the text character with a random character at a given speed, and when the estimated delay time is reached, the text character will be set to the real character, resulting in the hacker text effect
     private func animateText() {
-
+        for index in text.indices {
+            let delay = CGFloat.random(in: 0...duration)
+            let timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true) { _ in
+                guard let randomCharacter = randomCharacters.randomElement() else { return }
+                replaceCharacter(at: index, character: randomCharacter)
+            }
+            timer.fire()
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                if text.indices.contains(index) {
+                    let actualCharacter = text[index]
+                    replaceCharacter(at: index, character: actualCharacter)
+                }
+                timer.invalidate()
+            }
+        }
     }
 
     private func setRandomCharacters() {
