@@ -65,7 +65,6 @@ struct TabOffsetReaderView: View {
                     .tag(DummyTab.settings)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .overlay { Text("\(offsetObserver.offset)")}
         }
     }
 
