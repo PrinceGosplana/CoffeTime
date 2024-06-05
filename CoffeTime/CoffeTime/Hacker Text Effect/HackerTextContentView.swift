@@ -14,7 +14,9 @@ struct HackerTextContentView: View {
         VStack(alignment: .leading, spacing: 12) {
             HackerTextView(
                 text: "Made with SwiftUI\nFor people",
-                trigger: trigger
+                trigger: trigger,
+                transition: .interpolate,// .numericText(),// .identity,
+                speed: 0.06
             )
             .font(.largeTitle.bold())
             .lineLimit(2)
