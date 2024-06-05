@@ -12,9 +12,11 @@ struct HackerTextContentView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HackerTextView(text: "Text", trigger: trigger)
+            HackerTextView(text: "Made with SwiftUI\nFor people", trigger: trigger)
+                .font(.largeTitle.bold())
         }
         .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
