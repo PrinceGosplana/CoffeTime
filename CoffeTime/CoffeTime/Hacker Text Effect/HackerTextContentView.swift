@@ -13,7 +13,7 @@ struct HackerTextContentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HackerTextView(
-                text: "Made with SwiftUI\nFor people",
+                text: trigger ? "Hello, World!" : "Made with SwiftUI\nFor people",
                 trigger: trigger,
                 transition: .interpolate,// .numericText(),// .identity,
                 speed: 0.06

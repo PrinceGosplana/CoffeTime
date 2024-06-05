@@ -36,6 +36,11 @@ struct HackerTextView: View {
             .customOnChange(value: trigger) { newValue in
                 animateText()
             }
+            .customOnChange(value: text) { newValue in
+                animatedText = text
+                setRandomCharacters()
+                animateText()
+            }
     }
 
     /// the code that animates the text to create the hacker effect
