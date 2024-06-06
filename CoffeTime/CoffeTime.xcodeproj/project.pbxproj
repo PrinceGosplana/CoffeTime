@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */; };
 		8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */; };
+		8A07181D2C11918A0017E1E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181C2C11918A0017E1E8 /* Card.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextContentView.swift; sourceTree = "<group>"; };
+		8A07181C2C11918A0017E1E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -65,6 +67,22 @@
 				8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */,
 			);
 			path = "Hacker Text Effect";
+			sourceTree = "<group>";
+		};
+		8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				8A07181B2C1191760017E1E8 /* Model */,
+			);
+			path = "Vertical Circular Carousel";
+			sourceTree = "<group>";
+		};
+		8A07181B2C1191760017E1E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A07181C2C11918A0017E1E8 /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */ = {
@@ -106,6 +124,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */,
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
@@ -239,6 +258,7 @@
 				8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8A0F01CF2C0EF10500B77AB1 /* FindCollectionView.swift in Sources */,
+				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
