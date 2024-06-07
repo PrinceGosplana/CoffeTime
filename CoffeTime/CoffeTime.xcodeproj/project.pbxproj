@@ -13,6 +13,9 @@
 		8A0718202C1192BF0017E1E8 /* VCCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181F2C1192BF0017E1E8 /* VCCHome.swift */; };
 		8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718212C1192DF0017E1E8 /* VCCContentView.swift */; };
 		8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718232C1193D00017E1E8 /* VCCCardView.swift */; };
+		8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07185E2C12E9A50017E1E8 /* GlitchTextContentView.swift */; };
+		8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718612C12E9C00017E1E8 /* GlitchText.swift */; };
+		8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718632C12EA590017E1E8 /* GTTextView.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -37,6 +40,9 @@
 		8A07181F2C1192BF0017E1E8 /* VCCHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCHome.swift; sourceTree = "<group>"; };
 		8A0718212C1192DF0017E1E8 /* VCCContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCContentView.swift; sourceTree = "<group>"; };
 		8A0718232C1193D00017E1E8 /* VCCCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCCardView.swift; sourceTree = "<group>"; };
+		8A07185E2C12E9A50017E1E8 /* GlitchTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchTextContentView.swift; sourceTree = "<group>"; };
+		8A0718612C12E9C00017E1E8 /* GlitchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchText.swift; sourceTree = "<group>"; };
+		8A0718632C12EA590017E1E8 /* GTTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTextView.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -102,6 +108,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8A07185D2C12E97B0017E1E8 /* Glitch Text Effect */ = {
+			isa = PBXGroup;
+			children = (
+				8A0718602C12E9AC0017E1E8 /* Helpers */,
+				8A07185E2C12E9A50017E1E8 /* GlitchTextContentView.swift */,
+			);
+			path = "Glitch Text Effect";
+			sourceTree = "<group>";
+		};
+		8A0718602C12E9AC0017E1E8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A0718612C12E9C00017E1E8 /* GlitchText.swift */,
+				8A0718632C12EA590017E1E8 /* GTTextView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +169,7 @@
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
+				8A07185D2C12E97B0017E1E8 /* Glitch Text Effect */,
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
 				8A9AC5542C08ADAF003C3511 /* Preview Content */,
 				8A9AC55C2C08ADC9003C3511 /* RangeSlider */,
@@ -260,15 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */,
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
+				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
+				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
 				8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */,
 				8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */,
