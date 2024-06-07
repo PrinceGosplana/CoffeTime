@@ -8,70 +8,29 @@
 import SwiftUI
 
 struct GlitchTextContentView: View {
-    @State private var trigger: Bool = false
+    @State private var trigger: (Bool, Bool, Bool) = (false, false, false)
 
     var body: some View {
         VStack {
-            GlitchText(text: "We believe !", trigger: trigger) {
-                LinearKeyframe(
-                    GlitchFrame(
-                        top: -5,
-                        center: 0,
-                        bottom: 0,
-                        shadowOpacity: 0.2
-                    ),
-                    duration: 0.1
-                )
+            VStack(alignment: .leading, spacing: 10) {
+                GlitchTextAnimation(text: "We believe in!", trigger: $trigger.0)
+                    .font(.system(size: 60, weight: .semibold))
 
-                LinearKeyframe(
-                    GlitchFrame(
-                        top: -5,
-                        center: -5,
-                        bottom: -5,
-                        shadowOpacity: 0.6
-                    ),
-                    duration: 0.1
-                )
+                GlitchTextAnimation(text: "Glitch Text Effect", trigger: $trigger.1)
+                    .font(.system(size: 40, design: .rounded))
 
-                LinearKeyframe(
-                    GlitchFrame(
-                        top: -5,
-                        center: -5,
-                        bottom: 5,
-                        shadowOpacity: 0.8
-                    ),
-                    duration: 0.1
-                )
-
-                LinearKeyframe(
-                    GlitchFrame(
-                        top: 5,
-                        center: 5,
-                        bottom: 5,
-                        shadowOpacity: 0.4
-                    ),
-                    duration: 0.1
-                )
-
-                LinearKeyframe(
-                    GlitchFrame(
-                        top: 5,
-                        center: 0,
-                        bottom: 5,
-                        shadowOpacity: 0.1
-                    ),
-                    duration: 0.1
-                )
-
-                LinearKeyframe(
-                    GlitchFrame(),
-                    duration: 0.1
-                )
+                GlitchTextAnimation(text: "and Coffee", trigger: $trigger.2)
+                    .font(.system(size: 20))
             }
-                .font(.system(size: 60, weight: .semibold))
 
             Button {
-                trigger.toggle()
+                Task {
+                    trigger.0.toggle()
+                    try? await Task.sleep(for: .seconds(0.3))
+                    trigger.1.toggle()
+                    try? await Task.sleep(for: .seconds(0.4))
+                    trigger.2.toggle()
+                }
             } label: {
                 Text("Trigger")
                     .padding(.horizontal, 15)
@@ -79,6 +38,7 @@ struct GlitchTextContentView: View {
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
             .tint(.black)
+            .padding(.top, 20)
         }
         .padding()
     }

@@ -19,6 +19,7 @@
 		8A0718662C12EEEF0017E1E8 /* GTExtendedSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718652C12EEEF0017E1E8 /* GTExtendedSpacer.swift */; };
 		8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718672C12EFAA0017E1E8 /* GlitchFrame.swift */; };
 		8A07186A2C12F1190017E1E8 /* GlitchFrameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718692C12F1190017E1E8 /* GlitchFrameBuilder.swift */; };
+		8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -49,6 +50,7 @@
 		8A0718652C12EEEF0017E1E8 /* GTExtendedSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTExtendedSpacer.swift; sourceTree = "<group>"; };
 		8A0718672C12EFAA0017E1E8 /* GlitchFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchFrame.swift; sourceTree = "<group>"; };
 		8A0718692C12F1190017E1E8 /* GlitchFrameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchFrameBuilder.swift; sourceTree = "<group>"; };
+		8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchTextAnimation.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				8A0718602C12E9AC0017E1E8 /* Helpers */,
 				8A07185E2C12E9A50017E1E8 /* GlitchTextContentView.swift */,
+				8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */,
 			);
 			path = "Glitch Text Effect";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
+				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
