@@ -25,6 +25,8 @@
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
 		8A0F01CF2C0EF10500B77AB1 /* FindCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CE2C0EF10500B77AB1 /* FindCollectionView.swift */; };
 		8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01D02C0EF1B400B77AB1 /* UIView+Extension.swift */; };
+		8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED542C15AA1900D5915D /* DummyColors.swift */; };
+		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
 		8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5502C08ADAD003C3511 /* ContentView.swift */; };
 		8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9AC5522C08ADAF003C3511 /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
 		8A0F01CE2C0EF10500B77AB1 /* FindCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCollectionView.swift; sourceTree = "<group>"; };
 		8A0F01D02C0EF1B400B77AB1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8A20ED542C15AA1900D5915D /* DummyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyColors.swift; sourceTree = "<group>"; };
+		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTimeApp.swift; sourceTree = "<group>"; };
 		8A9AC5502C08ADAD003C3511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8A20ED522C15A9DB00D5915D /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				8A20ED532C15A9F500D5915D /* Value transformers with transformable */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		8A20ED532C15A9F500D5915D /* Value transformers with transformable */ = {
+			isa = PBXGroup;
+			children = (
+				8A20ED542C15AA1900D5915D /* DummyColors.swift */,
+				8A20ED562C15AC3800D5915D /* ColorContentView.swift */,
+			);
+			path = "Value transformers with transformable";
+			sourceTree = "<group>";
+		};
 		8A9AC5422C08ADAD003C3511 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +198,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
@@ -300,6 +322,7 @@
 				8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */,
 				8A07186A2C12F1190017E1E8 /* GlitchFrameBuilder.swift in Sources */,
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
+				8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
@@ -310,6 +333,7 @@
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
+				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,

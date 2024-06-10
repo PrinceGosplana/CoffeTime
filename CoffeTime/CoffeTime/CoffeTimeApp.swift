@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct CoffeTimeApp: App {
+
+    init() { ColorTransformer.register() }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+            /// in order to run ColorContentView
+                .modelContainer(for: ColorModel.self)
         }
     }
 }
