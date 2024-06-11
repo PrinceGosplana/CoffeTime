@@ -34,6 +34,8 @@
 		8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55D2C08ADE3003C3511 /* RSContent.swift */; };
 		8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */; };
 		8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5612C08B674003C3511 /* Interpolation.swift */; };
+		8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41A4A2C18764400801F63 /* SideMenuContentView.swift */; };
+		8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */; };
 		8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */; };
 		8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */; };
 		8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CF02C0E002900EC7A39 /* RotationModifier.swift */; };
@@ -68,6 +70,8 @@
 		8A9AC55D2C08ADE3003C3511 /* RSContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSContent.swift; sourceTree = "<group>"; };
 		8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderView.swift; sourceTree = "<group>"; };
 		8A9AC5612C08B674003C3511 /* Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		8AF41A4A2C18764400801F63 /* SideMenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContentView.swift; sourceTree = "<group>"; };
+		8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSideBar.swift; sourceTree = "<group>"; };
 		8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextView.swift; sourceTree = "<group>"; };
 		8AFA1CF02C0E002900EC7A39 /* RotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationModifier.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8AF41A492C18761000801F63 /* Interactive side menu */,
 				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
@@ -229,6 +234,15 @@
 				8A9AC5612C08B674003C3511 /* Interpolation.swift */,
 			);
 			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		8AF41A492C18761000801F63 /* Interactive side menu */ = {
+			isa = PBXGroup;
+			children = (
+				8AF41A4A2C18764400801F63 /* SideMenuContentView.swift */,
+				8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */,
+			);
+			path = "Interactive side menu";
 			sourceTree = "<group>";
 		};
 		8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */ = {
@@ -333,10 +347,12 @@
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
+				8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
+				8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */,
 				8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */,
 				8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */,
 				8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */,
