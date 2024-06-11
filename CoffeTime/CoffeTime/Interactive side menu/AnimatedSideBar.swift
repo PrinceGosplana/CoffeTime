@@ -68,10 +68,17 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                     if total > (sideMenuWidth * 0.6) {
 
                     } else {
-
+                        reset()
                     }
                 }
             }
+    }
+
+    /// Reset's to it's initial state
+    func reset() {
+        offsetX = 0
+        lastOffsetX = 0
+        showMenu = false
     }
 }
 
