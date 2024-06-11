@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct SideMenuContentView: View {
+
+    /// View properties
+    @State private var showMenu: Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AnimatedSideBar(
+            rotatesWhenExpands: true,
+            disablesInteraction: true,
+            sideMenuWidth: 200,
+            cornerRadius: 25,
+            showMenu: $showMenu) { safeArea in
+                NavigationStack {
+                    List {
+                        NavigationLink("Detail View") {
+                            Text("Hello there!")
+                                .navigationTitle("Detail")
+                        }
+                    }
+                    .navigationTitle("Home")
+                }
+            } menuView: { safeArea in
+
+            } background: {
+                Rectangle()
+                    .fill(.sideMenu)
+            }
+
     }
 }
 

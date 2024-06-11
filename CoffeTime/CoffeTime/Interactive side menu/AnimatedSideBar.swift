@@ -22,7 +22,24 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
     @ViewBuilder var background: Background
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader {
+            let size = $0.size
+            let saveArea = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.keyWindow?.safeAreaInsets ?? .zero
+            HStack(spacing: 0) {
+                GeometryReader { _ in
+                    menuView(saveArea)
+                }
+                .frame(width: sideMenuWidth)
+
+                GeometryReader { _ in
+                    content(saveArea)
+                }
+                .frame(width: size.width)
+            }
+            .frame(width: size.width + sideMenuWidth, height: size.height)
+            .offset(x: -sideMenuWidth)
+        }
+        .ignoresSafeArea()
     }
 }
 
