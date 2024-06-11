@@ -66,12 +66,19 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                     let total = velocityX + offsetX
 
                     if total > (sideMenuWidth * 0.6) {
-
+                        showSideBar()
                     } else {
                         reset()
                     }
                 }
             }
+    }
+
+    /// Show's side bar
+    func showSideBar() {
+        offsetX = sideMenuWidth
+        lastOffsetX = offsetX
+        showMenu = true
     }
 
     /// Reset's to it's initial state
