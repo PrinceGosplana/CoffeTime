@@ -47,6 +47,8 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                 .mask {
                     RoundedRectangle(cornerRadius: progress * cornerRadius)
                 }
+                .scaleEffect(rotatesWhenExpands ? 1 - (progress * 0.1) : 1, anchor: .trailing)
+                .rotation3DEffect(.init(degrees: rotatesWhenExpands ? (progress * -15) : 0), axis: (x: 00, y: 1.0, z: 0.0))
             }
             .frame(width: size.width + sideMenuWidth, height: size.height)
             .offset(x: -sideMenuWidth)
