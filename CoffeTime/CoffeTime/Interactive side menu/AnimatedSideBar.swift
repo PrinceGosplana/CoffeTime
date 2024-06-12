@@ -58,7 +58,7 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
             .updating($isDragging) { _, out, _ in
                 out = true
             }.onChanged { value in
-                let translationX = isDragging ? max(min(value.translation.width * lastOffsetX, sideMenuWidth), 0) : 0
+                let translationX = isDragging ? max(min(value.translation.width + lastOffsetX, sideMenuWidth), 0) : 0
                 offsetX = translationX
             }.onEnded { value in
                 withAnimation(.snappy(duration: 0.3, extraBounce: 0)) {
