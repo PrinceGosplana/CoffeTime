@@ -87,10 +87,13 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                 out = true
             }.onChanged { value in
                 guard value.startLocation.x > 10 else { return }
+                
                 let translationX = isDragging ? max(min(value.translation.width + lastOffsetX, sideMenuWidth), 0) : 0
                 offsetX = translationX
                 calculateProgress()
             }.onEnded { value in
+                guard value.startLocation.x > 10 else { return }
+
                 withAnimation(.snappy(duration: 0.3, extraBounce: 0)) {
                     let velocityX = value.velocity.width / 8
                     let total = velocityX + offsetX
