@@ -44,6 +44,17 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                     content(saveArea)
                 }
                 .frame(width: size.width)
+                .overlay {
+                    if disablesInteraction && progress > 0 {
+                        Rectangle()
+                            .fill(.black.opacity(progress * 0.2))
+                            .onTapGesture {
+                                withAnimation(.snappy(duration: 0.3, extraBounce: 0)) {
+                                    reset()
+                                }
+                            }
+                    }
+                }
                 .mask {
                     RoundedRectangle(cornerRadius: progress * cornerRadius)
                 }
@@ -75,6 +86,7 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
             .updating($isDragging) { _, out, _ in
                 out = true
             }.onChanged { value in
+                guard value.startLocation.x > 10 else { return }
                 let translationX = isDragging ? max(min(value.translation.width + lastOffsetX, sideMenuWidth), 0) : 0
                 offsetX = translationX
                 calculateProgress()
