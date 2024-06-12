@@ -14,10 +14,10 @@ struct SideMenuContentView: View {
 
     var body: some View {
         AnimatedSideBar(
-            rotatesWhenExpands: false,
-            disablesInteraction: false,
+            rotatesWhenExpands: true,
+            disablesInteraction: true,
             sideMenuWidth: 200,
-            cornerRadius: 0,
+            cornerRadius: 25,
             showMenu: $showMenu) { safeArea in
                 NavigationStack {
                     List {
@@ -40,7 +40,7 @@ struct SideMenuContentView: View {
                     }
                 }
             } menuView: { safeArea in
-
+                SideBarMenuView(safeArea: safeArea)
             } background: {
                 Rectangle()
                     .fill(.sideMenu)

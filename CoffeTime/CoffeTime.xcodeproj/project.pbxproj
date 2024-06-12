@@ -34,6 +34,7 @@
 		8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55D2C08ADE3003C3511 /* RSContent.swift */; };
 		8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */; };
 		8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5612C08B674003C3511 /* Interpolation.swift */; };
+		8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2FB582C19A43E00B98D74 /* SideBarMenuView.swift */; };
 		8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41A4A2C18764400801F63 /* SideMenuContentView.swift */; };
 		8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */; };
 		8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */; };
@@ -70,6 +71,7 @@
 		8A9AC55D2C08ADE3003C3511 /* RSContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSContent.swift; sourceTree = "<group>"; };
 		8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderView.swift; sourceTree = "<group>"; };
 		8A9AC5612C08B674003C3511 /* Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		8AF2FB582C19A43E00B98D74 /* SideBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenuView.swift; sourceTree = "<group>"; };
 		8AF41A4A2C18764400801F63 /* SideMenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContentView.swift; sourceTree = "<group>"; };
 		8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSideBar.swift; sourceTree = "<group>"; };
 		8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				8AF41A4A2C18764400801F63 /* SideMenuContentView.swift */,
 				8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */,
+				8AF2FB582C19A43E00B98D74 /* SideBarMenuView.swift */,
 			);
 			path = "Interactive side menu";
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
 				8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */,
+				8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
