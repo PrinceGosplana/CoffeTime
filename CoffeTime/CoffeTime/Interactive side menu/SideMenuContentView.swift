@@ -45,7 +45,6 @@ struct SideMenuContentView: View {
                 Rectangle()
                     .fill(.sideMenu)
             }
-
     }
 }
 

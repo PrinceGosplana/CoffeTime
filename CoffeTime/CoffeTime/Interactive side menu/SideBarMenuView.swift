@@ -15,6 +15,15 @@ struct SideBarMenuView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Side Menu")
                 .font(.largeTitle.bold())
+
+            SideBarButton(.home)
+            SideBarButton(.bookmark)
+            SideBarButton(.favourites)
+            SideBarButton(.profile)
+
+            Spacer()
+
+            SideBarButton(.logout)
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 20)
