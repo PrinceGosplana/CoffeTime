@@ -24,6 +24,8 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
     @GestureState private var isDragging: Bool = false
     @State private var offsetX: CGFloat = 0
     @State private var lastOffsetX: CGFloat = 0
+    /// Used to Dim content view when side bar is being dragged
+    @State private var progress: CGFloat = 0
 
     var body: some View {
         GeometryReader {
@@ -42,6 +44,9 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                     content(saveArea)
                 }
                 .frame(width: size.width)
+                .mask {
+                    RoundedRectangle(cornerRadius: progress * cornerRadius)
+                }
             }
             .frame(width: size.width + sideMenuWidth, height: size.height)
             .offset(x: -sideMenuWidth)
@@ -49,6 +54,7 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
             .contentShape(.rect)
             .gesture(dragGesture)
         }
+        .background(background)
         .ignoresSafeArea()
         .onChange(of: showMenu, initial: true) { oldValue, newValue in
             withAnimation(.snappy(duration: 0.3, extraBounce: 0)) {
@@ -69,6 +75,7 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
             }.onChanged { value in
                 let translationX = isDragging ? max(min(value.translation.width + lastOffsetX, sideMenuWidth), 0) : 0
                 offsetX = translationX
+                calculateProgress()
             }.onEnded { value in
                 withAnimation(.snappy(duration: 0.3, extraBounce: 0)) {
                     let velocityX = value.velocity.width / 8
@@ -88,6 +95,7 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
         offsetX = sideMenuWidth
         lastOffsetX = offsetX
         showMenu = true
+        calculateProgress()
     }
 
     /// Reset's to it's initial state
@@ -95,6 +103,12 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
         offsetX = 0
         lastOffsetX = 0
         showMenu = false
+        calculateProgress()
+    }
+
+    /// Convert offset into series of progress ranging from 0 - 1
+    private func calculateProgress() {
+        progress = max(min(offsetX / sideMenuWidth, 1), 0)
     }
 }
 
