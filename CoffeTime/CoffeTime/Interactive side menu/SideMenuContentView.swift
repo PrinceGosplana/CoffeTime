@@ -27,6 +27,17 @@ struct SideMenuContentView: View {
                         }
                     }
                     .navigationTitle("Home")
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                showMenu.toggle()
+                            } label: {
+                                Image(systemName: showMenu ? "xmark" : "line.3.horizontal")
+                                    .foregroundStyle(Color(.systemGray))
+                                    .contentTransition(.symbolEffect)
+                            }
+                        }
+                    }
                 }
             } menuView: { safeArea in
 

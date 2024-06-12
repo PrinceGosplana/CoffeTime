@@ -50,6 +50,15 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
             .gesture(dragGesture)
         }
         .ignoresSafeArea()
+        .onChange(of: showMenu, initial: true) { oldValue, newValue in
+            withAnimation(.snappy(duration: 0.3, extraBounce: 0)) {
+                if newValue {
+                    showSideBar()
+                } else {
+                    reset()
+                }
+            }
+        }
     }
 
     /// Drag gesture
@@ -65,7 +74,7 @@ struct AnimatedSideBar<Content: View, MenuView: View, Background: View>: View {
                     let velocityX = value.velocity.width / 8
                     let total = velocityX + offsetX
 
-                    if total > (sideMenuWidth * 0.6) {
+                    if total > (sideMenuWidth * 0.5) {
                         showSideBar()
                     } else {
                         reset()
