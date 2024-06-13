@@ -15,7 +15,32 @@ struct PHome: View {
 
                 DummySection(title: "Sales", isLong: true)
 
+                /// Parallax Image
+                ParallaxImageView(userFullWidth: true) { size in
+                    Image(.listing1)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: size.width, height: size.height)
 
+                }
+                .frame(height: 300)
+                
+                DummySection(title: "Business")
+
+                DummySection(title: "Promotion", isLong: true)
+
+                ParallaxImageView(maximumMovement: 150, userFullWidth: true) { size in
+                    Image(.listing2)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: size.width, height: size.height)
+
+                }
+                .frame(height: 400)
+
+                DummySection(title: "YouTube")
+
+                DummySection(title: "Twitter (X)", isLong: true)
             }
             .padding(15)
         }
