@@ -9,7 +9,17 @@ import SwiftUI
 
 struct PHome: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical) {
+            LazyVStack(spacing: 15) {
+                DummySection(title: "Social Media")
+
+                DummySection(title: "Sales", isLong: true)
+
+
+            }
+            .padding(15)
+        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
