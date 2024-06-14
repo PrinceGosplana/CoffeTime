@@ -31,6 +31,7 @@
 		8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349252C1B2CAA00099F7D /* ParallaxImageView.swift */; };
 		8A13493F2C1C40A800099F7D /* PixelArtContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13493E2C1C40A800099F7D /* PixelArtContentView.swift */; };
 		8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349402C1C40D000099F7D /* PAImageView.swift */; };
+		8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349452C1C6B4A00099F7D /* CarousalItem.swift */; };
 		8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED542C15AA1900D5915D /* DummyColors.swift */; };
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
@@ -75,6 +76,7 @@
 		8A1349252C1B2CAA00099F7D /* ParallaxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxImageView.swift; sourceTree = "<group>"; };
 		8A13493E2C1C40A800099F7D /* PixelArtContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelArtContentView.swift; sourceTree = "<group>"; };
 		8A1349402C1C40D000099F7D /* PAImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAImageView.swift; sourceTree = "<group>"; };
+		8A1349452C1C6B4A00099F7D /* CarousalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalItem.swift; sourceTree = "<group>"; };
 		8A20ED542C15AA1900D5915D /* DummyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyColors.swift; sourceTree = "<group>"; };
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,30 @@
 			path = "Pixel Art";
 			sourceTree = "<group>";
 		};
+		8A1349422C1C6B0200099F7D /* Google movie carousal */ = {
+			isa = PBXGroup;
+			children = (
+				8A1349442C1C6B3900099F7D /* Model */,
+				8A1349432C1C6B3200099F7D /* View */,
+			);
+			path = "Google movie carousal";
+			sourceTree = "<group>";
+		};
+		8A1349432C1C6B3200099F7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A1349442C1C6B3900099F7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A1349452C1C6B4A00099F7D /* CarousalItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8A20ED522C15A9DB00D5915D /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,18 +274,19 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A13493D2C1C409000099F7D /* Pixel Art */,
-				8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */,
-				8AF41A492C18761000801F63 /* Interactive side menu */,
-				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
 				8A07185D2C12E97B0017E1E8 /* Glitch Text Effect */,
+				8A1349422C1C6B0200099F7D /* Google movie carousal */,
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
+				8AF41A492C18761000801F63 /* Interactive side menu */,
+				8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */,
+				8A13493D2C1C409000099F7D /* Pixel Art */,
 				8A9AC5542C08ADAF003C3511 /* Preview Content */,
 				8A9AC55C2C08ADC9003C3511 /* RangeSlider */,
+				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */,
 				8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */,
 			);
@@ -390,6 +417,7 @@
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */,
 				8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */,
+				8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
 				8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
