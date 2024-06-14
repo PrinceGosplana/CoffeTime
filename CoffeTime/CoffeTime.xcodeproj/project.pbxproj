@@ -29,6 +29,8 @@
 		8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */; };
 		8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349232C1B29CB00099F7D /* DummySection.swift */; };
 		8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349252C1B2CAA00099F7D /* ParallaxImageView.swift */; };
+		8A13493F2C1C40A800099F7D /* PixelArtContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13493E2C1C40A800099F7D /* PixelArtContentView.swift */; };
+		8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349402C1C40D000099F7D /* PAImageView.swift */; };
 		8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED542C15AA1900D5915D /* DummyColors.swift */; };
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
@@ -71,6 +73,8 @@
 		8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxScrollEffectContent.swift; sourceTree = "<group>"; };
 		8A1349232C1B29CB00099F7D /* DummySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySection.swift; sourceTree = "<group>"; };
 		8A1349252C1B2CAA00099F7D /* ParallaxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxImageView.swift; sourceTree = "<group>"; };
+		8A13493E2C1C40A800099F7D /* PixelArtContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelArtContentView.swift; sourceTree = "<group>"; };
+		8A1349402C1C40D000099F7D /* PAImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAImageView.swift; sourceTree = "<group>"; };
 		8A20ED542C15AA1900D5915D /* DummyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyColors.swift; sourceTree = "<group>"; };
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8A13493D2C1C409000099F7D /* Pixel Art */ = {
+			isa = PBXGroup;
+			children = (
+				8A13493E2C1C40A800099F7D /* PixelArtContentView.swift */,
+				8A1349402C1C40D000099F7D /* PAImageView.swift */,
+			);
+			path = "Pixel Art";
+			sourceTree = "<group>";
+		};
 		8A20ED522C15A9DB00D5915D /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +248,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A13493D2C1C409000099F7D /* Pixel Art */,
 				8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */,
 				8AF41A492C18761000801F63 /* Interactive side menu */,
 				8A20ED522C15A9DB00D5915D /* SwiftData */,
@@ -371,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */,
+				8A13493F2C1C40A800099F7D /* PixelArtContentView.swift in Sources */,
 				8A07186A2C12F1190017E1E8 /* GlitchFrameBuilder.swift in Sources */,
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */,
@@ -382,6 +397,7 @@
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
+				8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8AF2FB5F2C19B89B00B98D74 /* SideBarButton.swift in Sources */,
@@ -542,6 +558,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeTime/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need your permission to save images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +587,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeTime/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need your permission to save images";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
