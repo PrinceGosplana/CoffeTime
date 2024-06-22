@@ -11,6 +11,9 @@
 		8A019B402C26BED100799137 /* SSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3F2C26BED100799137 /* SSContentView.swift */; };
 		8A019B422C26BED900799137 /* SSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B412C26BED900799137 /* SSHomeView.swift */; };
 		8A019B442C26C08000799137 /* BottomActionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B432C26C08000799137 /* BottomActionBar.swift */; };
+		8A019B462C26C4CC00799137 /* StackedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B452C26C4CC00799137 /* StackedCards.swift */; };
+		8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B472C26C6FB00799137 /* SSCardView.swift */; };
+		8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B4A2C26EAC100799137 /* SSHeader.swift */; };
 		8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */; };
 		8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */; };
 		8A07181D2C11918A0017E1E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181C2C11918A0017E1E8 /* Card.swift */; };
@@ -62,6 +65,9 @@
 		8A019B3F2C26BED100799137 /* SSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSContentView.swift; sourceTree = "<group>"; };
 		8A019B412C26BED900799137 /* SSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeView.swift; sourceTree = "<group>"; };
 		8A019B432C26C08000799137 /* BottomActionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomActionBar.swift; sourceTree = "<group>"; };
+		8A019B452C26C4CC00799137 /* StackedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedCards.swift; sourceTree = "<group>"; };
+		8A019B472C26C6FB00799137 /* SSCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCardView.swift; sourceTree = "<group>"; };
+		8A019B4A2C26EAC100799137 /* SSHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHeader.swift; sourceTree = "<group>"; };
 		8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextContentView.swift; sourceTree = "<group>"; };
 		8A07181C2C11918A0017E1E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 				8A019B3F2C26BED100799137 /* SSContentView.swift */,
 				8A019B412C26BED900799137 /* SSHomeView.swift */,
 				8A019B432C26C08000799137 /* BottomActionBar.swift */,
+				8A019B452C26C4CC00799137 /* StackedCards.swift */,
+				8A019B472C26C6FB00799137 /* SSCardView.swift */,
+				8A019B4A2C26EAC100799137 /* SSHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,9 +473,11 @@
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8AF2FB5F2C19B89B00B98D74 /* SideBarButton.swift in Sources */,
+				8A019B462C26C4CC00799137 /* StackedCards.swift in Sources */,
 				8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
+				8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */,
 				8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */,
 				8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */,
 				8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */,
@@ -490,6 +501,7 @@
 				8A0F01CF2C0EF10500B77AB1 /* FindCollectionView.swift in Sources */,
 				8A0718202C1192BF0017E1E8 /* VCCHome.swift in Sources */,
 				8A019B402C26BED100799137 /* SSContentView.swift in Sources */,
+				8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */,
 				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

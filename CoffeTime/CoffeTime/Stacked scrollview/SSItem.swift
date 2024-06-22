@@ -16,6 +16,7 @@ struct SSItem: Identifiable {
 
 extension SSItem {
     static let mockItems: [SSItem] = [
+        .init(logo: "", title: ""),
         .init(logo: "user1", title: "Amazon"),
         .init(logo: "user2", title: "Youtube"),
         .init(logo: "user3", title: "Dribble"),

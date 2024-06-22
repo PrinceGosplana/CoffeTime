@@ -16,9 +16,10 @@ struct SSContentView: View {
                     .scaledToFill()
                     .ignoresSafeArea()
 
-                SSHomeView()
             }
+            SSHomeView()
         }
+        .environment(\.colorScheme, .dark)
     }
 }
 

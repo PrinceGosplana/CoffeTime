@@ -10,7 +10,15 @@ import SwiftUI
 struct SSHomeView: View {
     var body: some View {
         VStack {
-            Spacer()
+            StackedCards(
+                items: SSItem.mockItems,
+                stackedDisplayCount: 1,
+                opacityDisplayCount: 0,
+                itemHeight: 70) { item in
+                    SSCardView(item: item)
+                }
+                .padding(.bottom, 20)
+            
             BottomActionBar()
         }
         .padding(20)
