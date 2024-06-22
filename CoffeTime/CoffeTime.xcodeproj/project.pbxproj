@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3C2C26BD8200799137 /* SSItem.swift */; };
 		8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */; };
 		8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */; };
 		8A07181D2C11918A0017E1E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181C2C11918A0017E1E8 /* Card.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A019B3C2C26BD8200799137 /* SSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSItem.swift; sourceTree = "<group>"; };
 		8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextContentView.swift; sourceTree = "<group>"; };
 		8A07181C2C11918A0017E1E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A019B3B2C26BD6B00799137 /* Stacked scrollview */ = {
+			isa = PBXGroup;
+			children = (
+				8A019B3C2C26BD8200799137 /* SSItem.swift */,
+			);
+			path = "Stacked scrollview";
+			sourceTree = "<group>";
+		};
 		8A0717F92C1037180017E1E8 /* Hacker Text Effect */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +290,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A019B3B2C26BD6B00799137 /* Stacked scrollview */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
@@ -440,6 +451,7 @@
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
 				8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */,
 				8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */,
+				8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
