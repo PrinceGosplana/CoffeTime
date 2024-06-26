@@ -44,6 +44,7 @@
 		8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */; };
 		8A1ED1302C2BF5C10046BDB9 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED12F2C2BF5C10046BDB9 /* LoginContentView.swift */; };
 		8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */; };
+		8A1ED1352C2BF87B0046BDB9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED1342C2BF87B0046BDB9 /* CustomTextField.swift */; };
 		8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED542C15AA1900D5915D /* DummyColors.swift */; };
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
@@ -101,6 +102,7 @@
 		8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8A1ED12F2C2BF5C10046BDB9 /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
 		8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		8A1ED1342C2BF87B0046BDB9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8A20ED542C15AA1900D5915D /* DummyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyColors.swift; sourceTree = "<group>"; };
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */,
+				8A1ED1342C2BF87B0046BDB9 /* CustomTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				8A13494A2C1C6FEE00099F7D /* CarousalItemView.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
 				8A1349202C1B26EC00099F7D /* PHome.swift in Sources */,
+				8A1ED1352C2BF87B0046BDB9 /* CustomTextField.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
 				8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */,
 				8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */,
