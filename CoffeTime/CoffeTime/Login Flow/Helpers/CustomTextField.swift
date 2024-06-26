@@ -43,15 +43,17 @@ struct CustomTextField: View {
                 Divider()
             }
             .overlay(alignment: .trailing) {
-                Button {
-                    withAnimation {
-                        showPassword.toggle()
+                if isPassword {
+                    Button {
+                        withAnimation {
+                            showPassword.toggle()
+                        }
+                    } label: {
+                        Image(systemName: showPassword ? "eye.slash" : "eye")
+                            .foregroundStyle(.gray)
+                            .padding(10)
+                            .contentShape(.rect)
                     }
-                } label: {
-                    Image(systemName: showPassword ? "eye.slash" : "eye")
-                        .foregroundStyle(.gray)
-                        .padding(10)
-                        .contentShape(.rect)
                 }
             }
         }
@@ -59,5 +61,5 @@ struct CustomTextField: View {
 }
 
 #Preview {
-    CustomTextField(sfIcon: "person", hint: "hint", value: .constant("test"))
+    CustomTextField(sfIcon: "person", hint: "hint", isPassword: true, value: .constant("test"))
 }

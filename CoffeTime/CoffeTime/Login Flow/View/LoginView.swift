@@ -28,6 +28,9 @@ struct LoginView: View {
 
             VStack(spacing: 25) {
                 CustomTextField(sfIcon: "at", hint: "Email ID", value: $emailID)
+
+                CustomTextField(sfIcon: "lock", hint: "Password", isPassword: true, value: $password)
+                    .padding(.top, 5)
             }
             .padding(.top, 20)
 
