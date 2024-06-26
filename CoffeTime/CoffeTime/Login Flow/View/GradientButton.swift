@@ -30,7 +30,8 @@ struct GradientButton: View {
                     colors: [.appYellow ?? .yellow, .orange, .red],
                     startPoint: .top,
                     endPoint: .bottom
-                )
+                ),
+                in: .capsule
             )
         }
     }

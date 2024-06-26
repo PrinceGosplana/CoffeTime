@@ -31,6 +31,21 @@ struct LoginView: View {
 
                 CustomTextField(sfIcon: "lock", hint: "Password", isPassword: true, value: $password)
                     .padding(.top, 5)
+
+                Button("Forgot Password") {
+
+                }
+                .font(.callout)
+                .fontWeight(.heavy)
+                .tint(.appYellow)
+                .hSpacing(.trailing)
+
+                /// Login button
+                GradientButton(title: "Login", icon: "arrow.right") {
+                    
+                }
+                .hSpacing(.trailing)
+
             }
             .padding(.top, 20)
 
