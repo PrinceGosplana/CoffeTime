@@ -23,6 +23,8 @@ struct CustomTextField: View {
             Image(systemName: sfIcon)
                 .foregroundStyle(iconTint)
                 .frame(width: 30)
+            /// slightly bringing down
+                .offset(y: 2)
 
             VStack(alignment: .leading, spacing: 8) {
                 if isPassword {
