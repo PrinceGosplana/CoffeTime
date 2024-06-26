@@ -45,11 +45,27 @@ struct LoginView: View {
                     
                 }
                 .hSpacing(.trailing)
+                /// disabling until the data is entered
+                .disableWithOpacity(emailID.isEmpty || password.isEmpty)
 
             }
             .padding(.top, 20)
 
             Spacer(minLength: 0)
+
+            HStack(spacing: 6) {
+                Text("Don't have an account?")
+                    .foregroundStyle(.gray)
+
+                Button("SignUP") {
+
+                }
+                .fontWeight(.bold)
+                .tint(.appYellow)
+            }
+            .font(.callout)
+            .hSpacing()
+
         }
         .padding(.vertical, 15)
         .padding(.horizontal, 25)
