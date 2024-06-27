@@ -16,7 +16,9 @@ struct LoginView: View {
     @State private var showResetView: Bool = false
 
     @Binding var showSignup: Bool
-    
+    @State private var askOTP: Bool = false
+    @State private var otpText: String = ""
+
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Spacer(minLength: 0)
@@ -47,7 +49,7 @@ struct LoginView: View {
 
                 /// Login button
                 GradientButton(title: "Login", icon: "arrow.right") {
-                    
+                    askOTP.toggle()
                 }
                 .hSpacing(.trailing)
                 /// disabling until the data is entered
@@ -96,6 +98,18 @@ struct LoginView: View {
                     .presentationCornerRadius(30)
             } else {
                 PasswordResetView()
+                    .presentationDetents([.height(350)])
+            }
+        }
+        /// OTP Prompt
+        .sheet(isPresented: $askOTP) {
+            if #available(iOS 16.4, *) {
+                /// since I wanted a custom sheet corner radius
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+                    .presentationCornerRadius(30)
+            } else {
+                OTPView(otpText: $otpText)
                     .presentationDetents([.height(350)])
             }
         }

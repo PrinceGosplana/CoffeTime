@@ -13,6 +13,8 @@ struct Signup: View {
     @State private var fullName: String = ""
     @State private var password: String = ""
 
+    @State private var askOTP: Bool = false
+    @State private var otpText: String = ""
     @Binding var showSignup: Bool
 
     var body: some View {
@@ -47,7 +49,7 @@ struct Signup: View {
 
                 /// SignUp button
                 GradientButton(title: "Continue", icon: "arrow.right") {
-
+                    askOTP.toggle()
                 }
                 .hSpacing(.trailing)
                 /// disabling until the data is entered
@@ -75,6 +77,18 @@ struct Signup: View {
         .padding(.vertical, 15)
         .padding(.horizontal, 25)
         .toolbar(.hidden, for: .navigationBar)
+        /// OTP Prompt
+        .sheet(isPresented: $askOTP) {
+            if #available(iOS 16.4, *) {
+                /// since I wanted a custom sheet corner radius
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+                    .presentationCornerRadius(30)
+            } else {
+                OTPView(otpText: $otpText)
+                    .presentationDetents([.height(350)])
+            }
+        }
     }
 }
 #Preview {
