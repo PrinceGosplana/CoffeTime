@@ -29,7 +29,6 @@ struct Signup: View {
             Text("SighUp")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
-                .padding(.top, 25)
 
             Text("Please sign up to continue")
                 .font(.callout)
