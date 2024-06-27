@@ -12,6 +12,8 @@ struct LoginView: View {
     @State private var emailID: String = ""
     @State private var password: String = ""
 
+    @Binding var showSignup: Bool
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Spacer(minLength: 0)
