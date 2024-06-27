@@ -11,6 +11,9 @@ struct LoginView: View {
 
     @State private var emailID: String = ""
     @State private var password: String = ""
+    @State private var showForgotPasswordView: Bool = false
+    /// Reset password view (with new password and confirmation password view)
+    @State private var showResetView: Bool = false
 
     @Binding var showSignup: Bool
     
@@ -35,7 +38,7 @@ struct LoginView: View {
                     .padding(.top, 5)
 
                 Button("Forgot Password") {
-
+                    showForgotPasswordView.toggle()
                 }
                 .font(.callout)
                 .fontWeight(.heavy)
@@ -72,6 +75,17 @@ struct LoginView: View {
         .padding(.vertical, 15)
         .padding(.horizontal, 25)
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $showForgotPasswordView) {
+            if #available(iOS 16.4, *) {
+                /// since I wanted a custom sheet corner radius
+                ForgotPassword(showResetView: $showResetView)
+                    .presentationDetents([.height(300)])
+                    .presentationCornerRadius(30)
+            } else {
+                ForgotPassword(showResetView: $showResetView)
+                    .presentationDetents([.height(300)])
+            }
+        }
     }
 }
 
