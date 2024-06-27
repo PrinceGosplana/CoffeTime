@@ -60,7 +60,7 @@ struct LoginView: View {
                     .foregroundStyle(.gray)
 
                 Button("SignUP") {
-
+                    showSignup.toggle()
                 }
                 .fontWeight(.bold)
                 .tint(.appYellow)

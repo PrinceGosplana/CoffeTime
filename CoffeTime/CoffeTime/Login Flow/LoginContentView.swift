@@ -18,6 +18,9 @@ struct LoginContentView: View {
                     
                 }
         }
+        .overlay {
+            CircleView(showSignup: showSignup)
+        }
     }
 }
 

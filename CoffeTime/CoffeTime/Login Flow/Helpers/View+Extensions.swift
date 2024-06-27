@@ -18,7 +18,7 @@ extension View {
     @ViewBuilder
     func vSpacing(_ alignment: Alignment = .center) -> some View {
         self
-            .frame(maxWidth: .infinity, alignment: alignment)
+            .frame(maxHeight: .infinity, alignment: alignment)
     }
 
     /// Disable with opacity
