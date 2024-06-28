@@ -32,6 +32,7 @@
 		8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A09C8E82C2DB79B0097D1DA /* OTPView.swift */; };
 		8A0A4A0B2C2ED91F001A47CE /* OTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A0A2C2ED91F001A47CE /* OTPVerificationView.swift */; };
 		8A0A4A0D2C2ED93C001A47CE /* OTPContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A0C2C2ED93C001A47CE /* OTPContentView.swift */; };
+		8A0A4A132C2EDD62001A47CE /* OTPTextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A122C2EDD62001A47CE /* OTPTextBox.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -98,6 +99,7 @@
 		8A09C8E82C2DB79B0097D1DA /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		8A0A4A0A2C2ED91F001A47CE /* OTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationView.swift; sourceTree = "<group>"; };
 		8A0A4A0C2C2ED93C001A47CE /* OTPContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPContentView.swift; sourceTree = "<group>"; };
+		8A0A4A122C2EDD62001A47CE /* OTPTextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextBox.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0A4A0A2C2ED91F001A47CE /* OTPVerificationView.swift */,
+				8A0A4A122C2EDD62001A47CE /* OTPTextBox.swift */,
 				8A0A4A0C2C2ED93C001A47CE /* OTPContentView.swift */,
 			);
 			path = View;
@@ -576,6 +579,7 @@
 				8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
+				8A0A4A132C2EDD62001A47CE /* OTPTextBox.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A1349482C1C6D6200099F7D /* GoogleMovieCarouselView.swift in Sources */,
 				8A13494A2C1C6FEE00099F7D /* CarousalItemView.swift in Sources */,
