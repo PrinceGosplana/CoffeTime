@@ -57,6 +57,14 @@ struct OTPVerificationView: View {
         }
         .padding(.all)
         .frame(maxHeight: .infinity, alignment: .top)
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                Button("Done") {
+                    isKeyboardShowing.toggle()
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+        }
     }
 
     @ViewBuilder

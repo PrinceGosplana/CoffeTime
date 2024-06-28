@@ -9,7 +9,19 @@ import SwiftUI
 
 struct OTPContentView: View {
     var body: some View {
-        OTPVerificationView()
+        if #available(iOS 15, *) {
+            NavigationView {
+                OTPVerificationView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
+            }
+        } else {
+            NavigationStack {
+                OTPVerificationView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar(.hidden, for: .navigationBar)
+            }
+        }
     }
 }
 
