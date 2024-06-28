@@ -37,6 +37,7 @@ struct OTPView: View {
 
             VStack(spacing: 25) {
                 /// put here OTPVerification view
+                LFOTPVerificationView(otpText: $otpText)
 
                 GradientButton(title: "Send Link", icon: "arrow.right") {
 
