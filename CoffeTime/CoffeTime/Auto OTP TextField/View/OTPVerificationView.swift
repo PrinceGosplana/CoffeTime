@@ -81,8 +81,11 @@ struct OTPVerificationView: View {
         }
         .frame(width: 45, height: 45)
         .background {
+            let status = (isKeyboardShowing && otpText.count == index)
+
             RoundedRectangle(cornerRadius: 6, style: .continuous)
-                .stroke(.gray, lineWidth: 0.5)
+                .stroke(status ? .black : .gray, lineWidth: status ? 1 : 0.5)
+                .animation(.easeInOut(duration: 0.2), value: status)
         }
         .frame(maxWidth: .infinity)
     }
