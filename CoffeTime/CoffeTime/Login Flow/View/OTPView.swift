@@ -44,7 +44,7 @@ struct OTPView: View {
                 }
                 .hSpacing(.trailing)
                 /// disabling until the data is entered
-                .disableWithOpacity(otpText.isEmpty)
+                .disableWithOpacity(otpText.count < 6)
             }
             .padding(.top, 20)
 

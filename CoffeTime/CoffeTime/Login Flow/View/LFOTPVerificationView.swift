@@ -20,6 +20,17 @@ struct LFOTPVerificationView: View {
                 OTPTextBox(index)
             }
         }
+        .background {
+            TextField("", text: $otpText.limit(6))
+                .keyboardType(.numberPad)
+                .textContentType(.oneTimeCode)
+                .frame(width: 1, height: 1)
+                .opacity(0.001)
+                .blendMode(.screen)
+                .focused($isKeyboardShowing)
+        }
+        .contentShape(Rectangle())
+        .onTapGesture { isKeyboardShowing.toggle() }
         .toolbar {
             ToolbarItem(placement: .keyboard) {
                 Button("Done") {
