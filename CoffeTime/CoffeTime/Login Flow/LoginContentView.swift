@@ -20,10 +20,10 @@ struct LoginContentView: View {
         }
         .overlay {
             if #available(iOS 17, *) {
-                CircleView(showSignup: showSignup)
+                PawView(showSignup: showSignup)
                     .animation(.smooth(duration: 0.45, extraBounce: 0), value: showSignup)
             } else {
-                CircleView(showSignup: showSignup)
+                PawView(showSignup: showSignup)
                     .animation(.easeInOut(duration: 0.3), value: showSignup)
             }
         }
