@@ -15,6 +15,7 @@ struct OTPView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Button {
+                otpText = ""
                 dismiss()
             } label: {
                 Image(systemName: "arrow.left")
