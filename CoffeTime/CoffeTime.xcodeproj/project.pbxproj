@@ -28,6 +28,7 @@
 		8A07186A2C12F1190017E1E8 /* GlitchFrameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718692C12F1190017E1E8 /* GlitchFrameBuilder.swift */; };
 		8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */; };
 		8A097D8F2C318CDF00F03670 /* PawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097D8E2C318CDF00F03670 /* PawView.swift */; };
+		8A097D942C3193EE00F03670 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097D932C3193EE00F03670 /* Message.swift */; };
 		8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A09C8E42C2DAEAC0097D1DA /* ForgotPassword.swift */; };
 		8A09C8E72C2DB5B00097D1DA /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A09C8E62C2DB5B00097D1DA /* PasswordResetView.swift */; };
 		8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A09C8E82C2DB79B0097D1DA /* OTPView.swift */; };
@@ -97,6 +98,7 @@
 		8A0718692C12F1190017E1E8 /* GlitchFrameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchFrameBuilder.swift; sourceTree = "<group>"; };
 		8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchTextAnimation.swift; sourceTree = "<group>"; };
 		8A097D8E2C318CDF00F03670 /* PawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawView.swift; sourceTree = "<group>"; };
+		8A097D932C3193EE00F03670 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8A09C8E42C2DAEAC0097D1DA /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		8A09C8E62C2DB5B00097D1DA /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		8A09C8E82C2DB79B0097D1DA /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
@@ -234,6 +236,30 @@
 				8A0718632C12EA590017E1E8 /* GTTextView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8A097D902C31938000F03670 /* Elastic Scroll Animation */ = {
+			isa = PBXGroup;
+			children = (
+				8A097D922C3193C100F03670 /* View */,
+				8A097D912C3193BA00F03670 /* Model */,
+			);
+			path = "Elastic Scroll Animation";
+			sourceTree = "<group>";
+		};
+		8A097D912C3193BA00F03670 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A097D932C3193EE00F03670 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A097D922C3193C100F03670 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8A0A4A082C2ED882001A47CE /* Auto OTP TextField */ = {
@@ -415,6 +441,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A1ED12B2C2BF57F0046BDB9 /* Login Flow */,
 				8A019B3B2C26BD6B00799137 /* Stacked scrollview */,
@@ -577,6 +604,7 @@
 				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
 				8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
+				8A097D942C3193EE00F03670 /* Message.swift in Sources */,
 				8A0A4A0B2C2ED91F001A47CE /* OTPVerificationView.swift in Sources */,
 				8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
