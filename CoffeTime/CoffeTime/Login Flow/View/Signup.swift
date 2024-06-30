@@ -68,7 +68,7 @@ struct Signup: View {
                     showSignup.toggle()
                 }
                 .fontWeight(.bold)
-                .tint(.appYellow)
+                .tint(.appLightBrown)
             }
             .font(.callout)
             .hSpacing()

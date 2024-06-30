@@ -20,7 +20,7 @@ struct LoginView: View {
     @State private var otpText: String = ""
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
+        VStack(alignment: .trailing, spacing: 5) {
             Spacer(minLength: 0)
 
             Text("Login")
@@ -44,7 +44,7 @@ struct LoginView: View {
                 }
                 .font(.callout)
                 .fontWeight(.heavy)
-                .tint(.appYellow)
+                .tint(.appLightBrown)
                 .hSpacing(.trailing)
 
                 /// Login button
@@ -68,7 +68,7 @@ struct LoginView: View {
                     showSignup.toggle()
                 }
                 .fontWeight(.bold)
-                .tint(.appYellow)
+                .tint(.appLightBrown)
             }
             .font(.callout)
             .hSpacing()
