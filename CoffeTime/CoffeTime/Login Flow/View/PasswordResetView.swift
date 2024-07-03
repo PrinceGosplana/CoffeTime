@@ -37,6 +37,7 @@ struct PasswordResetView: View {
                 /// Login button
                 GradientButton(title: "Send Link", icon: "arrow.right") {
                     /// Reset Password
+                    dismiss()
                 }
                 .hSpacing(.trailing)
                 /// disabling until the data is entered

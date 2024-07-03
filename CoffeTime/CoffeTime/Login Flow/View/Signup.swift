@@ -16,6 +16,7 @@ struct Signup: View {
     @State private var askOTP: Bool = false
     @State private var otpText: String = ""
     @Binding var showSignup: Bool
+    @Binding var openMainScreen: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -81,11 +82,11 @@ struct Signup: View {
         .sheet(isPresented: $askOTP) {
             if #available(iOS 16.4, *) {
                 /// since I wanted a custom sheet corner radius
-                OTPView(otpText: $otpText)
+                OTPView(otpText: $otpText, openMainScreen: $openMainScreen)
                     .presentationDetents([.height(350)])
                     .presentationCornerRadius(30)
             } else {
-                OTPView(otpText: $otpText)
+                OTPView(otpText: $otpText, openMainScreen: $openMainScreen)
                     .presentationDetents([.height(350)])
             }
         }

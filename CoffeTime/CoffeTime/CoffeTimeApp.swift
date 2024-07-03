@@ -14,9 +14,10 @@ struct CoffeTimeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-            /// in order to run ColorContentView
-                .modelContainer(for: ColorModel.self)
+            LoginContentView()
+//            ContentView()
+//            /// in order to run ColorContentView
+//                .modelContainer(for: ColorModel.self)
         }
     }
 }

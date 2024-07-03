@@ -10,6 +10,7 @@ import SwiftUI
 struct OTPView: View {
 
     @Binding var otpText: String
+    @Binding var openMainScreen: Bool
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -41,7 +42,8 @@ struct OTPView: View {
                 LFOTPVerificationView(otpText: $otpText)
 
                 GradientButton(title: "Send Link", icon: "arrow.right") {
-
+                    dismiss()
+                    openMainScreen.toggle()
                 }
                 .hSpacing(.trailing)
                 /// disabling until the data is entered
