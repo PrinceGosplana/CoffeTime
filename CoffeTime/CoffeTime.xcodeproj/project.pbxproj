@@ -58,6 +58,8 @@
 		8A135C2E2C350739007AF05B /* CTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A135C2D2C350739007AF05B /* CTabItem.swift */; };
 		8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A135C2F2C350784007AF05B /* CustomTabBar.swift */; };
 		8A135C322C350E9B007AF05B /* CTabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A135C312C350E9B007AF05B /* CTabShape.swift */; };
+		8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */; };
+		8A1A42FF2C370E0B00809BBA /* SwipeHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */; };
 		8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */; };
 		8A1ED1302C2BF5C10046BDB9 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED12F2C2BF5C10046BDB9 /* LoginContentView.swift */; };
 		8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */; };
@@ -137,6 +139,8 @@
 		8A135C2D2C350739007AF05B /* CTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTabItem.swift; sourceTree = "<group>"; };
 		8A135C2F2C350784007AF05B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8A135C312C350E9B007AF05B /* CTabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTabShape.swift; sourceTree = "<group>"; };
+		8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeContentView.swift; sourceTree = "<group>"; };
+		8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeHomeView.swift; sourceTree = "<group>"; };
 		8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8A1ED12F2C2BF5C10046BDB9 /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
 		8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -420,6 +424,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */ = {
+			isa = PBXGroup;
+			children = (
+				8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */,
+				8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */,
+			);
+			path = "Swipe Actions for scrollview";
+			sourceTree = "<group>";
+		};
 		8A1ED12B2C2BF57F0046BDB9 /* Login Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +512,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
@@ -667,11 +681,13 @@
 				8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
 				8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */,
+				8A1A42FF2C370E0B00809BBA /* SwipeHomeView.swift in Sources */,
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
+				8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */,
 				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
 				8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
