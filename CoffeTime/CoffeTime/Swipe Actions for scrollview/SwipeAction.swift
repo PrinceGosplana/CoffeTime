@@ -21,6 +21,14 @@ struct SwipeAction<Content: View>: View {
                     content
                     /// to take full available space
                         .containerRelativeFrame(.horizontal)
+                        .background {
+                            if let firstAction = actions.first {
+                                Rectangle()
+                                    .fill(firstAction.tint)
+                            }
+                        }
+
+                    ActionButtons()
                 }
                 .scrollIndicators(.hidden)
                 .visualEffect { content, geometryProxy in
@@ -30,6 +38,12 @@ struct SwipeAction<Content: View>: View {
             }
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
+            .background {
+                if let lastAction = actions.last {
+                    Rectangle()
+                        .fill(lastAction.tint)
+                }
+            }
             .clipShape(.rect(cornerRadius: cornerRadius))
         }
     }
@@ -38,5 +52,30 @@ struct SwipeAction<Content: View>: View {
         let minX = proxy.frame(in: .scrollView(axis: .horizontal)).minX
 
         return direction == .trailing ? (minX > 0 ? -minX : 0) : (minX < 0 ? -minX : 0)
+    }
+
+    @ViewBuilder
+    func ActionButtons() -> some View {
+        Rectangle()
+            .fill(.clear)
+            .frame(width: CGFloat(actions.count) * 100)
+            .overlay(alignment: direction.alignment) {
+                HStack(spacing: 0) {
+                    ForEach(actions) { button in
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: button.icon)
+                                .font(button.iconFont)
+                                .foregroundStyle(button.iconTint)
+                                .frame(width: 100)
+                                .frame(maxHeight: .infinity)
+                                .contentShape(.rect)
+                        }
+                        .buttonStyle(.plain)
+                        .background(button.tint)
+                    }
+                }
+            }
     }
 }

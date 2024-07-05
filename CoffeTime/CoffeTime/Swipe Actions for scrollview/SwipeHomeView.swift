@@ -18,6 +18,10 @@ struct SwipeHomeView: View {
                     SwipeAction(cornerRadius: 15, direction: .trailing) {
                         SwipeCardView(color: color)
                     } actions: {
+                        Action(tint: .blue, icon: "star.fill") {
+                            print("Bookmarked")
+                        }
+
                         Action(tint: .red, icon: "trash.fill") {
                             print("delete")
                         }
