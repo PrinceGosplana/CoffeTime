@@ -14,6 +14,7 @@
 		8A019B462C26C4CC00799137 /* StackedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B452C26C4CC00799137 /* StackedCards.swift */; };
 		8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B472C26C6FB00799137 /* SSCardView.swift */; };
 		8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B4A2C26EAC100799137 /* SSHeader.swift */; };
+		8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */; };
 		8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */; };
 		8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */; };
 		8A07181D2C11918A0017E1E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181C2C11918A0017E1E8 /* Card.swift */; };
@@ -95,6 +96,7 @@
 		8A019B452C26C4CC00799137 /* StackedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedCards.swift; sourceTree = "<group>"; };
 		8A019B472C26C6FB00799137 /* SSCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCardView.swift; sourceTree = "<group>"; };
 		8A019B4A2C26EAC100799137 /* SSHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHeader.swift; sourceTree = "<group>"; };
+		8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextContentView.swift; sourceTree = "<group>"; };
 		8A07181C2C11918A0017E1E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 			children = (
 				8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */,
 				8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */,
+				8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */,
 			);
 			path = "Swipe Actions for scrollview";
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				8A135C322C350E9B007AF05B /* CTabShape.swift in Sources */,
 				8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */,
 				8A0718662C12EEEF0017E1E8 /* GTExtendedSpacer.swift in Sources */,
+				8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8A097D962C3195D100F03670 /* ESAHomeView.swift in Sources */,
 				8A019B422C26BED900799137 /* SSHomeView.swift in Sources */,

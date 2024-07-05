@@ -15,7 +15,7 @@ struct SwipeHomeView: View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 10) {
                 ForEach(colors, id:\.self) { color in
-
+                    SwipeCardView(color: color)
                 }
             }
             .padding(15)
