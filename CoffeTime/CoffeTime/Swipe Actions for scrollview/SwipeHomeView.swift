@@ -15,7 +15,14 @@ struct SwipeHomeView: View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 10) {
                 ForEach(colors, id:\.self) { color in
-                    SwipeCardView(color: color)
+                    SwipeAction(cornerRadius: 15, direction: .trailing) {
+                        SwipeCardView(color: color)
+                    } actions: {
+                        Action(tint: .red, icon: "trash.fill") {
+                            print("delete")
+                        }
+                    }
+
                 }
             }
             .padding(15)

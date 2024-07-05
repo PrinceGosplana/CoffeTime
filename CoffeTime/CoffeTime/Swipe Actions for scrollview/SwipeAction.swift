@@ -23,9 +23,20 @@ struct SwipeAction<Content: View>: View {
                         .containerRelativeFrame(.horizontal)
                 }
                 .scrollIndicators(.hidden)
+                .visualEffect { content, geometryProxy in
+                    content
+                        .offset(x: scrollOffset(geometryProxy))
+                }
             }
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
+            .clipShape(.rect(cornerRadius: cornerRadius))
         }
+    }
+
+    func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {
+        let minX = proxy.frame(in: .scrollView(axis: .horizontal)).minX
+
+        return direction == .trailing ? (minX > 0 ? -minX : 0) : (minX < 0 ? -minX : 0)
     }
 }
