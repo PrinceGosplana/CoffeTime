@@ -17,6 +17,7 @@
 		8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */; };
 		8A06CDC02C37D1B300F60C1A /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */; };
 		8A06CDC22C37E67C00F60C1A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC12C37E67C00F60C1A /* Action.swift */; };
+		8A06CDC42C37E84900F60C1A /* ActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */; };
 		8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */; };
 		8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */; };
 		8A07181D2C11918A0017E1E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181C2C11918A0017E1E8 /* Card.swift */; };
@@ -101,6 +102,7 @@
 		8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		8A06CDC12C37E67C00F60C1A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBuilder.swift; sourceTree = "<group>"; };
 		8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextContentView.swift; sourceTree = "<group>"; };
 		8A07181C2C11918A0017E1E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */,
 				8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */,
 				8A06CDC12C37E67C00F60C1A /* Action.swift */,
+				8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */,
 			);
 			path = "Swipe Actions for scrollview";
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */,
 				8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */,
 				8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */,
+				8A06CDC42C37E84900F60C1A /* ActionBuilder.swift in Sources */,
 				8A135C322C350E9B007AF05B /* CTabShape.swift in Sources */,
 				8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */,
 				8A0718662C12EEEF0017E1E8 /* GTExtendedSpacer.swift in Sources */,

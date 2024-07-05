@@ -10,7 +10,8 @@ import SwiftUI
 struct SwipeHomeView: View {
 
     @State private var colors: [Color] = [.black, .yellow, .purple, .brown]
-
+    @ActionBuilder var actions: [Action]
+    
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 10) {
