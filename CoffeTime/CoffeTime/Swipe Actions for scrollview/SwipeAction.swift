@@ -9,8 +9,11 @@ import SwiftUI
 
 struct SwipeAction<Content: View>: View {
 
+    var cornerRadius: CGFloat = 0
+    var direction: SwipeDirection = .trailing
     @ViewBuilder var content: Content
-
+    @ActionBuilder var actions: [Action]
+    
     var body: some View {
         ScrollViewReader { scrollProxy in
             ScrollView(.horizontal) {
