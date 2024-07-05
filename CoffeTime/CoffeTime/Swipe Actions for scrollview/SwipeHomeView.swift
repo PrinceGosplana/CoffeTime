@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct SwipeHomeView: View {
+
+    @State private var colors: [Color] = [.black, .yellow, .purple, .brown]
+
     var body: some View {
         ScrollView(.vertical) {
+            LazyVStack(spacing: 10) {
+                ForEach(colors, id:\.self) { color in
 
+                }
+            }
+            .padding(15)
         }
         .scrollIndicators(.hidden)
     }
