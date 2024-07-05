@@ -18,6 +18,7 @@
 		8A06CDC02C37D1B300F60C1A /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */; };
 		8A06CDC22C37E67C00F60C1A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC12C37E67C00F60C1A /* Action.swift */; };
 		8A06CDC42C37E84900F60C1A /* ActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */; };
+		8A06CDC62C37E97800F60C1A /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC52C37E97800F60C1A /* SwipeDirection.swift */; };
 		8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */; };
 		8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */; };
 		8A07181D2C11918A0017E1E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07181C2C11918A0017E1E8 /* Card.swift */; };
@@ -103,6 +104,7 @@
 		8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		8A06CDC12C37E67C00F60C1A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBuilder.swift; sourceTree = "<group>"; };
+		8A06CDC52C37E97800F60C1A /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		8A0717FA2C10373B0017E1E8 /* HackerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextView.swift; sourceTree = "<group>"; };
 		8A0717FC2C1038370017E1E8 /* HackerTextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerTextContentView.swift; sourceTree = "<group>"; };
 		8A07181C2C11918A0017E1E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */,
 				8A06CDC12C37E67C00F60C1A /* Action.swift */,
 				8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */,
+				8A06CDC52C37E97800F60C1A /* SwipeDirection.swift */,
 			);
 			path = "Swipe Actions for scrollview";
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				8A1ED1352C2BF87B0046BDB9 /* CustomTextField.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
 				8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */,
+				8A06CDC62C37E97800F60C1A /* SwipeDirection.swift in Sources */,
 				8A135C282C3504B0007AF05B /* CTab.swift in Sources */,
 				8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */,
 				8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */,
