@@ -16,8 +16,8 @@ extension View {
                 GeometryReader {
                     let rect = $0.frame(in: .named(coordinateSpace))
                     Color.clear
-                        .preference(key: OffsetKey.self, value: rect)
-                        .onPreferenceChange(OffsetKey.self, perform: completion)
+                        .preference(key: OffsetKeyCGRect.self, value: rect)
+                        .onPreferenceChange(OffsetKeyCGRect.self, perform: completion)
                 }
             }
     }

@@ -17,6 +17,7 @@ struct SwipeAction<Content: View>: View {
 
     /// disabling the interactions while the animation is active
     @State private var isEnabled: Bool = true
+    @State private var scrollOffset: CGFloat = .zero
 
     var body: some View {
         ScrollViewReader { scrollProxy in
@@ -29,16 +30,29 @@ struct SwipeAction<Content: View>: View {
                             if let firstAction = actions.first {
                                 Rectangle()
                                     .fill(firstAction.tint)
+                                    .opacity(scrollOffset == .zero ? 0 : 1)
                             }
                         }
                         .id(viewID)
                         .transition(.identity)
+                        .overlay {
+                            GeometryReader {
+                                let minX = $0.frame(in: .scrollView(axis: .horizontal)).minX
+
+                                Color.clear
+                                    .preference(key: OffsetKeyCGFloat.self, value: minX)
+                                    .onPreferenceChange(OffsetKeyCGFloat.self) {
+                                        scrollOffset = $0
+                                    }
+                            }
+                        }
 
                     ActionButtons {
                         withAnimation(.snappy) {
                             scrollProxy.scrollTo(viewID, anchor: direction == .trailing ? .topLeading : .topTrailing)
                         }
                     }
+                    .opacity(scrollOffset == .zero ? 0 : 1)
                 }
                 .scrollIndicators(.hidden)
                 .visualEffect { content, geometryProxy in
@@ -52,6 +66,7 @@ struct SwipeAction<Content: View>: View {
                 if let lastAction = actions.last {
                     Rectangle()
                         .fill(lastAction.tint)
+                        .opacity(scrollOffset == .zero ? 0 : 1)
                 }
             }
             .clipShape(.rect(cornerRadius: cornerRadius))
