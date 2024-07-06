@@ -13,7 +13,8 @@ struct SwipeAction<Content: View>: View {
     var direction: SwipeDirection = .trailing
     @ViewBuilder var content: Content
     @ActionBuilder var actions: [Action]
-    
+    let viewID = UUID()
+
     var body: some View {
         ScrollViewReader { scrollProxy in
             ScrollView(.horizontal) {
@@ -27,8 +28,13 @@ struct SwipeAction<Content: View>: View {
                                     .fill(firstAction.tint)
                             }
                         }
+                        .id(viewID)
 
-                    ActionButtons()
+                    ActionButtons {
+                        withAnimation(.snappy) {
+                            scrollProxy.scrollTo(viewID, anchor: direction == .trailing ? .topLeading : .topTrailing)
+                        }
+                    }
                 }
                 .scrollIndicators(.hidden)
                 .visualEffect { content, geometryProxy in
@@ -55,7 +61,7 @@ struct SwipeAction<Content: View>: View {
     }
 
     @ViewBuilder
-    func ActionButtons() -> some View {
+    func ActionButtons(resetPosition: @escaping () -> ()) -> some View {
         Rectangle()
             .fill(.clear)
             .frame(width: CGFloat(actions.count) * 100)
@@ -63,7 +69,12 @@ struct SwipeAction<Content: View>: View {
                 HStack(spacing: 0) {
                     ForEach(actions) { button in
                         Button {
-                            
+                            Task { 
+                                resetPosition()
+                                // the scroll animation will take 0.25 seconds to complete, delaying the action once the view is returned to its original position.
+                                try? await Task.sleep(for: .seconds(0.25))
+                                button.action()
+                            }
                         } label: {
                             Image(systemName: button.icon)
                                 .font(button.iconFont)
