@@ -15,6 +15,7 @@ struct SwipeAction<Content: View>: View {
     @ActionBuilder var actions: [Action]
     let viewID = UUID()
 
+    @Environment(\.colorScheme) private var scheme
     /// disabling the interactions while the animation is active
     @State private var isEnabled: Bool = true
     @State private var scrollOffset: CGFloat = .zero
@@ -24,10 +25,12 @@ struct SwipeAction<Content: View>: View {
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 0) {
                     content
+                        .rotationEffect(.init(degrees: direction == .leading ? -180 : 0))
                     /// to take full available space
                         .containerRelativeFrame(.horizontal)
+                        .background(scheme == .dark ? .black : .white)
                         .background {
-                            if let firstAction = actions.first {
+                            if let firstAction = filteredActions.first {
                                 Rectangle()
                                     .fill(firstAction.tint)
                                     .opacity(scrollOffset == .zero ? 0 : 1)
@@ -63,13 +66,14 @@ struct SwipeAction<Content: View>: View {
             .scrollIndicators(.hidden)
             .scrollTargetBehavior(.viewAligned)
             .background {
-                if let lastAction = actions.last {
+                if let lastAction = filteredActions.last {
                     Rectangle()
                         .fill(lastAction.tint)
                         .opacity(scrollOffset == .zero ? 0 : 1)
                 }
             }
             .clipShape(.rect(cornerRadius: cornerRadius))
+            .rotationEffect(.init(degrees: direction == .leading ? 180 : 0))
         }
         .allowsHitTesting(isEnabled)
         .transition(CustomTransition())
@@ -78,17 +82,21 @@ struct SwipeAction<Content: View>: View {
     func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {
         let minX = proxy.frame(in: .scrollView(axis: .horizontal)).minX
 
-        return direction == .trailing ? (minX > 0 ? -minX : 0) : (minX < 0 ? -minX : 0)
+        return minX > 0 ? -minX : 0
+    }
+
+    var filteredActions: [Action] {
+        actions.filter { $0.isEnabled }
     }
 
     @ViewBuilder
     func ActionButtons(resetPosition: @escaping () -> ()) -> some View {
         Rectangle()
             .fill(.clear)
-            .frame(width: CGFloat(actions.count) * 100)
+            .frame(width: CGFloat(filteredActions.count) * 100)
             .overlay(alignment: direction.alignment) {
                 HStack(spacing: 0) {
-                    ForEach(actions) { button in
+                    ForEach(filteredActions) { button in
                         Button {
                             Task { 
                                 isEnabled = false
@@ -109,6 +117,7 @@ struct SwipeAction<Content: View>: View {
                         }
                         .buttonStyle(.plain)
                         .background(button.tint)
+                        .rotationEffect(.init(degrees: direction == .leading ? -180 : 0))
                     }
                 }
             }

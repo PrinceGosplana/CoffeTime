@@ -15,10 +15,10 @@ struct SwipeHomeView: View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 10) {
                 ForEach(colors, id:\.self) { color in
-                    SwipeAction(cornerRadius: 15, direction: .trailing) {
+                    SwipeAction(cornerRadius: 15, direction: color == .black ? .trailing : .leading) {
                         SwipeCardView(color: color)
                     } actions: {
-                        Action(tint: .blue, icon: "star.fill") {
+                        Action(tint: .blue, icon: "star.fill", isEnabled: color == .black) {
                             print("Bookmarked")
                         }
 
