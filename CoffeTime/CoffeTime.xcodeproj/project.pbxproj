@@ -15,6 +15,7 @@
 		8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B472C26C6FB00799137 /* SSCardView.swift */; };
 		8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B4A2C26EAC100799137 /* SSHeader.swift */; };
 		8A0381EC2C3961CC000CAEE0 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */; };
+		8A0381EF2C39640B000CAEE0 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0381EE2C39640B000CAEE0 /* OffsetKey.swift */; };
 		8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */; };
 		8A06CDC02C37D1B300F60C1A /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */; };
 		8A06CDC22C37E67C00F60C1A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC12C37E67C00F60C1A /* Action.swift */; };
@@ -102,6 +103,7 @@
 		8A019B472C26C6FB00799137 /* SSCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCardView.swift; sourceTree = "<group>"; };
 		8A019B4A2C26EAC100799137 /* SSHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHeader.swift; sourceTree = "<group>"; };
 		8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		8A0381EE2C39640B000CAEE0 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 		8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		8A06CDC12C37E67C00F60C1A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -212,6 +214,14 @@
 				8A019B4A2C26EAC100799137 /* SSHeader.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8A0381ED2C3963E5000CAEE0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A0381EE2C39640B000CAEE0 /* OffsetKey.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8A0717F92C1037180017E1E8 /* Hacker Text Effect */ = {
@@ -530,6 +540,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A0381ED2C3963E5000CAEE0 /* Helpers */,
 				8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
@@ -735,6 +746,7 @@
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A1349482C1C6D6200099F7D /* GoogleMovieCarouselView.swift in Sources */,
+				8A0381EF2C39640B000CAEE0 /* OffsetKey.swift in Sources */,
 				8A13494A2C1C6FEE00099F7D /* CarousalItemView.swift in Sources */,
 				8A097D8F2C318CDF00F03670 /* PawView.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
