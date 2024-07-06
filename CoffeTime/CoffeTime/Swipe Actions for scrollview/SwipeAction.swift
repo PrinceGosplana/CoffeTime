@@ -32,6 +32,7 @@ struct SwipeAction<Content: View>: View {
                             }
                         }
                         .id(viewID)
+                        .transition(.identity)
 
                     ActionButtons {
                         withAnimation(.snappy) {
@@ -56,6 +57,7 @@ struct SwipeAction<Content: View>: View {
             .clipShape(.rect(cornerRadius: cornerRadius))
         }
         .allowsHitTesting(isEnabled)
+        .transition(CustomTransition())
     }
 
     func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {

@@ -14,6 +14,7 @@
 		8A019B462C26C4CC00799137 /* StackedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B452C26C4CC00799137 /* StackedCards.swift */; };
 		8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B472C26C6FB00799137 /* SSCardView.swift */; };
 		8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B4A2C26EAC100799137 /* SSHeader.swift */; };
+		8A0381EC2C3961CC000CAEE0 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */; };
 		8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */; };
 		8A06CDC02C37D1B300F60C1A /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */; };
 		8A06CDC22C37E67C00F60C1A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06CDC12C37E67C00F60C1A /* Action.swift */; };
@@ -100,6 +101,7 @@
 		8A019B452C26C4CC00799137 /* StackedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedCards.swift; sourceTree = "<group>"; };
 		8A019B472C26C6FB00799137 /* SSCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCardView.swift; sourceTree = "<group>"; };
 		8A019B4A2C26EAC100799137 /* SSHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHeader.swift; sourceTree = "<group>"; };
+		8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		8A06CDC12C37E67C00F60C1A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */,
 				8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */,
 				8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */,
+				8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */,
 				8A06CDC12C37E67C00F60C1A /* Action.swift */,
 				8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */,
 				8A06CDC52C37E97800F60C1A /* SwipeDirection.swift */,
@@ -707,6 +710,7 @@
 				8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A097D942C3193EE00F03670 /* Message.swift in Sources */,
+				8A0381EC2C3961CC000CAEE0 /* CustomTransition.swift in Sources */,
 				8A0A4A0B2C2ED91F001A47CE /* OTPVerificationView.swift in Sources */,
 				8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
