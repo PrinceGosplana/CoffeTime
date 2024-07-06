@@ -23,7 +23,9 @@ struct SwipeHomeView: View {
                         }
 
                         Action(tint: .red, icon: "trash.fill") {
-                            print("delete")
+                            withAnimation(.easeInOut) {
+                                colors.removeAll(where: { $0 == color })
+                            }
                         }
                     }
 

@@ -15,6 +15,9 @@ struct SwipeAction<Content: View>: View {
     @ActionBuilder var actions: [Action]
     let viewID = UUID()
 
+    /// disabling the interactions while the animation is active
+    @State private var isEnabled: Bool = true
+
     var body: some View {
         ScrollViewReader { scrollProxy in
             ScrollView(.horizontal) {
@@ -52,6 +55,7 @@ struct SwipeAction<Content: View>: View {
             }
             .clipShape(.rect(cornerRadius: cornerRadius))
         }
+        .allowsHitTesting(isEnabled)
     }
 
     func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {
@@ -70,10 +74,13 @@ struct SwipeAction<Content: View>: View {
                     ForEach(actions) { button in
                         Button {
                             Task { 
+                                isEnabled = false
                                 resetPosition()
                                 // the scroll animation will take 0.25 seconds to complete, delaying the action once the view is returned to its original position.
                                 try? await Task.sleep(for: .seconds(0.25))
                                 button.action()
+                                try? await Task.sleep(for: .seconds(0.25))
+                                isEnabled = true
                             }
                         } label: {
                             Image(systemName: button.icon)
