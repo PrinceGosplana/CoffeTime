@@ -11,6 +11,8 @@ struct StickyHeaderView: View {
     let safeAreaTop: CGFloat
     // Reduced Header height will be 80
     let offsetY: CGFloat
+    @Binding var showSearchBar: Bool
+
     var progress: CGFloat {
         -(offsetY / 80) > 1 ? -1 : (offsetY > 0 ? 0 : (offsetY / 80))
     }
@@ -31,7 +33,7 @@ struct StickyHeaderView: View {
                         .fill(.black)
                         .opacity(0.15)
                 }
-                .opacity(1 + progress)
+                .opacity(showSearchBar ? 1 : 1 + progress)
 
                 Button {
 
@@ -46,6 +48,20 @@ struct StickyHeaderView: View {
                                 .fill(.white)
                                 .padding(-2)
                         }
+                }
+                .opacity(showSearchBar ? 0 : 1)
+                .overlay {
+                    if showSearchBar {
+                        // MARK: Displaying XMark button
+                        Button {
+                            showSearchBar.toggle() // false
+                        } label: {
+                            Image(systemName: "xmark")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(.white)
+                        }
+                    }
                 }
             }
 
@@ -71,7 +87,22 @@ struct StickyHeaderView: View {
             .padding(.top, 10)
             // MARK: Moving up when scrolling started
             .offset(y: progress * 65)
+            .opacity(showSearchBar ? 0 : 1)
         }
+        // MARK: Displaying search button
+        .overlay(alignment: .topLeading) {
+            Button {
+                showSearchBar.toggle()
+            } label: {
+                Image(systemName: "magnifyingglass")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+            }
+            .offset(x: 13, y: 10)
+            .opacity(showSearchBar ? 0 : -progress)
+        }
+        .animation(.easeInOut(duration: 0.2), value: showSearchBar)
         .environment(\.colorScheme, .dark)
         .padding([.horizontal, .bottom], 15)
         .padding(.top, safeAreaTop + 10)

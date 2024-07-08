@@ -11,14 +11,15 @@ struct StickyHeaderHomeView: View {
 
     // MARK: Header animation properties
     @State var offsetY: CGFloat = 0
-
+    @State var showSearchBar: Bool = false
+    
     var body: some View {
         GeometryReader { proxy in
             let safeAreaTop = proxy.safeAreaInsets.top
 
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    StickyHeaderView(safeAreaTop: safeAreaTop, offsetY: offsetY)
+                    StickyHeaderView(safeAreaTop: safeAreaTop, offsetY: offsetY, showSearchBar: $showSearchBar)
                         .offset(y: -offsetY)
                         .zIndex(1)
 
@@ -35,6 +36,7 @@ struct StickyHeaderHomeView: View {
                 }
                 .offset(coordinateSpace: .named("SCROLL")) { offset in
                     offsetY = offset
+                    showSearchBar = (-offset > 80) && showSearchBar
                 }
             }
             .coordinateSpace(name: "SCROLL")
