@@ -9,7 +9,12 @@ import SwiftUI
 
 struct StickyHeaderView: View {
     let safeAreaTop: CGFloat
-    
+    // Reduced Header height will be 80
+    let offsetY: CGFloat
+    var progress: CGFloat {
+        -(offsetY / 80) > 1 ? -1 : (offsetY < 0 ? 0 : (offsetY / 80))
+    }
+
     var body: some View {
         VStack(spacing: 15) {
             HStack(spacing: 15) {
