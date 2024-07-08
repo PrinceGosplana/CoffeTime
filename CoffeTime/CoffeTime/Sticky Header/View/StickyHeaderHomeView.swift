@@ -20,6 +20,7 @@ struct StickyHeaderHomeView: View {
                 VStack {
                     StickyHeaderView(safeAreaTop: safeAreaTop, offsetY: offsetY)
                         .offset(y: -offsetY)
+                        .zIndex(1)
 
                     /// Scroll content goes here
                     VStack {
@@ -30,6 +31,7 @@ struct StickyHeaderHomeView: View {
                         }
                     }
                     .padding(15)
+                    .zIndex(0)
                 }
                 .offset(coordinateSpace: .named("SCROLL")) { offset in
                     offsetY = offset

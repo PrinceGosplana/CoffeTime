@@ -11,7 +11,13 @@ struct StickyHeaderCustomButton: View {
 
     let symbolImage: String
     let title: String
+    let offsetY: CGFloat
     let onClick: () -> Void
+
+    /// Fading out soon than the navbar animation
+    var progress: CGFloat {
+        -(offsetY / 40) > 1 ? -1 : (offsetY > 0 ? 0 : (offsetY / 40))
+    }
 
     var body: some View {
         Button {
@@ -33,11 +39,17 @@ struct StickyHeaderCustomButton: View {
                     .lineLimit(1)
                     .foregroundStyle(.white)
             }
+            .frame(maxWidth: .infinity)
+            .opacity(1 + progress)
+            // MARK: Displaying alternative icon
+            .overlay {
+                Image(systemName: symbolImage)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .opacity(-progress)
+                    .offset(y: -10)
+            }
         }
-        .frame(maxWidth: .infinity)
     }
 }
-
-//#Preview {
-//    StickyHeaderCustomButton()
-//}

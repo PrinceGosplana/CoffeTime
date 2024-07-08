@@ -12,7 +12,7 @@ struct StickyHeaderView: View {
     // Reduced Header height will be 80
     let offsetY: CGFloat
     var progress: CGFloat {
-        -(offsetY / 80) > 1 ? -1 : (offsetY < 0 ? 0 : (offsetY / 80))
+        -(offsetY / 80) > 1 ? -1 : (offsetY > 0 ? 0 : (offsetY / 80))
     }
 
     var body: some View {
@@ -31,6 +31,7 @@ struct StickyHeaderView: View {
                         .fill(.black)
                         .opacity(0.15)
                 }
+                .opacity(1 + progress)
 
                 Button {
 
@@ -49,23 +50,27 @@ struct StickyHeaderView: View {
             }
 
             HStack(spacing: 0) {
-                StickyHeaderCustomButton(symbolImage: "rectangle.portrait.and.arrow.forward", title: "Deposit") {
+                StickyHeaderCustomButton(symbolImage: "rectangle.portrait.and.arrow.forward", title: "Deposit", offsetY: offsetY) {
 
                 }
 
-                StickyHeaderCustomButton(symbolImage: "dollarsign", title: "Withdraw") {
+                StickyHeaderCustomButton(symbolImage: "dollarsign", title: "Withdraw", offsetY: offsetY) {
 
                 }
 
-                StickyHeaderCustomButton(symbolImage: "qrcode", title: "QR Code") {
+                StickyHeaderCustomButton(symbolImage: "qrcode", title: "QR Code", offsetY: offsetY) {
 
                 }
 
-                StickyHeaderCustomButton(symbolImage: "qrcode.viewfinder", title: "Scanning") {
+                StickyHeaderCustomButton(symbolImage: "qrcode.viewfinder", title: "Scanning", offsetY: offsetY) {
 
                 }
             }
+            /// Shrinking horizontal
+            .padding(.horizontal, -progress * 50)
             .padding(.top, 10)
+            // MARK: Moving up when scrolling started
+            .offset(y: progress * 65)
         }
         .environment(\.colorScheme, .dark)
         .padding([.horizontal, .bottom], 15)
@@ -73,6 +78,7 @@ struct StickyHeaderView: View {
         .background {
             Rectangle()
                 .fill(.red.gradient)
+                .padding(.bottom, -progress * 85)
         }
     }
 }
