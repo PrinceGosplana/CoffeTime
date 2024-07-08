@@ -11,7 +11,7 @@ struct StickyHeaderView: View {
     let safeAreaTop: CGFloat
     
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             HStack(spacing: 15) {
                 HStack(spacing: 8) {
                     Image(systemName: "magnifyingglass")
@@ -42,6 +42,25 @@ struct StickyHeaderView: View {
                         }
                 }
             }
+
+            HStack(spacing: 0) {
+                StickyHeaderCustomButton(symbolImage: "rectangle.portrait.and.arrow.forward", title: "Deposit") {
+
+                }
+
+                StickyHeaderCustomButton(symbolImage: "dollarsign", title: "Withdraw") {
+
+                }
+
+                StickyHeaderCustomButton(symbolImage: "qrcode", title: "QR Code") {
+
+                }
+
+                StickyHeaderCustomButton(symbolImage: "qrcode.viewfinder", title: "Scanning") {
+
+                }
+            }
+            .padding(.top, 10)
         }
         .environment(\.colorScheme, .dark)
         .padding([.horizontal, .bottom], 15)
@@ -54,5 +73,5 @@ struct StickyHeaderView: View {
 }
 
 #Preview {
-    StickyHeaderView(safeAreaTop: 0)
+    StickyHeaderContentView()
 }

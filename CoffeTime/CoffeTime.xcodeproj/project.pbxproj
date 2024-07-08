@@ -48,6 +48,7 @@
 		8A0C9C2B2C3AB2DD007487DA /* StickyHeaderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */; };
 		8A0C9C2D2C3AB2F0007487DA /* StickyHeaderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */; };
 		8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */; };
+		8A0CA0472C3BC49100D10CEF /* StickyHeaderCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -139,6 +140,7 @@
 		8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderHomeView.swift; sourceTree = "<group>"; };
 		8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderContentView.swift; sourceTree = "<group>"; };
 		8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
+		8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderCustomButton.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */,
 				8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */,
 				8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */,
+				8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				8A06CDC62C37E97800F60C1A /* SwipeDirection.swift in Sources */,
 				8A135C282C3504B0007AF05B /* CTab.swift in Sources */,
 				8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */,
+				8A0CA0472C3BC49100D10CEF /* StickyHeaderCustomButton.swift in Sources */,
 				8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */,
 				8A09C8E72C2DB5B00097D1DA /* PasswordResetView.swift in Sources */,
 				8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */,
