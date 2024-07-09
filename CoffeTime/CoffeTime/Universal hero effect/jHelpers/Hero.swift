@@ -12,7 +12,7 @@ struct HeroWrapper<Content: View>: View {
     @ViewBuilder var content: Content
 
     @Environment(\.scenePhase) private var scene
-    @State private var overlayWindow: UIWindow?
+    @State private var overlayWindow: PassthroughWindow?
     
     var body: some View {
         content
@@ -26,7 +26,7 @@ struct HeroWrapper<Content: View>: View {
         for scene in UIApplication.shared.connectedScenes {
             /// finding active scene
             if let windowScene = scene as? UIWindowScene, scene.activationState == .foregroundActive, overlayWindow == nil {
-                let window = UIWindow(windowScene: windowScene)
+                let window = PassthroughWindow(windowScene: windowScene)
                 window.backgroundColor = .clear
                 window.isUserInteractionEnabled = false
                 window.isHidden = false
@@ -52,6 +52,13 @@ struct HeroWrapper<Content: View>: View {
 fileprivate struct HeroLayerView: View {
     var body: some View {
         Rectangle()
-            .fill(.red)
+            .fill(.clear)
+    }
+}
+
+fileprivate class PassthroughWindow: UIWindow {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        guard let view = super.hitTest(point, with: event) else { return nil }
+        return rootViewController?.view == view ? nil : view
     }
 }
