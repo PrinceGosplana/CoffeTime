@@ -50,6 +50,8 @@
 		8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */; };
 		8A0CA0472C3BC49100D10CEF /* StickyHeaderCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */; };
 		8A0CA04A2C3BC9C400D10CEF /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CA0492C3BC9C400D10CEF /* View+Ext.swift */; };
+		8A0D66AC2C3D2719005163F9 /* UHEContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D66AB2C3D2719005163F9 /* UHEContentView.swift */; };
+		8A0D66AF2C3D272F005163F9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D66AE2C3D272F005163F9 /* Hero.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -88,6 +90,7 @@
 		8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55D2C08ADE3003C3511 /* RSContent.swift */; };
 		8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */; };
 		8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5612C08B674003C3511 /* Interpolation.swift */; };
+		8AEB90592C3D6F9000F7CD4E /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEB90582C3D6F9000F7CD4E /* View+Ext.swift */; };
 		8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2FB582C19A43E00B98D74 /* SideBarMenuView.swift */; };
 		8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2FB5A2C19A77A00B98D74 /* SideMenuTabs.swift */; };
 		8AF2FB5F2C19B89B00B98D74 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2FB5E2C19B89B00B98D74 /* SideBarButton.swift */; };
@@ -143,6 +146,8 @@
 		8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
 		8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderCustomButton.swift; sourceTree = "<group>"; };
 		8A0CA0492C3BC9C400D10CEF /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		8A0D66AB2C3D2719005163F9 /* UHEContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHEContentView.swift; sourceTree = "<group>"; };
+		8A0D66AE2C3D272F005163F9 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 		8A9AC55D2C08ADE3003C3511 /* RSContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSContent.swift; sourceTree = "<group>"; };
 		8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderView.swift; sourceTree = "<group>"; };
 		8A9AC5612C08B674003C3511 /* Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		8AEB90582C3D6F9000F7CD4E /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		8AF2FB582C19A43E00B98D74 /* SideBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenuView.swift; sourceTree = "<group>"; };
 		8AF2FB5A2C19A77A00B98D74 /* SideMenuTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTabs.swift; sourceTree = "<group>"; };
 		8AF2FB5E2C19B89B00B98D74 /* SideBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
@@ -377,6 +383,24 @@
 				8A0CA0492C3BC9C400D10CEF /* View+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A0D66AA2C3D26E8005163F9 /* Universal hero effect */ = {
+			isa = PBXGroup;
+			children = (
+				8A0D66AD2C3D2723005163F9 /* jHelpers */,
+				8A0D66AB2C3D2719005163F9 /* UHEContentView.swift */,
+			);
+			path = "Universal hero effect";
+			sourceTree = "<group>";
+		};
+		8A0D66AD2C3D2723005163F9 /* jHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A0D66AE2C3D272F005163F9 /* Hero.swift */,
+				8AEB90582C3D6F9000F7CD4E /* View+Ext.swift */,
+			);
+			path = jHelpers;
 			sourceTree = "<group>";
 		};
 		8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */ = {
@@ -577,6 +601,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A0D66AA2C3D26E8005163F9 /* Universal hero effect */,
 				8A0CA0482C3BC9B400D10CEF /* Extensions */,
 				8A0C9C282C3AB285007487DA /* Sticky Header */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
@@ -770,6 +795,7 @@
 				8A135C2A2C35056D007AF05B /* CustomTabbarContentView.swift in Sources */,
 				8A3389AC2C2D9E9600245E6C /* Signup.swift in Sources */,
 				8AF2FB5F2C19B89B00B98D74 /* SideBarButton.swift in Sources */,
+				8A0D66AC2C3D2719005163F9 /* UHEContentView.swift in Sources */,
 				8A019B462C26C4CC00799137 /* StackedCards.swift in Sources */,
 				8A0CA04A2C3BC9C400D10CEF /* View+Ext.swift in Sources */,
 				8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */,
@@ -793,8 +819,10 @@
 				8A13494A2C1C6FEE00099F7D /* CarousalItemView.swift in Sources */,
 				8A097D8F2C318CDF00F03670 /* PawView.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,
+				8AEB90592C3D6F9000F7CD4E /* View+Ext.swift in Sources */,
 				8A1349202C1B26EC00099F7D /* PHome.swift in Sources */,
 				8A1ED1352C2BF87B0046BDB9 /* CustomTextField.swift in Sources */,
+				8A0D66AF2C3D272F005163F9 /* Hero.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
 				8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */,
 				8A06CDC62C37E97800F60C1A /* SwipeDirection.swift in Sources */,
