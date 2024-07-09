@@ -30,7 +30,7 @@ struct ESAHomeView: View {
                 }
                 .coordinateSpace(name: "SCROLLVIEW")
             }
-            .navigationTitle("Messanger")
+            .navigationTitle("Messenger")
         }
     }
 
