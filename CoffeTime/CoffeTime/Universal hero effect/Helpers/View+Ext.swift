@@ -25,4 +25,9 @@ extension View {
                 }
         }
     }
+
+    @ViewBuilder
+    func heroLayer<Content: View>() -> some View {
+        self
+    }
 }

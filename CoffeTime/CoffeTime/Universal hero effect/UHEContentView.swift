@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct UHEContentView: View {
+    @State private var showView: Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SourceView(id: "View 1") {
+                Circle()
+                    .fill(.red)
+                    .frame(width: 50, height: 50)
+                    .onTapGesture {
+                        showView.toggle()
+                    }
+            }
+        }
+        .padding()
+        .sheet(isPresented: $showView, content: {
+            DestinationView(id: "View 2") {
+                Circle()
+                    .fill(.red)
+                    .frame(width: 150, height: 150)
+                    .onTapGesture {
+                        showView.toggle()
+                    }
+            }
+            .padding(15)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            /// This effect must disable all the native dismiss interactions, such as the sheet interactive dismiss and navigation back button
+            .interactiveDismissDisabled()
+        })
     }
 }
 
