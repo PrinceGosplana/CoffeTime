@@ -83,6 +83,7 @@
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A325E222C3E4D5800E27325 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A325E212C3E4D5800E27325 /* HeroModel.swift */; };
 		8A325E262C3E641A00E27325 /* AnchorKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A325E252C3E641A00E27325 /* AnchorKey.swift */; };
+		8A325E282C3E652900E27325 /* HeroInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A325E272C3E652900E27325 /* HeroInfo.swift */; };
 		8A3389AA2C2D968500245E6C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3389A92C2D968500245E6C /* CircleView.swift */; };
 		8A3389AC2C2D9E9600245E6C /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3389AB2C2D9E9600245E6C /* Signup.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
@@ -183,6 +184,7 @@
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A325E212C3E4D5800E27325 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		8A325E252C3E641A00E27325 /* AnchorKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorKey.swift; sourceTree = "<group>"; };
+		8A325E272C3E652900E27325 /* HeroInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroInfo.swift; sourceTree = "<group>"; };
 		8A3389A92C2D968500245E6C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		8A3389AB2C2D9E9600245E6C /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -411,6 +413,7 @@
 				8AEB905A2C3D9EA600F7CD4E /* SourceView.swift */,
 				8AEB905C2C3D9F2600F7CD4E /* DestinationView.swift */,
 				8A325E252C3E641A00E27325 /* AnchorKey.swift */,
+				8A325E272C3E652900E27325 /* HeroInfo.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */,
 				8A13493F2C1C40A800099F7D /* PixelArtContentView.swift in Sources */,
 				8A07186A2C12F1190017E1E8 /* GlitchFrameBuilder.swift in Sources */,
+				8A325E282C3E652900E27325 /* HeroInfo.swift in Sources */,
 				8A325E222C3E4D5800E27325 /* HeroModel.swift in Sources */,
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */,
