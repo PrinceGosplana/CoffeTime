@@ -9,5 +9,5 @@ import SwiftUI
 
 /// This environment object will be shared by source, destination and layer view for handling hero effects
 final class HeroModel: ObservableObject {
-
+    @Published var info: [HeroInfo] = []
 }
