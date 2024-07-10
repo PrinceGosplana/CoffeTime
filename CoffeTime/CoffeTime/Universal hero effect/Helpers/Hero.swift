@@ -13,12 +13,13 @@ struct HeroWrapper<Content: View>: View {
 
     @Environment(\.scenePhase) private var scene
     @State private var overlayWindow: PassthroughWindow?
-    
+    @StateObject private var heroModel: HeroModel = .init()
     var body: some View {
         content
             .customOnChange(value: scene) { newValue in
                 if newValue == .active { addOverlayWindow() }
             }
+            .environmentObject(heroModel)
     }
 
     /// adding overlay window
@@ -30,7 +31,7 @@ struct HeroWrapper<Content: View>: View {
                 window.backgroundColor = .clear
                 window.isUserInteractionEnabled = false
                 window.isHidden = false
-                let rootController = UIHostingController(rootView: HeroLayerView())
+                let rootController = UIHostingController(rootView: HeroLayerView().environmentObject(heroModel))
                 rootController.view.frame = windowScene.screen.bounds
                 rootController.view.backgroundColor = .clear
 
@@ -50,6 +51,9 @@ struct HeroWrapper<Content: View>: View {
 }
 
 fileprivate struct HeroLayerView: View {
+
+    @EnvironmentObject private var hereModel: HeroModel
+
     var body: some View {
         Rectangle()
             .fill(.clear)

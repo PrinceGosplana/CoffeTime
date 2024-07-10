@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DestinationView<Content: View>: View {
+    @EnvironmentObject private var hereModel: HeroModel
+    
     @ViewBuilder var content: Content
     var body: some View {
         content
