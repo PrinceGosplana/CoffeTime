@@ -36,6 +36,15 @@ struct UHEContentView: View {
             /// This effect must disable all the native dismiss interactions, such as the sheet interactive dismiss and navigation back button
             .interactiveDismissDisabled()
         })
+        .heroLayer(
+            id: "View 1",
+            animate: $showView) {
+                Circle()
+                    .fill(.red)
+            } completion: { status in
+
+            }
+
     }
 }
 
