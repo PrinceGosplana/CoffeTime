@@ -56,6 +56,8 @@
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
 		8A0F01CF2C0EF10500B77AB1 /* FindCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CE2C0EF10500B77AB1 /* FindCollectionView.swift */; };
 		8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01D02C0EF1B400B77AB1 /* UIView+Extension.swift */; };
+		8A1192422C40ECB600374DA9 /* HeroLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1192412C40ECB600374DA9 /* HeroLayerView.swift */; };
+		8A1192442C40ECD800374DA9 /* PassthroughWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1192432C40ECD800374DA9 /* PassthroughWindow.swift */; };
 		8A1349202C1B26EC00099F7D /* PHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13491F2C1B26EC00099F7D /* PHome.swift */; };
 		8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */; };
 		8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349232C1B29CB00099F7D /* DummySection.swift */; };
@@ -157,6 +159,8 @@
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
 		8A0F01CE2C0EF10500B77AB1 /* FindCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCollectionView.swift; sourceTree = "<group>"; };
 		8A0F01D02C0EF1B400B77AB1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8A1192412C40ECB600374DA9 /* HeroLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLayerView.swift; sourceTree = "<group>"; };
+		8A1192432C40ECD800374DA9 /* PassthroughWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughWindow.swift; sourceTree = "<group>"; };
 		8A13491F2C1B26EC00099F7D /* PHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHome.swift; sourceTree = "<group>"; };
 		8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxScrollEffectContent.swift; sourceTree = "<group>"; };
 		8A1349232C1B29CB00099F7D /* DummySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySection.swift; sourceTree = "<group>"; };
@@ -407,13 +411,15 @@
 		8A0D66AD2C3D2723005163F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8A0D66AE2C3D272F005163F9 /* Hero.swift */,
-				8A325E212C3E4D5800E27325 /* HeroModel.swift */,
-				8AEB905A2C3D9EA600F7CD4E /* SourceView.swift */,
-				8AEB905C2C3D9F2600F7CD4E /* DestinationView.swift */,
 				8A325E252C3E641A00E27325 /* AnchorKey.swift */,
+				8AEB905C2C3D9F2600F7CD4E /* DestinationView.swift */,
+				8A0D66AE2C3D272F005163F9 /* Hero.swift */,
 				8A325E272C3E652900E27325 /* HeroInfo.swift */,
 				8AE9BCDB2C4008C90084D4E8 /* HeroLayerViewModifier.swift */,
+				8A325E212C3E4D5800E27325 /* HeroModel.swift */,
+				8AEB905A2C3D9EA600F7CD4E /* SourceView.swift */,
+				8A1192412C40ECB600374DA9 /* HeroLayerView.swift */,
+				8A1192432C40ECD800374DA9 /* PassthroughWindow.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -616,15 +622,13 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A0D66AA2C3D26E8005163F9 /* Universal hero effect */,
-				8A0CA0482C3BC9B400D10CEF /* Extensions */,
-				8A0C9C282C3AB285007487DA /* Sticky Header */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
+				8A0CA0482C3BC9B400D10CEF /* Extensions */,
 				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
 				8A07185D2C12E97B0017E1E8 /* Glitch Text Effect */,
 				8A1349422C1C6B0200099F7D /* Google movie carousal */,
@@ -637,9 +641,11 @@
 				8A9AC5542C08ADAF003C3511 /* Preview Content */,
 				8A9AC55C2C08ADC9003C3511 /* RangeSlider */,
 				8A019B3B2C26BD6B00799137 /* Stacked scrollview */,
+				8A0C9C282C3AB285007487DA /* Sticky Header */,
 				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */,
 				8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */,
+				8A0D66AA2C3D26E8005163F9 /* Universal hero effect */,
 				8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */,
 			);
 			path = CoffeTime;
@@ -779,6 +785,7 @@
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */,
 				8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */,
+				8A1192442C40ECD800374DA9 /* PassthroughWindow.swift in Sources */,
 				8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */,
 				8A1ED1302C2BF5C10046BDB9 /* LoginContentView.swift in Sources */,
 				8A135C2E2C350739007AF05B /* CTabItem.swift in Sources */,
@@ -833,6 +840,7 @@
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A1349482C1C6D6200099F7D /* GoogleMovieCarouselView.swift in Sources */,
 				8A0381EF2C39640B000CAEE0 /* OffsetKey.swift in Sources */,
+				8A1192422C40ECB600374DA9 /* HeroLayerView.swift in Sources */,
 				8A13494A2C1C6FEE00099F7D /* CarousalItemView.swift in Sources */,
 				8A097D8F2C318CDF00F03670 /* PawView.swift in Sources */,
 				8A0718622C12E9C00017E1E8 /* GlitchText.swift in Sources */,

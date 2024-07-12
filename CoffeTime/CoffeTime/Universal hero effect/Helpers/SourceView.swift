@@ -9,23 +9,36 @@ import SwiftUI
 
 struct SourceView<Content: View>: View {
     let id: String
-    @EnvironmentObject private var hereModel: HeroModel
+    @EnvironmentObject private var heroModel: HeroModel
     @ViewBuilder var content: Content
     var body: some View {
         content
+            .opacity(opacity)
             .anchorPreference(key: AnchorKey.self, value: .bounds, transform: { anchor in
                 /// Whenever the hero effect for the given ID is active, we will be returning its anchor value for handling the animation
-                if let index, hereModel.info[index].isActive {
+                if let index, heroModel.info[index].isActive {
                     return [id: anchor]
                 }
                 return [:]
             })
+            .onPreferenceChange(AnchorKey.self, perform: { value in
+                if let index, heroModel.info[index].isActive, heroModel.info[index].sourceAnchor == nil {
+                    heroModel.info[index].sourceAnchor = value[id]
+                }
+            })
     }
 
-    private var index: Int? {
-        if let index = hereModel.info.firstIndex(where: { $0.infoID == id }) {
+    var index: Int? {
+        if let index = heroModel.info.firstIndex(where: { $0.infoID == id }) {
             return index
         }
         return nil
+    }
+
+    var opacity: CGFloat {
+        if let index {
+            return heroModel.info[index].isActive ? 0 : 1
+        }
+        return 1
     }
 }

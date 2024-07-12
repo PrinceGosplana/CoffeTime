@@ -32,7 +32,7 @@ struct UHEContentView: View {
                     }
             }
             .padding(15)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             /// This effect must disable all the native dismiss interactions, such as the sheet interactive dismiss and navigation back button
             .interactiveDismissDisabled()
         })

@@ -49,20 +49,3 @@ struct HeroWrapper<Content: View>: View {
 #Preview {
     UHEContentView()
 }
-
-fileprivate struct HeroLayerView: View {
-
-    @EnvironmentObject private var hereModel: HeroModel
-
-    var body: some View {
-        Rectangle()
-            .fill(.clear)
-    }
-}
-
-fileprivate class PassthroughWindow: UIWindow {
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        guard let view = super.hitTest(point, with: event) else { return nil }
-        return rootViewController?.view == view ? nil : view
-    }
-}
