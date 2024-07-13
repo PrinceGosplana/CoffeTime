@@ -46,6 +46,7 @@
 		8A0A4A162C2EE1AF001A47CE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A152C2EE1AF001A47CE /* String+Ext.swift */; };
 		8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */; };
 		8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */; };
+		8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */; };
 		8A0C9C2B2C3AB2DD007487DA /* StickyHeaderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */; };
 		8A0C9C2D2C3AB2F0007487DA /* StickyHeaderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */; };
 		8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */; };
@@ -150,6 +151,7 @@
 		8A0A4A152C2EE1AF001A47CE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOTPVerificationView.swift; sourceTree = "<group>"; };
 		8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroItem.swift; sourceTree = "<group>"; };
+		8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
 		8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderHomeView.swift; sourceTree = "<group>"; };
 		8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderContentView.swift; sourceTree = "<group>"; };
 		8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				8A1192412C40ECB600374DA9 /* HeroLayerView.swift */,
 				8A1192432C40ECD800374DA9 /* PassthroughWindow.swift */,
 				8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */,
+				8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */,
 				8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */,
+				8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */,
 				8A1192442C40ECD800374DA9 /* PassthroughWindow.swift in Sources */,
 				8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */,
 				8A1ED1302C2BF5C10046BDB9 /* LoginContentView.swift in Sources */,

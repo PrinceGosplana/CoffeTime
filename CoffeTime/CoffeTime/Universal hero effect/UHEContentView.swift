@@ -59,7 +59,7 @@ struct UHEContentView: View {
         NavigationStack {
             List {
                 ForEach(HeroItem.mocks) { item in
-
+                    HeroCardView(item: item)
                 }
             }
             .navigationTitle("Hero Effect")

@@ -17,7 +17,7 @@ struct HeroItem: Identifiable {
 
 extension HeroItem {
     static var mocks: [HeroItem] = [
-        .init(title: "Book Icon", color: .red, symbol: "book.fill"),
+        .init(title: "Book Icon", color: .yellow, symbol: "book.fill"),
         .init(title: "Stack Icon", color: .mint, symbol: "square.stack.3d.up"),
         .init(title: "Rectangle Icon", color: .indigo, symbol: "rectangle.portrait")
     ]
