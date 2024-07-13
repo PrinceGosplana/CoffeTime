@@ -377,6 +377,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8A0BF0072C429394007D0FC1 /* Progress based hero animation effect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Progress based hero animation effect";
+			sourceTree = "<group>";
+		};
 		8A0C9C282C3AB285007487DA /* Sticky Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +635,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A0BF0072C429394007D0FC1 /* Progress based hero animation effect */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
