@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct HAEHomeView: View {
+    @State private var allProfiles: [HeroProfile] = HeroProfile.mocks
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(allProfiles) { profile in
+                HStack(spacing: 12) {
+                    Image(profile.profilePicture)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(profile.userName)
+                            .fontWeight(.semibold)
+
+                        Text(profile.lastMsg)
+                            .font(.caption2)
+                            .foregroundStyle(.gray)
+                    }
+                }
+                .onTapGesture {
+
+                }
+            }
+            .navigationTitle("Progress Effect")
+        }
     }
 }
 
