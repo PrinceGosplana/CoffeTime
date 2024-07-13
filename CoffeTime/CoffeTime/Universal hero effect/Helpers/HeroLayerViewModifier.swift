@@ -44,6 +44,7 @@ struct HeroLayerViewModifier<Layer: View>: ViewModifier {
                             }
                         }
                     } else {
+                        heroModel.info[index].hideView = false
                         withAnimation(.snappy(duration: 0.35, extraBounce: 0)) {
                             heroModel.info[index].animateView = false
                         }

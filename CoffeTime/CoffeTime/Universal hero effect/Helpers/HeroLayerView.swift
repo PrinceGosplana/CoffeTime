@@ -42,9 +42,9 @@ struct HeroLayerView: View {
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     }
                 }
-                .customOnChange(value: info.hideView) { newValue in
+                .customOnChange(value: info.animateView) { newValue in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-                        if newValue {
+                        if !newValue {
                             /// Reseting all data once the view goes back to it's source state
                             info.isActive = false
                             info.layerView = nil
