@@ -31,14 +31,21 @@ struct HeroCardView: View {
         }
         .sheet(isPresented: $expandSheet, content: {
             DestinationView(id: item.id.uuidString) {
-                Image(systemName: item.symbol)
-                    .font(.title2)
-                    .frame(width: 40, height: 40)
-                    .background(item.color.gradient, in: .circle)
+                ImageView()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
             .padding()
         })
+
+
+    }
+
+    @ViewBuilder
+    func ImageView() -> some View {
+        Image(systemName: item.symbol)
+            .font(.title2)
+            .frame(width: 40, height: 40)
+            .background(item.color.gradient, in: .circle)
     }
 }
 
