@@ -15,10 +15,7 @@ struct HeroCardView: View {
     var body: some View {
         HStack(spacing: 12) {
             SourceView(id: item.id.uuidString) {
-                Image(systemName: item.symbol)
-                    .font(.title3)
-                    .frame(width: 40, height: 40)
-                    .background(item.color.gradient, in: .circle)
+                ImageView()
             }
 
             Text(item.title)
@@ -32,11 +29,19 @@ struct HeroCardView: View {
         .sheet(isPresented: $expandSheet, content: {
             DestinationView(id: item.id.uuidString) {
                 ImageView()
+                    .onTapGesture {
+                        expandSheet.toggle()
+                    }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             .padding()
+            .interactiveDismissDisabled()
         })
+        .heroLayer(id: item.id.uuidString, animate: $expandSheet) {
+            ImageView()
+        } completion: { _ in
 
+        }
 
     }
 
@@ -44,6 +49,7 @@ struct HeroCardView: View {
     func ImageView() -> some View {
         Image(systemName: item.symbol)
             .font(.title2)
+            .foregroundStyle(.white)
             .frame(width: 40, height: 40)
             .background(item.color.gradient, in: .circle)
     }
