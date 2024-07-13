@@ -47,6 +47,7 @@
 		8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */; };
 		8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */; };
 		8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */; };
+		8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */; };
 		8A0C9C2B2C3AB2DD007487DA /* StickyHeaderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */; };
 		8A0C9C2D2C3AB2F0007487DA /* StickyHeaderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */; };
 		8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */; };
@@ -152,6 +153,7 @@
 		8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOTPVerificationView.swift; sourceTree = "<group>"; };
 		8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroItem.swift; sourceTree = "<group>"; };
 		8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
+		8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroProfile.swift; sourceTree = "<group>"; };
 		8A0C9C2A2C3AB2DD007487DA /* StickyHeaderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderHomeView.swift; sourceTree = "<group>"; };
 		8A0C9C2C2C3AB2F0007487DA /* StickyHeaderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderContentView.swift; sourceTree = "<group>"; };
 		8A0C9C2E2C3AB3DC007487DA /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
@@ -380,8 +382,17 @@
 		8A0BF0072C429394007D0FC1 /* Progress based hero animation effect */ = {
 			isa = PBXGroup;
 			children = (
+				8A0BF0082C429587007D0FC1 /* Model */,
 			);
 			path = "Progress based hero animation effect";
+			sourceTree = "<group>";
+		};
+		8A0BF0082C429587007D0FC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8A0C9C282C3AB285007487DA /* Sticky Header */ = {
@@ -883,6 +894,7 @@
 				8A0718662C12EEEF0017E1E8 /* GTExtendedSpacer.swift in Sources */,
 				8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */,
 				8AEB905B2C3D9EA600F7CD4E /* SourceView.swift in Sources */,
+				8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8A097D962C3195D100F03670 /* ESAHomeView.swift in Sources */,
 				8A019B422C26BED900799137 /* SSHomeView.swift in Sources */,
