@@ -92,6 +92,7 @@
 		8A325E282C3E652900E27325 /* HeroInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A325E272C3E652900E27325 /* HeroInfo.swift */; };
 		8A3389AA2C2D968500245E6C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3389A92C2D968500245E6C /* CircleView.swift */; };
 		8A3389AC2C2D9E9600245E6C /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3389AB2C2D9E9600245E6C /* Signup.swift */; };
+		8A39C0DF2C43FC9F00A7F855 /* HAEDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
 		8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5502C08ADAD003C3511 /* ContentView.swift */; };
 		8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9AC5522C08ADAF003C3511 /* Assets.xcassets */; };
@@ -200,6 +201,7 @@
 		8A325E272C3E652900E27325 /* HeroInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroInfo.swift; sourceTree = "<group>"; };
 		8A3389A92C2D968500245E6C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		8A3389AB2C2D9E9600245E6C /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAEDetailView.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTimeApp.swift; sourceTree = "<group>"; };
 		8A9AC5502C08ADAD003C3511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 			children = (
 				8A0BF00C2C42967C007D0FC1 /* HAEHomeView.swift */,
 				8A0BF00E2C429688007D0FC1 /* HAEContentVeiw.swift */,
+				8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
 				8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */,
+				8A39C0DF2C43FC9F00A7F855 /* HAEDetailView.swift in Sources */,
 				8A0C9C2B2C3AB2DD007487DA /* StickyHeaderHomeView.swift in Sources */,
 				8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */,
 				8A1A42FF2C370E0B00809BBA /* SwipeHomeView.swift in Sources */,

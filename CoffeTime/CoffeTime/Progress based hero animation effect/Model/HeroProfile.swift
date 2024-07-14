@@ -17,6 +17,7 @@ struct HeroProfile: Identifiable {
 extension HeroProfile {
     static let mocks: [HeroProfile] = [
         .init(userName: "Henna Ezarik", profilePicture: "girl_1", lastMsg: "I miss you"),
-        .init(userName: "Julie Stark", profilePicture: "girl_2", lastMsg: "I'm watching at you!")
+        .init(userName: "Julie Stark", profilePicture: "girl_2", lastMsg: "I'm watching at you!"),
+        .init(userName: "Janet Groove", profilePicture: "girl_3", lastMsg: "Shame on you!")
     ]
 }

@@ -10,6 +10,10 @@ import SwiftUI
 struct HAEHomeView: View {
     @State private var allProfiles: [HeroProfile] = HeroProfile.mocks
 
+    /// Detail properties
+    @State private var selectedProfile: HeroProfile?
+    @State private var showDetail = false
+
     var body: some View {
         NavigationStack {
             List(allProfiles) { profile in
@@ -30,10 +34,17 @@ struct HAEHomeView: View {
                     }
                 }
                 .onTapGesture {
-
+                    selectedProfile = profile
+                    showDetail.toggle()
                 }
             }
             .navigationTitle("Progress Effect")
+        }
+        .overlay {
+            if showDetail {
+                HAEDetailView(selectedProfile: $selectedProfile, showDetail: $showDetail)
+                    .transition(.identity)
+            }
         }
     }
 }
