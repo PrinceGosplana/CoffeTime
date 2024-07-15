@@ -10,7 +10,9 @@ import SwiftUI
 struct HAEDetailView: View {
 
     @Binding var selectedProfile: HeroProfile?
+    @Binding var heroProgress: CGFloat
     @Binding var showDetail: Bool
+    @Binding var showHeroView: Bool
 
     /// Color scheme based background color
     @Environment(\.colorScheme) private var scheme
@@ -24,12 +26,14 @@ struct HAEDetailView: View {
                     Rectangle()
                         .fill(.clear)
                         .overlay {
-                            Image(selectedProfile.profilePicture)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: size.width, height: 400)
-                                .clipped()
-                                .hidden()
+                            if !showHeroView {
+                                Image(selectedProfile.profilePicture)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: size.width, height: 400)
+                                    .clipShape(.rect(cornerRadius: 25))
+                                    .transition(.identity)
+                            }
                         }
                         .frame(height: 400)
 
@@ -59,12 +63,15 @@ struct HAEDetailView: View {
                     }
                     .buttonStyle(.plain)
                     .padding()
+                    .opacity(showHeroView ? 0 : 1)
+                    .animation(.smooth, value: showHeroView)
                 }
+                .offset(x: size.width - (size.width * heroProgress))
             }
         }
     }
 }
 
 #Preview {
-    HAEDetailView(selectedProfile: .constant(HeroProfile.mocks[0]), showDetail: .constant(true))
+    HAEDetailView(selectedProfile: .constant(HeroProfile.mocks[0]), heroProgress: .constant(1.0), showDetail: .constant(true), showHeroView: .constant(true))
 }

@@ -14,6 +14,7 @@ struct HAEHomeView: View {
     @State private var selectedProfile: HeroProfile?
     @State private var showDetail = false
     @State private var heroProgress: CGFloat = 0
+    @State private var showHeroView = true
 
     var body: some View {
         NavigationStack {
@@ -44,17 +45,22 @@ struct HAEHomeView: View {
                     withAnimation(.snappy(duration: 0.35, extraBounce: 0), completionCriteria: .logicallyComplete) {
                         heroProgress = 1.0
                     } completion: {
-
+                        Task {
+                            try? await Task.sleep(for: .seconds(0.1))
+                            showHeroView = false
+                        }
                     }
                 }
             }
             .navigationTitle("Progress Effect")
         }
         .overlay {
-            if showDetail {
-                HAEDetailView(selectedProfile: $selectedProfile, showDetail: $showDetail)
-                    .transition(.identity)
-            }
+            HAEDetailView(
+                selectedProfile: $selectedProfile,
+                heroProgress: $heroProgress,
+                showDetail: $showDetail, 
+                showHeroView: $showHeroView
+            )
         }
         /// Hero animation layer
         .overlayPreferenceValue(AnchorKey.self,
@@ -92,6 +98,7 @@ struct HAEHomeView: View {
                             x: sourceRect.minX + (diffOrigin.x * heroProgress),
                             y: sourceRect.minY + (diffOrigin.y * heroProgress)
                         )
+                        .opacity(showHeroView ? 1 : 0)
                 }
             }
         })
