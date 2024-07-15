@@ -25,6 +25,7 @@ struct HAEHomeView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
+                        .opacity(selectedProfile?.id == profile.id ? 0 : 1)
                         .anchorPreference(key: AnchorKey.self, value: .bounds, transform: { anchor in
                             [profile.id.uuidString: anchor]
                         })
@@ -40,7 +41,7 @@ struct HAEHomeView: View {
                 }
                 .onTapGesture {
                     selectedProfile = profile
-                    showDetail.toggle()
+                    showDetail = true
 
                     withAnimation(.snappy(duration: 0.35, extraBounce: 0), completionCriteria: .logicallyComplete) {
                         heroProgress = 1.0
