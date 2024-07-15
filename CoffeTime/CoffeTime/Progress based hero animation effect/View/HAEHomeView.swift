@@ -40,6 +40,12 @@ struct HAEHomeView: View {
                 .onTapGesture {
                     selectedProfile = profile
                     showDetail.toggle()
+
+                    withAnimation(.snappy(duration: 0.35, extraBounce: 0), completionCriteria: .logicallyComplete) {
+                        heroProgress = 1.0
+                    } completion: {
+
+                    }
                 }
             }
             .navigationTitle("Progress Effect")
@@ -89,10 +95,6 @@ struct HAEHomeView: View {
                 }
             }
         })
-        .overlay(alignment: .bottom) {
-            Slider(value: $heroProgress)
-                .padding()
-        }
     }
 }
 
