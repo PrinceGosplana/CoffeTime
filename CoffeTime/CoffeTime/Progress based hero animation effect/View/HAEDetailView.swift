@@ -21,11 +21,22 @@ struct HAEDetailView: View {
                 let size = $0.size
 
                 ScrollView(.vertical) {
-                    Image(selectedProfile.profilePicture)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: size.width, height: 400)
-                        .clipped()
+                    Rectangle()
+                        .fill(.clear)
+                        .overlay {
+                            Image(selectedProfile.profilePicture)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: size.width, height: 400)
+                                .clipped()
+                                .hidden()
+                        }
+                        .frame(height: 400)
+
+                    /// Destination anchor frame
+                        .anchorPreference(key: AnchorKey.self, value: .bounds, transform: { anchor in
+                            ["DESTINATION": anchor]
+                        })
                 }
                 .scrollIndicators(.hidden)
                 .ignoresSafeArea()

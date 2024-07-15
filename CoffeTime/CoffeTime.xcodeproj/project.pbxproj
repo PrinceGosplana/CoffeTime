@@ -261,6 +261,7 @@
 		8A0381ED2C3963E5000CAEE0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8A325E252C3E641A00E27325 /* AnchorKey.swift */,
 				8A0381EE2C39640B000CAEE0 /* OffsetKey.swift */,
 				8AE9BCDD2C400C610084D4E8 /* View+Ext.swift */,
 			);
@@ -450,7 +451,6 @@
 		8A0D66AD2C3D2723005163F9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8A325E252C3E641A00E27325 /* AnchorKey.swift */,
 				8AEB905C2C3D9F2600F7CD4E /* DestinationView.swift */,
 				8A0D66AE2C3D272F005163F9 /* Hero.swift */,
 				8A325E272C3E652900E27325 /* HeroInfo.swift */,

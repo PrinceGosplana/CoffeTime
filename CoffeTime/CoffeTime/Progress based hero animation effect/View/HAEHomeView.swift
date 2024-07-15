@@ -23,6 +23,9 @@ struct HAEHomeView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
+                        .anchorPreference(key: AnchorKey.self, value: .bounds, transform: { anchor in
+                            [profile.id.uuidString: anchor]
+                        })
 
                     VStack(alignment: .leading, spacing: 6) {
                         Text(profile.userName)
@@ -46,6 +49,25 @@ struct HAEHomeView: View {
                     .transition(.identity)
             }
         }
+        /// Hero animation layer
+        .overlayPreferenceValue(AnchorKey.self, { value in
+            GeometryReader { geometry in
+                /// Let's check whether we have both source and destination frames
+                if let selectedProfile, let source = value[selectedProfile.id.uuidString], let destination = value["DESTINATION"] {
+                    let sourceRect = geometry[source]
+                    let radius = sourceRect.height / 2
+                    let destinationRect = geometry[destination]
+
+                    /// Hero view here is just a profile image
+                    Image(selectedProfile.profilePicture)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: sourceRect.width, height: sourceRect.height)
+                        .clipShape(.rect(cornerRadius: radius))
+                        .offset(x: sourceRect.minX, y: sourceRect.minY)
+                }
+            }
+        })
     }
 }
 
