@@ -13,6 +13,7 @@ struct HAEHomeView: View {
     /// Detail properties
     @State private var selectedProfile: HeroProfile?
     @State private var showDetail = false
+    @State private var heroProgress: CGFloat = 0
 
     var body: some View {
         NavigationStack {
@@ -50,24 +51,48 @@ struct HAEHomeView: View {
             }
         }
         /// Hero animation layer
-        .overlayPreferenceValue(AnchorKey.self, { value in
+        .overlayPreferenceValue(AnchorKey.self,
+                                {
+            value in
             GeometryReader { geometry in
                 /// Let's check whether we have both source and destination frames
-                if let selectedProfile, let source = value[selectedProfile.id.uuidString], let destination = value["DESTINATION"] {
+                if let selectedProfile,
+                   let source = value[selectedProfile.id.uuidString],
+                   let destination = value["DESTINATION"] {
                     let sourceRect = geometry[source]
                     let radius = sourceRect.height / 2
                     let destinationRect = geometry[destination]
+                    
+                    let diffSize = CGSize(
+                        width: destinationRect.width - sourceRect.width,
+                        height: destinationRect.height - sourceRect.height
+                    )
+
+                    let diffOrigin = CGPoint(
+                        x: destinationRect.minX - sourceRect.minX,
+                        y: destinationRect.minY - sourceRect.minY
+                    )
 
                     /// Hero view here is just a profile image
                     Image(selectedProfile.profilePicture)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: sourceRect.width, height: sourceRect.height)
+                        .frame(
+                            width: sourceRect.width + (diffSize.width * heroProgress),
+                            height: sourceRect.height + (diffSize.height * heroProgress)
+                        )
                         .clipShape(.rect(cornerRadius: radius))
-                        .offset(x: sourceRect.minX, y: sourceRect.minY)
+                        .offset(
+                            x: sourceRect.minX + (diffOrigin.x * heroProgress),
+                            y: sourceRect.minY + (diffOrigin.y * heroProgress)
+                        )
                 }
             }
         })
+        .overlay(alignment: .bottom) {
+            Slider(value: $heroProgress)
+                .padding()
+        }
     }
 }
 
