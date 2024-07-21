@@ -56,6 +56,8 @@
 		8A0CA0472C3BC49100D10CEF /* StickyHeaderCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */; };
 		8A0D66AC2C3D2719005163F9 /* UHEContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D66AB2C3D2719005163F9 /* UHEContentView.swift */; };
 		8A0D66AF2C3D272F005163F9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D66AE2C3D272F005163F9 /* Hero.swift */; };
+		8A0E02042C4CE33A000E8AF9 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E02032C4CE33A000E8AF9 /* LockView.swift */; };
+		8A0E02062C4CE352000E8AF9 /* LockContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E02052C4CE352000E8AF9 /* LockContentView.swift */; };
 		8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */; };
 		8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */; };
 		8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */; };
@@ -165,6 +167,8 @@
 		8A0CA0462C3BC49100D10CEF /* StickyHeaderCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderCustomButton.swift; sourceTree = "<group>"; };
 		8A0D66AB2C3D2719005163F9 /* UHEContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UHEContentView.swift; sourceTree = "<group>"; };
 		8A0D66AE2C3D272F005163F9 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		8A0E02032C4CE33A000E8AF9 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		8A0E02052C4CE352000E8AF9 /* LockContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockContentView.swift; sourceTree = "<group>"; };
 		8A0F01C82C0EEE3700B77AB1 /* DummyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTab.swift; sourceTree = "<group>"; };
 		8A0F01CA2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOffsetReaderView.swift; sourceTree = "<group>"; };
 		8A0F01CC2C0EF08200B77AB1 /* PageOffsetObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageOffsetObserver.swift; sourceTree = "<group>"; };
@@ -465,6 +469,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8A0E02012C4CE2E8000E8AF9 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				8A0E02022C4CE32D000E8AF9 /* View */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		8A0E02022C4CE32D000E8AF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A0E02032C4CE33A000E8AF9 /* LockView.swift */,
+				8A0E02052C4CE352000E8AF9 /* LockContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,14 +593,14 @@
 		8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */ = {
 			isa = PBXGroup;
 			children = (
-				8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */,
-				8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */,
-				8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */,
-				8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */,
-				8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */,
 				8A06CDC12C37E67C00F60C1A /* Action.swift */,
 				8A06CDC32C37E84900F60C1A /* ActionBuilder.swift */,
+				8A0381EB2C3961CC000CAEE0 /* CustomTransition.swift */,
+				8A06CDBF2C37D1B300F60C1A /* SwipeAction.swift */,
+				8A06CDBD2C37CE9900F60C1A /* SwipeCardView.swift */,
+				8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */,
 				8A06CDC52C37E97800F60C1A /* SwipeDirection.swift */,
+				8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */,
 			);
 			path = "Swipe Actions for scrollview";
 			sourceTree = "<group>";
@@ -663,6 +684,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A0E02012C4CE2E8000E8AF9 /* Lock */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
@@ -842,6 +864,7 @@
 				8A019B442C26C08000799137 /* BottomActionBar.swift in Sources */,
 				8AEB905D2C3D9F2600F7CD4E /* DestinationView.swift in Sources */,
 				8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */,
+				8A0E02042C4CE33A000E8AF9 /* LockView.swift in Sources */,
 				8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
 				8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */,
@@ -921,6 +944,7 @@
 				8A0F01CF2C0EF10500B77AB1 /* FindCollectionView.swift in Sources */,
 				8A0718202C1192BF0017E1E8 /* VCCHome.swift in Sources */,
 				8A019B402C26BED100799137 /* SSContentView.swift in Sources */,
+				8A0E02062C4CE352000E8AF9 /* LockContentView.swift in Sources */,
 				8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */,
 				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
 			);
