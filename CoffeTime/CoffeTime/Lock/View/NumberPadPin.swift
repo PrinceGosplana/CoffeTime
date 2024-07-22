@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NumberPadPin: View {
+    var forgotPin: () -> ()
     var body: some View {
         VStack(spacing: 15) {
             Text("Enter Pin")
@@ -19,6 +20,14 @@ struct NumberPadPin: View {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 50, height: 55)
                 }
+            }
+            .padding(.top, 15)
+            .overlay(alignment: .bottomTrailing) {
+                Button("Forgot Pin?") {
+                    forgotPin()
+                }
+                .foregroundStyle(.white)
+                .offset(y: 40)
             }
             .frame(maxHeight: .infinity)
 
