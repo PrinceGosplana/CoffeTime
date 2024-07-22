@@ -14,6 +14,7 @@ struct LockView<Content: View>: View {
     let isEnabled: Bool
     var lockWhenAppGoesBackground: Bool = true
     @State private var pin: String = ""
+    @State private var isUnlocked: Bool = false
     
     var forgotPin: () -> () = { }
     @ViewBuilder let content: Content
@@ -25,17 +26,18 @@ struct LockView<Content: View>: View {
             content
                 .frame(width: size.width, height: size.height)
 
-            if isEnabled {
-                Rectangle()
-                    .ignoresSafeArea()
-                
+            if isEnabled && !isUnlocked {
+
                 ZStack {
+                    Rectangle()
+                        .ignoresSafeArea()
                     if lockType == .both || lockType == .biometric {
                     } else {
                         /// Custom number pad to type view lock pin
-                        NumberPadPin(forgotPin: forgotPin, pin: $pin, lockPin: lockPin)
+                        NumberPadPin(forgotPin: forgotPin, pin: $pin, lockPin: lockPin, isUnlocked: $isUnlocked)
                     }
                 }
+                .transition(.offset(y: size.height + 100))
             }
         }
     }

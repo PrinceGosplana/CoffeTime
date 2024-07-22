@@ -13,6 +13,7 @@ struct NumberPadPin: View {
     @Binding var pin: String
     let lockPin: String
     @State private var animateField: Bool = false
+    @Binding var isUnlocked: Bool
 
     var body: some View {
         VStack(spacing: 15) {
@@ -112,7 +113,12 @@ struct NumberPadPin: View {
                 if newValue.count == maxLimit {
                     /// Validate pin
                     if lockPin == pin {
-
+                        withAnimation(.snappy, completionCriteria: .logicallyComplete) {
+                            isUnlocked = true
+                        } completion: {
+                            /// clearing pin
+                            pin = ""
+                        }
                     } else {
                         pin = ""
                         animateField.toggle()
