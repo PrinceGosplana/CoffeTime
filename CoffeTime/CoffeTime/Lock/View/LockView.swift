@@ -32,7 +32,7 @@ struct LockView<Content: View>: View {
                     if lockType == .both || lockType == .biometric {
                     } else {
                         /// Custom number pad to type view lock pin
-                        NumberPadPin(forgotPin: forgotPin)
+                        NumberPadPin(forgotPin: forgotPin, pin: $pin)
                     }
                 }
             }

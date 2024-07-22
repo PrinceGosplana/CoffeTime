@@ -9,6 +9,9 @@ import SwiftUI
 
 struct NumberPadPin: View {
     var forgotPin: () -> ()
+    let maxLimit = 4
+    @Binding var pin: String
+
     var body: some View {
         VStack(spacing: 15) {
             Text("Enter Pin")
@@ -19,6 +22,18 @@ struct NumberPadPin: View {
                 ForEach(0..<4, id:\.self) { index in
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 50, height: 55)
+                    /// Showing Pin at each box with the help of index
+                        .overlay {
+                            /// Safe check
+                            if pin.count > index {
+                                let index = pin.index(pin.startIndex, offsetBy: index)
+                                let string = String(pin[index])
+
+                                Text(string)
+                                    .font(.title.bold())
+                                    .foregroundStyle(.black)
+                            }
+                        }
                 }
             }
             .padding(.top, 15)
@@ -36,7 +51,11 @@ struct NumberPadPin: View {
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 3), content: {
                     ForEach(1...9, id:\.self) { number in
                         Button {
-
+                            /// Adding number to pin
+                            /// Max limit - 4
+                            if pin.count < maxLimit {
+                                pin.append("\(number)")
+                            }
                         } label: {
                             Text("\(number)")
                                 .font(.title)
@@ -48,7 +67,9 @@ struct NumberPadPin: View {
                     }
 
                     Button {
-
+                        if !pin.isEmpty {
+                            pin.removeLast()
+                        }
                     } label: {
                         Image(systemName: "delete.backward")
                             .font(.title)
@@ -59,7 +80,9 @@ struct NumberPadPin: View {
                     .tint(.white)
 
                     Button {
-
+                        if pin.count <= maxLimit {
+                            pin.append("0")
+                        }
                     } label: {
                         Text("0")
                             .font(.title)
