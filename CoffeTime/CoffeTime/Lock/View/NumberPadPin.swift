@@ -11,6 +11,7 @@ struct NumberPadPin: View {
     var forgotPin: () -> ()
     let maxLimit = 4
     @Binding var pin: String
+    let lockPin: String
 
     var body: some View {
         VStack(spacing: 15) {
@@ -94,6 +95,16 @@ struct NumberPadPin: View {
 
                 })
                 .frame(maxHeight: .infinity, alignment: .bottom)
+            }
+            .onChange(of: pin) { oldValue, newValue in
+                if newValue.count == maxLimit {
+                    /// Validate pin
+                    if lockPin == pin {
+
+                    } else {
+                        pin = ""
+                    }
+                }
             }
 
         }

@@ -14,6 +14,8 @@ struct LockView<Content: View>: View {
     let isEnabled: Bool
     var lockWhenAppGoesBackground: Bool = true
     @State private var pin: String = ""
+    @State private var animateField: Bool = false
+    
     var forgotPin: () -> () = { }
     @ViewBuilder let content: Content
     
@@ -32,7 +34,7 @@ struct LockView<Content: View>: View {
                     if lockType == .both || lockType == .biometric {
                     } else {
                         /// Custom number pad to type view lock pin
-                        NumberPadPin(forgotPin: forgotPin, pin: $pin)
+                        NumberPadPin(forgotPin: forgotPin, pin: $pin, lockPin: lockPin)
                     }
                 }
             }
