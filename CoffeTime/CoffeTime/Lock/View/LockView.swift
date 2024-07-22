@@ -15,7 +15,8 @@ struct LockView<Content: View>: View {
     var lockWhenAppGoesBackground: Bool = true
     @State private var pin: String = ""
     @State private var isUnlocked: Bool = false
-    
+    @State private var noBiometricAccess: Bool = false
+
     var forgotPin: () -> () = { }
     @ViewBuilder let content: Content
     
@@ -30,13 +31,51 @@ struct LockView<Content: View>: View {
 
                 ZStack {
                     Rectangle()
+                        .fill(.black)
                         .ignoresSafeArea()
                     if lockType == .both || lockType == .biometric {
+                        Group {
+                            if noBiometricAccess {
+                                Text("Enable biometric authentication in Settings to unlock the view.")
+                                    .font(.callout)
+                                    .multilineTextAlignment(.center)
+                                    .padding(50)
+                            } else {
+                                /// Bio metric / pin unlock
+                                VStack(spacing: 12) {
+                                    VStack(spacing: 6) {
+                                        Image(systemName: "lock")
+                                            .font(.largeTitle)
+
+                                        Text("Tap to Unlock")
+                                            .font(.caption2)
+                                            .foregroundStyle(.gray)
+                                    }
+                                    .frame(width: 100, height: 100)
+                                    .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
+                                    .contentShape(.rect)
+                                    .onTapGesture {
+
+                                    }
+
+                                    if lockType == .both {
+                                        Text("Enter Pin")
+                                            .frame(width: 100, height: 40)
+                                            .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
+                                            .contentShape(.rect)
+                                            .onTapGesture {
+                                                
+                                            }
+                                    }
+                                }
+                            }
+                        }
                     } else {
                         /// Custom number pad to type view lock pin
                         NumberPadPin(forgotPin: forgotPin, pin: $pin, lockPin: lockPin, isUnlocked: $isUnlocked)
                     }
                 }
+                .environment(\.colorScheme, .dark)
                 .transition(.offset(y: size.height + 100))
             }
         }
