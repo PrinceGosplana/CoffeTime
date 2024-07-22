@@ -14,7 +14,6 @@ struct LockView<Content: View>: View {
     let isEnabled: Bool
     var lockWhenAppGoesBackground: Bool = true
     @State private var pin: String = ""
-    @State private var animateField: Bool = false
     
     var forgotPin: () -> () = { }
     @ViewBuilder let content: Content

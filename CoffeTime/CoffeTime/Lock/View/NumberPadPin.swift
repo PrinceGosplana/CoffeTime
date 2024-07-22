@@ -12,6 +12,7 @@ struct NumberPadPin: View {
     let maxLimit = 4
     @Binding var pin: String
     let lockPin: String
+    @State private var animateField: Bool = false
 
     var body: some View {
         VStack(spacing: 15) {
@@ -19,6 +20,7 @@ struct NumberPadPin: View {
                 .font(.title.bold())
                 .frame(maxWidth: .infinity)
 
+            /// adding wiggling animation for wrong password with keyframe animation
             HStack(spacing: 10) {
                 ForEach(0..<4, id:\.self) { index in
                     RoundedRectangle(cornerRadius: 10)
@@ -37,6 +39,16 @@ struct NumberPadPin: View {
                         }
                 }
             }
+            .keyframeAnimator(initialValue: CGFloat.zero, trigger: animateField, content: { content, value in
+                content
+                    .offset(x: value)
+            }, keyframes: { _ in
+                CubicKeyframe(30, duration: 0.07)
+                CubicKeyframe(-30, duration: 0.07)
+                CubicKeyframe(20, duration: 0.07)
+                CubicKeyframe(-20, duration: 0.07)
+                CubicKeyframe(0, duration: 0.07)
+            })
             .padding(.top, 15)
             .overlay(alignment: .bottomTrailing) {
                 Button("Forgot Pin?") {
@@ -103,6 +115,7 @@ struct NumberPadPin: View {
 
                     } else {
                         pin = ""
+                        animateField.toggle()
                     }
                 }
             }
