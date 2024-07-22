@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct LockView<Content: View>: View {
     /// Lock Properties
@@ -18,6 +19,10 @@ struct LockView<Content: View>: View {
     @State private var isUnlocked: Bool = false
     @State private var noBiometricAccess: Bool = false
     @State private var animateField: Bool = false
+    /// Lock context
+    let context = LAContext()
+    /// Scene phase
+    @Environment(\.scenePhase) private var phase
 
     var forgotPin: () -> () = { }
     @ViewBuilder let content: Content
@@ -81,10 +86,28 @@ struct LockView<Content: View>: View {
                 .transition(.offset(y: size.height + 100))
             }
         }
+        .onChange(of: isEnabled, initial: true) { oldValue, newValue in
+            if newValue { unlockView() }
+        }
     }
 
     private func unlockView() {
+        /// Checking and unlocking view
+        Task {
+            if isBiometricAvailable && lockType != .number {
+                /// Requesting biometric unlock
+                if let result = try? await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Unlock the View"), result {
 
+                }
+            }
+
+            /// No bio Metric permission || Lock type must be set as keypad updating biometric status
+            noBiometricAccess = !isBiometricAvailable
+        }
+    }
+
+    private var isBiometricAvailable: Bool {
+        context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
 
     /// Lock Type
@@ -102,7 +125,18 @@ struct LockView<Content: View>: View {
                     .frame(maxWidth: .infinity)
                     .overlay(alignment: .leading) {
                         /// back button only for both lock type
-
+                        if lockType == .both && isBiometricAvailable {
+                            Button {
+                                pin = ""
+                                noBiometricAccess = false
+                            } label: {
+                                Image(systemName: "arrow.left")
+                                    .font(.title3)
+                                    .contentShape(.rect)
+                            }
+                            .tint(.white)
+                            .padding(.leading)
+                        }
                     }
 
                 /// adding wiggling animation for wrong password with keyframe animation
