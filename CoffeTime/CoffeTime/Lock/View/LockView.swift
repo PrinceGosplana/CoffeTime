@@ -89,6 +89,13 @@ struct LockView<Content: View>: View {
         .onChange(of: isEnabled, initial: true) { oldValue, newValue in
             if newValue { unlockView() }
         }
+        /// Locking when the app goes background
+        .onChange(of: phase) { oldValue, newValue in
+            if newValue != .active && lockWhenAppGoesBackground {
+                isUnlocked = false
+                pin = ""
+            }
+        }
     }
 
     private func unlockView() {
@@ -240,6 +247,7 @@ struct LockView<Content: View>: View {
                             } completion: {
                                 /// clearing pin
                                 pin = ""
+                                noBiometricAccess = !isBiometricAvailable
                             }
                         } else {
                             pin = ""
