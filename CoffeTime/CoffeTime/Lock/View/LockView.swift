@@ -97,7 +97,11 @@ struct LockView<Content: View>: View {
             if isBiometricAvailable && lockType != .number {
                 /// Requesting biometric unlock
                 if let result = try? await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Unlock the View"), result {
-
+                    withAnimation(.snappy, completionCriteria: .logicallyComplete) {
+                        isUnlocked = true
+                    } completion: {
+                        pin = ""
+                    }
                 }
             }
 
