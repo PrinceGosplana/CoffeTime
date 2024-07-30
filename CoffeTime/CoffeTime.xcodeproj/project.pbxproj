@@ -95,6 +95,8 @@
 		8A3389AA2C2D968500245E6C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3389A92C2D968500245E6C /* CircleView.swift */; };
 		8A3389AC2C2D9E9600245E6C /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3389AB2C2D9E9600245E6C /* Signup.swift */; };
 		8A39C0DF2C43FC9F00A7F855 /* HAEDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */; };
+		8A4D3FFC2C58DC30002B8549 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */; };
+		8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
 		8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5502C08ADAD003C3511 /* ContentView.swift */; };
 		8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9AC5522C08ADAF003C3511 /* Assets.xcassets */; };
@@ -206,6 +208,8 @@
 		8A3389A92C2D968500245E6C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		8A3389AB2C2D9E9600245E6C /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAEDetailView.swift; sourceTree = "<group>"; };
+		8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
+		8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeContentView.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTimeApp.swift; sourceTree = "<group>"; };
 		8A9AC5502C08ADAD003C3511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -656,6 +660,23 @@
 			path = "Value transformers with transformable";
 			sourceTree = "<group>";
 		};
+		8A23B20B2C58DBB800155D9A /* Theme Switcher UI */ = {
+			isa = PBXGroup;
+			children = (
+				8A23B20C2C58DBD800155D9A /* Helpers */,
+				8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */,
+			);
+			path = "Theme Switcher UI";
+			sourceTree = "<group>";
+		};
+		8A23B20C2C58DBD800155D9A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8A3389A82C2D967900245E6C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,6 +705,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A23B20B2C58DBB800155D9A /* Theme Switcher UI */,
 				8A0E02012C4CE2E8000E8AF9 /* Lock */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
@@ -862,6 +884,7 @@
 				8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
 				8A019B442C26C08000799137 /* BottomActionBar.swift in Sources */,
+				8A4D3FFC2C58DC30002B8549 /* ThemeChangeView.swift in Sources */,
 				8AEB905D2C3D9F2600F7CD4E /* DestinationView.swift in Sources */,
 				8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */,
 				8A0E02042C4CE33A000E8AF9 /* LockView.swift in Sources */,
@@ -946,6 +969,7 @@
 				8A019B402C26BED100799137 /* SSContentView.swift in Sources */,
 				8A0E02062C4CE352000E8AF9 /* LockContentView.swift in Sources */,
 				8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */,
+				8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */,
 				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
