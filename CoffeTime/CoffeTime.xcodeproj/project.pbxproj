@@ -97,6 +97,7 @@
 		8A39C0DF2C43FC9F00A7F855 /* HAEDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */; };
 		8A4D3FFC2C58DC30002B8549 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */; };
 		8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */; };
+		8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
 		8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5502C08ADAD003C3511 /* ContentView.swift */; };
 		8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9AC5522C08ADAF003C3511 /* Assets.xcassets */; };
@@ -210,6 +211,7 @@
 		8A39C0DE2C43FC9F00A7F855 /* HAEDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HAEDetailView.swift; sourceTree = "<group>"; };
 		8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
 		8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeContentView.swift; sourceTree = "<group>"; };
+		8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTheme.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTimeApp.swift; sourceTree = "<group>"; };
 		8A9AC5502C08ADAD003C3511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -673,6 +675,7 @@
 			isa = PBXGroup;
 			children = (
 				8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */,
+				8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */,
 				8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */,
 				8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */,
+				8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */,
 				8A06CDC42C37E84900F60C1A /* ActionBuilder.swift in Sources */,
 				8A135C322C350E9B007AF05B /* CTabShape.swift in Sources */,
 				8AE9BCDE2C400C610084D4E8 /* View+Ext.swift in Sources */,

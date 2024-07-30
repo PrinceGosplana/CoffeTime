@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ThemeChangeView: View {
     @Environment(\.colorScheme) private var scheme
-
+    @AppStorage("user_theme") private var userTheme: TCTheme = .systemDefault
     var body: some View {
         VStack(spacing: 15) {
-            
+
         }
     }
 }
