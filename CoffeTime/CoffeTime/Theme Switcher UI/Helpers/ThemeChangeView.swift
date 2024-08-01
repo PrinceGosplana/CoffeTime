@@ -52,6 +52,11 @@ struct ThemeChangeView: View {
             .background(.primary.opacity(0.06), in: .capsule)
             .padding(.top, 20)
         }
+        /// Max height = 410
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(height: 410)
+        .background(Color(.secondarySystemGroupedBackground))
+        .clipShape(.rect(cornerRadius: 30))
     }
 }
 
