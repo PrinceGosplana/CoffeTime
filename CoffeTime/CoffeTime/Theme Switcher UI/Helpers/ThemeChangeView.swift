@@ -58,6 +58,7 @@ struct ThemeChangeView: View {
         .background(Color(.secondarySystemGroupedBackground))
         .clipShape(.rect(cornerRadius: 30))
         .padding(.horizontal, 15)
+        .environment(\.colorScheme, scheme)
     }
 }
 
