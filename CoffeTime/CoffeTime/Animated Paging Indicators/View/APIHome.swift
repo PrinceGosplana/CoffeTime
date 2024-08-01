@@ -10,6 +10,8 @@ import SwiftUI
 struct APIHome: View {
 
     @State private var colors: [Color] = [.red, .blue, .green, .yellow]
+    @State private var opacityEffect: Bool = false
+    @State private var clipEdges: Bool = false
 
     var body: some View {
         VStack {
@@ -28,6 +30,16 @@ struct APIHome: View {
             .frame(height: 220)
 
             List {
+                Section {
+                    Toggle("Opacity Effect", isOn: $opacityEffect)
+                    Toggle("Clip Edges", isOn: $clipEdges)
+
+                    Button("Add Item") {
+                        colors.append(.random)
+                    }
+                } header: {
+                    Text("Options")
+                }
 
             }
             .clipShape(.rect(cornerRadius: 15))
