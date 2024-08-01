@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ThemeChangeContentView: View {
     @State private var changeThemes: Bool = false
+    @AppStorage("userTheme") private var userTheme: TCTheme = .systemDefault
 
     var body: some View {
         NavigationStack {
@@ -24,6 +25,7 @@ struct ThemeChangeContentView: View {
             }
             .navigationTitle("Settings")
         }
+        .preferredColorScheme(userTheme.colorScheme)
         .sheet(isPresented: $changeThemes, content: {
             ThemeChangeView()
             /// Since max height is 410

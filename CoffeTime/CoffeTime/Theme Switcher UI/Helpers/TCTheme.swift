@@ -22,4 +22,16 @@ enum TCTheme: String, CaseIterable {
             return .moon!
         }
     }
+
+    /// nil simply represents the system default behaviour
+    var colorScheme: ColorScheme? {
+        switch self {
+        case .systemDefault:
+                nil
+        case .light:
+                .light
+        case .dark:
+                .dark
+        }
+    }
 }
