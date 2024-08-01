@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ThemeChangeView: View {
-    @Environment(\.colorScheme) private var scheme
+    var scheme: ColorScheme
     @AppStorage("userTheme") private var userTheme: TCTheme = .systemDefault
     /// For sliding effect
     @Namespace private var animation
