@@ -25,6 +25,14 @@ struct APIHome: View {
                             .containerRelativeFrame(.horizontal)
                     }
                 }
+                .overlay(alignment: .bottom) {
+                    PagingIndicator(
+                        activeTint: .white,
+                        inActiveTint: .black.opacity(0.25),
+                        opacityEffect: opacityEffect,
+                        clipEdges: clipEdges
+                    )
+                }
             }
             .scrollTargetBehavior(.paging)
             .frame(height: 220)

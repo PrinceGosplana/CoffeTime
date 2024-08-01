@@ -68,6 +68,7 @@
 		8A1195192C5BC0A80071AC11 /* APIHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1195182C5BC0A80071AC11 /* APIHome.swift */; };
 		8A11951B2C5BC0BE0071AC11 /* APIContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A11951A2C5BC0BE0071AC11 /* APIContentView.swift */; };
 		8A11951D2C5BC8BF0071AC11 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A11951C2C5BC8BF0071AC11 /* Color+Ext.swift */; };
+		8A1195202C5BCB7A0071AC11 /* PagingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A11951F2C5BCB7A0071AC11 /* PagingIndicator.swift */; };
 		8A1349202C1B26EC00099F7D /* PHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13491F2C1B26EC00099F7D /* PHome.swift */; };
 		8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */; };
 		8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349232C1B29CB00099F7D /* DummySection.swift */; };
@@ -185,6 +186,7 @@
 		8A1195182C5BC0A80071AC11 /* APIHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHome.swift; sourceTree = "<group>"; };
 		8A11951A2C5BC0BE0071AC11 /* APIContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContentView.swift; sourceTree = "<group>"; };
 		8A11951C2C5BC8BF0071AC11 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		8A11951F2C5BCB7A0071AC11 /* PagingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingIndicator.swift; sourceTree = "<group>"; };
 		8A13491F2C1B26EC00099F7D /* PHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHome.swift; sourceTree = "<group>"; };
 		8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxScrollEffectContent.swift; sourceTree = "<group>"; };
 		8A1349232C1B29CB00099F7D /* DummySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySection.swift; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 		8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */ = {
 			isa = PBXGroup;
 			children = (
+				8A11951E2C5BC9900071AC11 /* Helper */,
 				8A1195172C5BC0930071AC11 /* View */,
 			);
 			path = "Animated Paging Indicators";
@@ -534,6 +537,14 @@
 				8A11951A2C5BC0BE0071AC11 /* APIContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8A11951E2C5BC9900071AC11 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8A11951F2C5BCB7A0071AC11 /* PagingIndicator.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */ = {
@@ -960,6 +971,7 @@
 				8A0A4A162C2EE1AF001A47CE /* String+Ext.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
+				8A1195202C5BCB7A0071AC11 /* PagingIndicator.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A1349482C1C6D6200099F7D /* GoogleMovieCarouselView.swift in Sources */,
 				8A0381EF2C39640B000CAEE0 /* OffsetKey.swift in Sources */,
