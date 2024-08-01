@@ -13,6 +13,13 @@ struct ThemeChangeView: View {
     /// For sliding effect
     @Namespace private var animation
 
+    @State private var circleOffset: CGSize
+    init(scheme: ColorScheme) {
+        self.scheme = scheme
+        let isDark = scheme == .dark
+        self._circleOffset = .init(initialValue: CGSize(width: isDark ? 30 : 150, height: isDark ? -25 : -150))
+    }
+
     var body: some View {
         VStack(spacing: 15) {
             Circle()
@@ -23,7 +30,7 @@ struct ThemeChangeView: View {
                     Rectangle()
                         .overlay {
                             Circle()
-                                .offset(x: 30, y: -25)
+                                .offset(circleOffset)
                                 .blendMode(.destinationOut)
                         }
                 }
@@ -68,6 +75,12 @@ struct ThemeChangeView: View {
         .clipShape(.rect(cornerRadius: 30))
         .padding(.horizontal, 15)
         .environment(\.colorScheme, scheme)
+        .onChange(of: scheme) { _, newValue in
+            let isDark = newValue == .dark
+            withAnimation(.bouncy) {
+                circleOffset = CGSize(width: isDark ? 30 : 150, height: isDark ? -25 : -150)
+            }
+        }
     }
 }
 
