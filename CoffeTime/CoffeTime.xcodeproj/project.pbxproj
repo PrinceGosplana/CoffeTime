@@ -65,6 +65,8 @@
 		8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F01D02C0EF1B400B77AB1 /* UIView+Extension.swift */; };
 		8A1192422C40ECB600374DA9 /* HeroLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1192412C40ECB600374DA9 /* HeroLayerView.swift */; };
 		8A1192442C40ECD800374DA9 /* PassthroughWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1192432C40ECD800374DA9 /* PassthroughWindow.swift */; };
+		8A1195192C5BC0A80071AC11 /* APIHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1195182C5BC0A80071AC11 /* APIHome.swift */; };
+		8A11951B2C5BC0BE0071AC11 /* APIContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A11951A2C5BC0BE0071AC11 /* APIContentView.swift */; };
 		8A1349202C1B26EC00099F7D /* PHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13491F2C1B26EC00099F7D /* PHome.swift */; };
 		8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */; };
 		8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1349232C1B29CB00099F7D /* DummySection.swift */; };
@@ -179,6 +181,8 @@
 		8A0F01D02C0EF1B400B77AB1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8A1192412C40ECB600374DA9 /* HeroLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLayerView.swift; sourceTree = "<group>"; };
 		8A1192432C40ECD800374DA9 /* PassthroughWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughWindow.swift; sourceTree = "<group>"; };
+		8A1195182C5BC0A80071AC11 /* APIHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHome.swift; sourceTree = "<group>"; };
+		8A11951A2C5BC0BE0071AC11 /* APIContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContentView.swift; sourceTree = "<group>"; };
 		8A13491F2C1B26EC00099F7D /* PHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHome.swift; sourceTree = "<group>"; };
 		8A1349212C1B270900099F7D /* ParallaxScrollEffectContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxScrollEffectContent.swift; sourceTree = "<group>"; };
 		8A1349232C1B29CB00099F7D /* DummySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySection.swift; sourceTree = "<group>"; };
@@ -512,6 +516,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				8A1195172C5BC0930071AC11 /* View */,
+			);
+			path = "Animated Paging Indicators";
+			sourceTree = "<group>";
+		};
+		8A1195172C5BC0930071AC11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A1195182C5BC0A80071AC11 /* APIHome.swift */,
+				8A11951A2C5BC0BE0071AC11 /* APIContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,8 +729,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A23B20B2C58DBB800155D9A /* Theme Switcher UI */,
-				8A0E02012C4CE2E8000E8AF9 /* Lock */,
+				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
@@ -723,6 +743,7 @@
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
 				8A0381ED2C3963E5000CAEE0 /* Helpers */,
 				8AF41A492C18761000801F63 /* Interactive side menu */,
+				8A0E02012C4CE2E8000E8AF9 /* Lock */,
 				8A1ED12B2C2BF57F0046BDB9 /* Login Flow */,
 				8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */,
 				8A13493D2C1C409000099F7D /* Pixel Art */,
@@ -734,6 +755,7 @@
 				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */,
 				8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */,
+				8A23B20B2C58DBB800155D9A /* Theme Switcher UI */,
 				8A0D66AA2C3D26E8005163F9 /* Universal hero effect */,
 				8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */,
 			);
@@ -905,6 +927,7 @@
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */,
 				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
+				8A11951B2C5BC0BE0071AC11 /* APIContentView.swift in Sources */,
 				8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */,
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A097D942C3193EE00F03670 /* Message.swift in Sources */,
@@ -921,6 +944,7 @@
 				8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */,
 				8A135C2C2C35057E007AF05B /* CustomTabbarHomeView.swift in Sources */,
 				8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */,
+				8A1195192C5BC0A80071AC11 /* APIHome.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0A4A0D2C2ED93C001A47CE /* OTPContentView.swift in Sources */,
 				8A0C9C2D2C3AB2F0007487DA /* StickyHeaderContentView.swift in Sources */,
