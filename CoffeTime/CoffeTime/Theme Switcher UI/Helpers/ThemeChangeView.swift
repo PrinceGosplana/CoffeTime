@@ -18,6 +18,15 @@ struct ThemeChangeView: View {
             Circle()
                 .fill(userTheme.color(scheme).gradient)
                 .frame(width: 150, height: 150)
+                .mask {
+                    /// Inverted mask
+                    Rectangle()
+                        .overlay {
+                            Circle()
+                                .offset(x: 30, y: -25)
+                                .blendMode(.destinationOut)
+                        }
+                }
 
             Text("Choose a Style")
                 .font(.title2.bold())
