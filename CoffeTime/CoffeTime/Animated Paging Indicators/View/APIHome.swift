@@ -8,10 +8,32 @@
 import SwiftUI
 
 struct APIHome: View {
+
+    @State private var colors: [Color] = [.red, .blue, .green, .yellow]
+
     var body: some View {
         VStack {
-            
+            /// Paging view
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 0) {
+                    ForEach(colors, id:\.self) {
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill($0.gradient)
+                            .padding(.horizontal, 15)
+                            .containerRelativeFrame(.horizontal)
+                    }
+                }
+            }
+            .scrollTargetBehavior(.paging)
+            .frame(height: 220)
+
+            List {
+
+            }
+            .clipShape(.rect(cornerRadius: 15))
+            .padding(15)
         }
+        .navigationTitle("Custom Indicator")
     }
 }
 
