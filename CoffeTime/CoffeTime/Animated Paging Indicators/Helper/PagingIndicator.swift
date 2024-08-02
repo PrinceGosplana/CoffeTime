@@ -41,6 +41,15 @@ struct PagingIndicator: View {
                         Capsule()
                             .fill(inActiveTint)
                             .frame(width: 8 + (activeIndex == index ? currentPageWidth : nextIndex == index ? nextPageWidth : 0), height: 8)
+                            .overlay {
+                                ZStack {
+                                    Capsule()
+                                        .fill(inActiveTint)
+                                    Capsule()
+                                        .fill(activeTint)
+                                        .opacity(opacityEffect ? activeIndex == index ? 1 - indicatorProgress : nextIndex == index ? nextPageWidth : 0 : 1)
+                                }
+                            }
                     }
                 }
                 .frame(width: scrollViewWidth)
