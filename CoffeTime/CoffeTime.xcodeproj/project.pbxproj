@@ -111,6 +111,7 @@
 		8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5612C08B674003C3511 /* Interpolation.swift */; };
 		8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */; };
 		8AE88A952C5CFD1800C57C4C /* CoverFlowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A942C5CFD1800C57C4C /* CoverFlowContentView.swift */; };
+		8AE88A972C5CFDBC00C57C4C /* CoverFlowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */; };
 		8AE9BCDC2C4008C90084D4E8 /* HeroLayerViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9BCDB2C4008C90084D4E8 /* HeroLayerViewModifier.swift */; };
 		8AE9BCDE2C400C610084D4E8 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9BCDD2C400C610084D4E8 /* View+Ext.swift */; };
 		8AEB905B2C3D9EA600F7CD4E /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEB905A2C3D9EA600F7CD4E /* SourceView.swift */; };
@@ -232,6 +233,7 @@
 		8A9AC5612C08B674003C3511 /* Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
 		8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowView.swift; sourceTree = "<group>"; };
 		8AE88A942C5CFD1800C57C4C /* CoverFlowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowContentView.swift; sourceTree = "<group>"; };
+		8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowItem.swift; sourceTree = "<group>"; };
 		8AE9BCDB2C4008C90084D4E8 /* HeroLayerViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLayerViewModifier.swift; sourceTree = "<group>"; };
 		8AE9BCDD2C400C610084D4E8 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		8AEB905A2C3D9EA600F7CD4E /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */,
+				8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1036,6 +1039,7 @@
 				8A0718202C1192BF0017E1E8 /* VCCHome.swift in Sources */,
 				8A019B402C26BED100799137 /* SSContentView.swift in Sources */,
 				8A0E02062C4CE352000E8AF9 /* LockContentView.swift in Sources */,
+				8AE88A972C5CFDBC00C57C4C /* CoverFlowItem.swift in Sources */,
 				8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */,
 				8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */,
 				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
