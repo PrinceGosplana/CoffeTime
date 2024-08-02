@@ -11,6 +11,7 @@ struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where It
 
     /// Customization properties
     var itemWidth: CGFloat
+    var enableReflection: Bool = false
     var spacing: CGFloat = 0
     var rotation: Double
     var items: Item
@@ -25,6 +26,7 @@ struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where It
                     ForEach(items) { item in
                         content(item)
                             .frame(width: itemWidth)
+                            .reflection(enableReflection)
                     }
                 }
                 .padding(.horizontal, (size.width - itemWidth) / 2)
@@ -32,6 +34,7 @@ struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where It
             }
             .scrollTargetBehavior(.viewAligned)
             .scrollIndicators(.hidden)
+            .scrollClipDisabled()
         }
     }
 }

@@ -24,6 +24,7 @@ struct CoverFlowContentView: View {
 
                 CoverFlowView(
                     itemWidth: 280,
+                    enableReflection: enableReflection,
                     spacing: 0,
                     rotation: 0,
                     items: items
