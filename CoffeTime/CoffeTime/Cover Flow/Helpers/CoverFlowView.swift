@@ -25,7 +25,9 @@ struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where It
                     }
                 }
                 .padding(.horizontal, (size.width - itemWidth) / 2)
+                .scrollTargetLayout()
             }
+            .scrollTargetBehavior(.viewAligned)
         }
     }
 }
