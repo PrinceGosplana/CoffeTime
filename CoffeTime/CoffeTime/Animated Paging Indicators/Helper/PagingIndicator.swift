@@ -24,7 +24,7 @@ struct PagingIndicator: View {
 
                 /// Progress
                 let freeProgress = -minX / scrollViewWidth
-                let clippedProgress = min(max(freeProgress, 0.0), 1.0)
+                let clippedProgress = min(max(freeProgress, 0.0), CGFloat(totalPages - 1))
                 let progress = clipEdges ? clippedProgress : freeProgress
 
                 /// Indexes
