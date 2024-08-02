@@ -25,6 +25,7 @@ struct APIHome: View {
                             .containerRelativeFrame(.horizontal)
                     }
                 }
+                .scrollTargetLayout()
                 .overlay(alignment: .bottom) {
                     PagingIndicator(
                         activeTint: .white,
@@ -34,8 +35,10 @@ struct APIHome: View {
                     )
                 }
             }
-            .scrollTargetBehavior(.paging)
+            .scrollTargetBehavior(.viewAligned)
             .frame(height: 220)
+            .safeAreaPadding(.vertical, 15)
+            .safeAreaPadding(.horizontal, 25)
 
             List {
                 Section {
