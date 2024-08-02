@@ -31,11 +31,16 @@ struct PagingIndicator: View {
                 let activeIndex = Int(progress)
                 /// this will provide the upcoming index that is being scrolled, with this we can expand the indicator of the next page and minimize the indicator size of the current page
                 let nextIndex = Int(progress.rounded(.awayFromZero))
+                let indicatorProgress = progress - CGFloat(activeIndex)
+                /// Indicator width's (current & upcoming)
+                let currentPageWidth = 18 - (indicatorProgress * 18)
+                let nextPageWidth = indicatorProgress * 18
+
                 HStack(spacing: 10) {
                     ForEach(0..<totalPages, id: \.self) { index in
-                        Circle()
+                        Capsule()
                             .fill(inActiveTint)
-                            .frame(width: 8, height: 8)
+                            .frame(width: 8 + (activeIndex == index ? currentPageWidth : nextIndex == index ? nextPageWidth : 0), height: 8)
                     }
                 }
                 .frame(width: scrollViewWidth)
