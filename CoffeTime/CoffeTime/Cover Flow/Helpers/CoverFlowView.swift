@@ -7,9 +7,21 @@
 
 import SwiftUI
 
-struct CoverFlowView<Content: View>: View {
+struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where Item.Element: Identifiable {
+
+    var itemWidth: CGFloat
+    var items: Item
+    var content: (Item.Element) -> Content
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            LazyHStack(spacing: 0) {
+                ForEach(items) { item in
+                    content(item)
+                        .frame(width: itemWidth)
+                }
+            }
+        }
     }
 }
 
