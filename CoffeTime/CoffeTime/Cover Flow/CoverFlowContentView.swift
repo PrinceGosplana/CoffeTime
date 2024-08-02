@@ -15,6 +15,7 @@ struct CoverFlowContentView: View {
     /// View properties
     @State private var spacing: CGFloat = 0
     @State private var rotation: CGFloat = .zero
+    @State private var enableReflection: Bool = false
 
     var body: some View {
         NavigationStack {
@@ -33,6 +34,26 @@ struct CoverFlowContentView: View {
                 .frame(height: 180)
 
                 Spacer(minLength: 0)
+
+                /// Customization View
+                VStack(alignment: .leading, spacing: 10) {
+                    Toggle("Toggle Reflection", isOn: $enableReflection)
+
+                    Text("Card Spacing")
+                        .font(.caption)
+                        .foregroundStyle(.gray)
+
+                    Slider(value: $spacing, in: -90...20)
+
+                    Text("Card Rotation")
+                        .font(.caption)
+                        .foregroundStyle(.gray)
+
+                    Slider(value: $rotation, in: 0...90)
+                }
+                .padding(15)
+                .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
+                .padding(15)
             }
             .navigationTitle("CoverFlow")
         }
