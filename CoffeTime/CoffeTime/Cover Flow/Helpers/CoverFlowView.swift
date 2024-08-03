@@ -27,6 +27,10 @@ struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where It
                         content(item)
                             .frame(width: itemWidth)
                             .reflection(enableReflection)
+                            .visualEffect { content, geometryProxy in
+                                content
+                                    .rotation3DEffect(.init(degrees: rotation(geometryProxy)), axis: (x: 0, y: 1, z: 0), anchor: .center)
+                            }
                     }
                 }
                 .padding(.horizontal, (size.width - itemWidth) / 2)
@@ -36,6 +40,17 @@ struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where It
             .scrollIndicators(.hidden)
             .scrollClipDisabled()
         }
+    }
+
+    private func rotation(_ proxy: GeometryProxy) -> Double {
+        let scrollViewWidth = proxy.bounds(of: .scrollView(axis: .horizontal))?.width ?? 0
+        let midX = proxy.frame(in: .scrollView(axis: .horizontal)).midX
+        /// Converting into progress
+        let progress = midX / scrollViewWidth
+        /// Limiting progress between 0 - 1
+        let cappedProgress = max(min(progress, 1), 0)
+
+        return cappedProgress * rotation
     }
 }
 
