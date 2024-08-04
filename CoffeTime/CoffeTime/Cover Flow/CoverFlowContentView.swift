@@ -44,13 +44,13 @@ struct CoverFlowContentView: View {
                         .font(.caption)
                         .foregroundStyle(.gray)
 
-                    Slider(value: $spacing, in: -90...20)
+                    Slider(value: $spacing, in: -120...20)
 
                     Text("Card Rotation")
                         .font(.caption)
                         .foregroundStyle(.gray)
 
-                    Slider(value: $rotation, in: 0...90)
+                    Slider(value: $rotation, in: 0...100)
                 }
                 .padding(15)
                 .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
