@@ -113,6 +113,8 @@
 		8AAD77462C6B86EC004E54D1 /* SHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77452C6B86EC004E54D1 /* SHHomeView.swift */; };
 		8AAD77482C6B8A8B004E54D1 /* SHScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77472C6B8A8B004E54D1 /* SHScrollDetector.swift */; };
 		8AAD774A2C6B9425004E54D1 /* SHSampleCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77492C6B9425004E54D1 /* SHSampleCardsView.swift */; };
+		8AAD774D2C6B9ED4004E54D1 /* DIContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD774C2C6B9ED4004E54D1 /* DIContentView.swift */; };
+		8AAD774F2C6B9EDE004E54D1 /* DIHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD774E2C6B9EDE004E54D1 /* DIHomeView.swift */; };
 		8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */; };
 		8AE88A952C5CFD1800C57C4C /* CoverFlowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A942C5CFD1800C57C4C /* CoverFlowContentView.swift */; };
 		8AE88A972C5CFDBC00C57C4C /* CoverFlowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */; };
@@ -239,6 +241,8 @@
 		8AAD77452C6B86EC004E54D1 /* SHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHHomeView.swift; sourceTree = "<group>"; };
 		8AAD77472C6B8A8B004E54D1 /* SHScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHScrollDetector.swift; sourceTree = "<group>"; };
 		8AAD77492C6B9425004E54D1 /* SHSampleCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSampleCardsView.swift; sourceTree = "<group>"; };
+		8AAD774C2C6B9ED4004E54D1 /* DIContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContentView.swift; sourceTree = "<group>"; };
+		8AAD774E2C6B9EDE004E54D1 /* DIHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIHomeView.swift; sourceTree = "<group>"; };
 		8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowView.swift; sourceTree = "<group>"; };
 		8AE88A942C5CFD1800C57C4C /* CoverFlowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowContentView.swift; sourceTree = "<group>"; };
 		8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowItem.swift; sourceTree = "<group>"; };
@@ -782,6 +786,7 @@
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
+				8AAD774B2C6B9EBC004E54D1 /* Draggable Images */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
 				8A0CA0482C3BC9B400D10CEF /* Extensions */,
 				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
@@ -837,6 +842,15 @@
 				8AAD77492C6B9425004E54D1 /* SHSampleCardsView.swift */,
 			);
 			path = StickyHeader;
+			sourceTree = "<group>";
+		};
+		8AAD774B2C6B9EBC004E54D1 /* Draggable Images */ = {
+			isa = PBXGroup;
+			children = (
+				8AAD774C2C6B9ED4004E54D1 /* DIContentView.swift */,
+				8AAD774E2C6B9EDE004E54D1 /* DIHomeView.swift */,
+			);
+			path = "Draggable Images";
 			sourceTree = "<group>";
 		};
 		8AF41A492C18761000801F63 /* Interactive side menu */ = {
@@ -965,6 +979,7 @@
 				8A0BF00D2C42967C007D0FC1 /* HAEHomeView.swift in Sources */,
 				8A097D992C319B5E00F03670 /* OffsetHelpers.swift in Sources */,
 				8A3389AA2C2D968500245E6C /* CircleView.swift in Sources */,
+				8AAD774F2C6B9EDE004E54D1 /* DIHomeView.swift in Sources */,
 				8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */,
 				8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
@@ -1054,6 +1069,7 @@
 				8A0718662C12EEEF0017E1E8 /* GTExtendedSpacer.swift in Sources */,
 				8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */,
 				8AEB905B2C3D9EA600F7CD4E /* SourceView.swift in Sources */,
+				8AAD774D2C6B9ED4004E54D1 /* DIContentView.swift in Sources */,
 				8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */,
