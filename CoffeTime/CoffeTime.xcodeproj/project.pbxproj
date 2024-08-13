@@ -109,6 +109,10 @@
 		8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55D2C08ADE3003C3511 /* RSContent.swift */; };
 		8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */; };
 		8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5612C08B674003C3511 /* Interpolation.swift */; };
+		8AAD77442C6B86E2004E54D1 /* SHContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77432C6B86E2004E54D1 /* SHContentView.swift */; };
+		8AAD77462C6B86EC004E54D1 /* SHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77452C6B86EC004E54D1 /* SHHomeView.swift */; };
+		8AAD77482C6B8A8B004E54D1 /* SHScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77472C6B8A8B004E54D1 /* SHScrollDetector.swift */; };
+		8AAD774A2C6B9425004E54D1 /* SHSampleCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAD77492C6B9425004E54D1 /* SHSampleCardsView.swift */; };
 		8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */; };
 		8AE88A952C5CFD1800C57C4C /* CoverFlowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A942C5CFD1800C57C4C /* CoverFlowContentView.swift */; };
 		8AE88A972C5CFDBC00C57C4C /* CoverFlowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */; };
@@ -231,6 +235,10 @@
 		8A9AC55D2C08ADE3003C3511 /* RSContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSContent.swift; sourceTree = "<group>"; };
 		8A9AC55F2C08AE21003C3511 /* RangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderView.swift; sourceTree = "<group>"; };
 		8A9AC5612C08B674003C3511 /* Interpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolation.swift; sourceTree = "<group>"; };
+		8AAD77432C6B86E2004E54D1 /* SHContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHContentView.swift; sourceTree = "<group>"; };
+		8AAD77452C6B86EC004E54D1 /* SHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHHomeView.swift; sourceTree = "<group>"; };
+		8AAD77472C6B8A8B004E54D1 /* SHScrollDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHScrollDetector.swift; sourceTree = "<group>"; };
+		8AAD77492C6B9425004E54D1 /* SHSampleCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSampleCardsView.swift; sourceTree = "<group>"; };
 		8AE88A922C5CFD0800C57C4C /* CoverFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowView.swift; sourceTree = "<group>"; };
 		8AE88A942C5CFD1800C57C4C /* CoverFlowContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowContentView.swift; sourceTree = "<group>"; };
 		8AE88A962C5CFDBC00C57C4C /* CoverFlowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowItem.swift; sourceTree = "<group>"; };
@@ -767,12 +775,12 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
+				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
 				8A0CA0482C3BC9B400D10CEF /* Extensions */,
@@ -791,6 +799,7 @@
 				8A9AC55C2C08ADC9003C3511 /* RangeSlider */,
 				8A019B3B2C26BD6B00799137 /* Stacked scrollview */,
 				8A0C9C282C3AB285007487DA /* Sticky Header */,
+				8AAD77422C6B86C1004E54D1 /* StickyHeader */,
 				8A20ED522C15A9DB00D5915D /* SwiftData */,
 				8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */,
 				8A0F01C62C0EEE0B00B77AB1 /* Tabview offset reader */,
@@ -817,6 +826,17 @@
 				8A9AC5612C08B674003C3511 /* Interpolation.swift */,
 			);
 			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		8AAD77422C6B86C1004E54D1 /* StickyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8AAD77432C6B86E2004E54D1 /* SHContentView.swift */,
+				8AAD77452C6B86EC004E54D1 /* SHHomeView.swift */,
+				8AAD77472C6B8A8B004E54D1 /* SHScrollDetector.swift */,
+				8AAD77492C6B9425004E54D1 /* SHSampleCardsView.swift */,
+			);
+			path = StickyHeader;
 			sourceTree = "<group>";
 		};
 		8AF41A492C18761000801F63 /* Interactive side menu */ = {
@@ -952,6 +972,7 @@
 				8A4D3FFC2C58DC30002B8549 /* ThemeChangeView.swift in Sources */,
 				8AEB905D2C3D9F2600F7CD4E /* DestinationView.swift in Sources */,
 				8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */,
+				8AAD77482C6B8A8B004E54D1 /* SHScrollDetector.swift in Sources */,
 				8A0E02042C4CE33A000E8AF9 /* LockView.swift in Sources */,
 				8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
@@ -964,6 +985,7 @@
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
+				8AAD77442C6B86E2004E54D1 /* SHContentView.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */,
 				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
@@ -1000,6 +1022,7 @@
 				8A1195202C5BCB7A0071AC11 /* PagingIndicator.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A1349482C1C6D6200099F7D /* GoogleMovieCarouselView.swift in Sources */,
+				8AAD774A2C6B9425004E54D1 /* SHSampleCardsView.swift in Sources */,
 				8A0381EF2C39640B000CAEE0 /* OffsetKey.swift in Sources */,
 				8A1192422C40ECB600374DA9 /* HeroLayerView.swift in Sources */,
 				8A13494A2C1C6FEE00099F7D /* CarousalItemView.swift in Sources */,
@@ -1020,6 +1043,7 @@
 				8A09C8E72C2DB5B00097D1DA /* PasswordResetView.swift in Sources */,
 				8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */,
 				8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */,
+				8AAD77462C6B86EC004E54D1 /* SHHomeView.swift in Sources */,
 				8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */,
 				8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */,
 				8A06CDC42C37E84900F60C1A /* ActionBuilder.swift in Sources */,
