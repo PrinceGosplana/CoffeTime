@@ -91,4 +91,38 @@ extension View {
                 }
             }
     }
+
+    @ViewBuilder
+    func offsetX(completion: @escaping (CGFloat) -> ()) -> some View {
+        self
+            .overlay {
+                GeometryReader {
+                    let minX = $0.frame(in: .scrollView(axis: .horizontal)).minX
+
+                    Color.clear
+                        .preference(key: OffsetKeyCGFloat.self, value: minX)
+                        .onPreferenceChange(OffsetKeyCGFloat.self, perform: completion)
+                }
+            }
+    }
+
+    func tabMask(_ tabProgress: CGFloat, tabsCount: Int) -> some View {
+        ZStack {
+            self
+                .foregroundStyle(.black)
+
+            self
+                .symbolVariant(.fill)
+                .mask {
+                    GeometryReader {
+                        let size = $0.size
+                        let capsuleWidth = size.width / CGFloat(tabsCount)
+
+                        Capsule()
+                            .frame(width: capsuleWidth)
+                            .offset(x: tabProgress * (size.width - capsuleWidth))
+                    }
+                }
+        }
+    }
 }
