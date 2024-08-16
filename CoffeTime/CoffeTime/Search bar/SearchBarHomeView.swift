@@ -10,6 +10,10 @@ import SwiftUI
 struct SearchBarHomeView: View {
     @State private var searchText = ""
 
+    @State private var activeTab: SBTab = .all
+    @Environment(\.colorScheme) private var scheme
+    @Namespace var animation
+
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 15) {
@@ -48,6 +52,33 @@ struct SearchBarHomeView: View {
                 RoundedRectangle(cornerRadius: 25, style: .continuous)
                     .fill(.background)
             }
+
+            ScrollView(.horizontal) {
+                HStack(spacing: 12) {
+                    ForEach(SBTab.allCases, id: \.rawValue) { tab in
+                        Button {
+                            withAnimation {
+                                activeTab = tab
+                            }
+                        } label: {
+                            Text(tab.title)
+                                .font(.callout)
+                                .foregroundStyle(activeTab == tab ? (scheme == .dark ? .black : .white) : Color.primary)
+                                .padding(.vertical, 8)
+                                .padding(.horizontal, 15)
+                                .background {
+                                    if activeTab == tab {
+                                        Capsule()
+                                            .fill(Color.primary)
+                                            .matchedGeometryEffect(id: "ACTIVE", in: animation)
+                                    }
+                                }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
+
         }
         .padding(.top, 25)
         .safeAreaPadding(.horizontal, 15)
