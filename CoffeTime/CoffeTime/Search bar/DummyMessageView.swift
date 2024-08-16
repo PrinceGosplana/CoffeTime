@@ -14,12 +14,11 @@ struct DummyMessageView: View {
                 .frame(width: 50, height: 50)
             VStack(alignment: .leading) {
                 Rectangle()
-                    .frame(width: 140, height: 5)
+                    .frame(width: 140, height: 8)
 
                 Rectangle()
-                    .frame(height: 10)
+                    .frame(height: 8)
                     .frame(maxWidth: .infinity)
-                    .clipShape(RoundedRectangle(cornerRadius: 3))
             }
         }
         .foregroundStyle(.gray.opacity(0.4))
