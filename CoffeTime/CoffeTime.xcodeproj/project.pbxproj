@@ -105,6 +105,7 @@
 		8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */; };
 		8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
+		8A93A06F2C732A5100EC12D9 /* CSACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06E2C732A5100EC12D9 /* CSACard.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
 		8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC5502C08ADAD003C3511 /* ContentView.swift */; };
 		8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9AC5522C08ADAF003C3511 /* Assets.xcassets */; };
@@ -242,6 +243,7 @@
 		8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeContentView.swift; sourceTree = "<group>"; };
 		8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTheme.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		8A93A06E2C732A5100EC12D9 /* CSACard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSACard.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeTimeApp.swift; sourceTree = "<group>"; };
 		8A9AC5502C08ADAD003C3511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -756,9 +758,9 @@
 		8A22E6A62C7322960003345B /* Complex scroll animations */ = {
 			isa = PBXGroup;
 			children = (
-				8A93A06D2C73248400EC12D9 /* View */,
-				8A93A06A2C73230700EC12D9 /* Model */,
 				8A22E6A92C7322BD0003345B /* CSAContentView.swift */,
+				8A93A06A2C73230700EC12D9 /* Model */,
+				8A93A06D2C73248400EC12D9 /* View */,
 			);
 			path = "Complex scroll animations";
 			sourceTree = "<group>";
@@ -794,6 +796,7 @@
 			isa = PBXGroup;
 			children = (
 				8A93A06B2C73232200EC12D9 /* Expense.swift */,
+				8A93A06E2C732A5100EC12D9 /* CSACard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1057,6 +1060,7 @@
 			files = (
 				8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */,
 				8A0BF00F2C429688007D0FC1 /* HAEContentVeiw.swift in Sources */,
+				8A93A06F2C732A5100EC12D9 /* CSACard.swift in Sources */,
 				8AAD77AF2C6F3032004E54D1 /* SearchBarHomeView.swift in Sources */,
 				8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */,
 				8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */,
