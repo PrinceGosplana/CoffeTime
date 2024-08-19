@@ -38,14 +38,39 @@ struct CSAHomeView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
 
-                    ForEach(Expense.expenses) { expense in
-                        
+                    ForEach(allExpenses) { expense in
+                        ExpenseCardView(expense)
                     }
                 }
                 .padding(15)
             }
             .padding(.vertical, 15)
         }
+        .onAppear {
+            allExpenses = Expense.expenses.shuffled()
+        }
+    }
+
+    /// Expense card view
+    func ExpenseCardView(_ expense: Expense) -> some View {
+        HStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(expense.product)
+                    .font(.callout)
+                    .fontWeight(.semibold)
+
+                Text(expense.spendType)
+                    .font(.caption)
+                    .foregroundStyle(.gray)
+            }
+
+            Spacer(minLength: 0)
+
+            Text(expense.amountSpent)
+                .fontWeight(.bold)
+        }
+        .padding(.horizontal, 15)
+        .padding(.vertical, 6)
     }
 }
 
