@@ -11,6 +11,8 @@ struct CSAHomeView: View {
 
     /// View Properties
     @State private var allExpenses: [Expense] = []
+    /// Environment values
+    @Environment(\.colorScheme) private var scheme
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -18,13 +20,27 @@ struct CSAHomeView: View {
                 VStack(alignment: .leading, spacing: 15) {
                     Text("Hello there!")
                         .font(.largeTitle.bold())
+                        .frame(height: 45)
                         .padding(.horizontal, 15)
 
                     GeometryReader {
                         let rect = $0.frame(in: .scrollView)
+
+                        /// card view
+                        ScrollView(.horizontal) {
+                            LazyHStack(spacing: 0) {
+                                ForEach(CSACard.cards) {
+                                    CardView($0)
+                                        .containerRelativeFrame(.horizontal)
+                                }
+                            }
+                            .scrollTargetLayout()
+                        }
+                        .scrollTargetBehavior(.paging)
                     }
                     .frame(height: 125)
                 }
+
                 LazyVStack(spacing: 15) {
                     Menu {
 
@@ -40,6 +56,7 @@ struct CSAHomeView: View {
 
                     ForEach(allExpenses) { expense in
                         ExpenseCardView(expense)
+                            .containerRelativeFrame(.horizontal)
                     }
                 }
                 .padding(15)
@@ -71,6 +88,45 @@ struct CSAHomeView: View {
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 6)
+    }
+
+    /// Card view
+    func CardView(_ card: CSACard) -> some View {
+        GeometryReader {
+            let rect = $0.frame(in: .scrollView(axis: .vertical))
+            let minY = rect.minY
+            let offset = min(minY - 75, 0)
+
+            ZStack {
+                Rectangle()
+                    .fill(card.bgColor)
+                    .overlay(alignment: .leading) {
+                        Circle()
+                            .fill(card.bgColor)
+                            .overlay {
+                                Circle()
+                                    .fill(.white.opacity(0.2))
+                            }
+                            .scaleEffect(2, anchor: .topLeading)
+                            .offset(x: -50, y: -40)
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Spacer(minLength: 0)
+
+                    Text("Current Balance")
+                        .font(.callout)
+
+                    Text(card.balance)
+                        .font(.title.bold())
+                }
+                .foregroundStyle(.white)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(15)
+            }
+        }
+        .padding(.horizontal, 15)
     }
 }
 
