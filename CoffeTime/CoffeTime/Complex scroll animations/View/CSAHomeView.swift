@@ -56,6 +56,9 @@ struct CSAHomeView: View {
                         }
                         .scrollPosition(id: $activeCard)
                         .scrollTargetBehavior(.paging)
+                        .scrollClipDisabled()
+                        .scrollIndicators(.hidden)
+                        .scrollDisabled(minY != 75.0)
                     }
                     .frame(height: 125)
                 }
