@@ -95,7 +95,10 @@ struct CSAHomeView: View {
         GeometryReader {
             let rect = $0.frame(in: .scrollView(axis: .vertical))
             let minY = rect.minY
-            let offset = min(minY - 75, 0)
+            let topValue: CGFloat = 75.0
+            let offset = min(minY - topValue, 0)
+            let progress = max(min(-offset / topValue, 1), 0)
+            let scale: CGFloat = 1 + progress
 
             ZStack {
                 Rectangle()
@@ -111,6 +114,7 @@ struct CSAHomeView: View {
                             .offset(x: -50, y: -40)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+                    .scaleEffect(scale, anchor: .bottom)
 
                 VStack(alignment: .leading, spacing: 4) {
                     Spacer(minLength: 0)
