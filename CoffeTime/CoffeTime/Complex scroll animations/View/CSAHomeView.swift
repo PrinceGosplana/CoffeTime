@@ -82,6 +82,14 @@ struct CSAHomeView: View {
                     }
                 }
                 .padding(15)
+                .background {
+                    GeometryReader {
+                        let rect = $0.frame(in: .scrollView)
+
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                            .fill(scheme == .dark ? .black : .white)
+                    }
+                }
             }
             .padding(.vertical, 15)
         }
@@ -158,6 +166,8 @@ struct CSAHomeView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(15)
             }
+            .offset(y: -offset)
+            .offset(y: progress * -topValue)
         }
         .padding(.horizontal, 15)
     }
