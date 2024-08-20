@@ -24,3 +24,9 @@ extension CSCard {
         .init(image: "girl_7")
     ]
 }
+
+extension [CSCard] {
+    func indexOf(_ card: CSCard) -> Int {
+        self.firstIndex(of: card) ?? 0
+    }
+}
