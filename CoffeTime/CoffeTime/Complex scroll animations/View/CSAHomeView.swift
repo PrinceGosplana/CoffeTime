@@ -11,6 +11,8 @@ struct CSAHomeView: View {
 
     /// View Properties
     @State private var allExpenses: [Expense] = []
+    @State private var activeCard: UUID?
+
     /// Environment values
     @Environment(\.colorScheme) private var scheme
 
@@ -25,17 +27,34 @@ struct CSAHomeView: View {
 
                     GeometryReader {
                         let rect = $0.frame(in: .scrollView)
+                        let minY = rect.minY.rounded()
 
                         /// card view
                         ScrollView(.horizontal) {
                             LazyHStack(spacing: 0) {
-                                ForEach(CSACard.cards) {
-                                    CardView($0)
-                                        .containerRelativeFrame(.horizontal)
+                                ForEach(CSACard.cards) { card in
+                                    ZStack {
+                                        if minY == 75.0 {
+                                            /// Not scrolled
+                                            /// /// Showing all cards
+                                            CardView(card)
+                                        } else {
+                                            /// scrolled
+                                            /// Showing only selected card
+                                            if activeCard == card.id {
+                                                CardView(card)
+                                            } else {
+                                                Rectangle()
+                                                    .fill(.clear)
+                                            }
+                                        }
+                                    }
+                                    .containerRelativeFrame(.horizontal)
                                 }
                             }
                             .scrollTargetLayout()
                         }
+                        .scrollPosition(id: $activeCard)
                         .scrollTargetBehavior(.paging)
                     }
                     .frame(height: 125)
@@ -64,7 +83,14 @@ struct CSAHomeView: View {
             .padding(.vertical, 15)
         }
         .onAppear {
-            allExpenses = Expense.expenses.shuffled()
+            if activeCard == nil {
+                activeCard = CSACard.cards.first?.id
+            }
+        }
+        .onChange(of: activeCard) { oldValue, newValue in
+            withAnimation(.snappy) {
+                allExpenses = Expense.expenses.shuffled()
+            }
         }
     }
 
