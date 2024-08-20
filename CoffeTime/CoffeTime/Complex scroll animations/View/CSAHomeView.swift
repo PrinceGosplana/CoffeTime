@@ -82,12 +82,22 @@ struct CSAHomeView: View {
                     }
                 }
                 .padding(15)
+                .mask {
+                    Rectangle()
+                        .visualEffect { content, proxy in
+                            content
+                                .offset(y: backgroundLimitOffset(proxy))
+                        }
+                }
                 .background {
-                    GeometryReader {
-                        let rect = $0.frame(in: .scrollView)
-
+                    GeometryReader { _ in
                         RoundedRectangle(cornerRadius: 30, style: .continuous)
                             .fill(scheme == .dark ? .black : .white)
+                        /// Limiting background scroll bellow the header
+                            .visualEffect { content, proxy in
+                                content
+                                    .offset(y: backgroundLimitOffset(proxy))
+                            }
                     }
                 }
             }
@@ -105,8 +115,14 @@ struct CSAHomeView: View {
         }
     }
 
+    /// Background limit offset
+    private func backgroundLimitOffset(_ proxy: GeometryProxy) -> CGFloat {
+        let minY = proxy.frame(in: .scrollView).minY
+        return minY < 100 ? -minY + 100 : 0
+    }
+
     /// Expense card view
-    func ExpenseCardView(_ expense: Expense) -> some View {
+    private func ExpenseCardView(_ expense: Expense) -> some View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(expense.product)
@@ -128,7 +144,7 @@ struct CSAHomeView: View {
     }
 
     /// Card view
-    func CardView(_ card: CSACard) -> some View {
+    private func CardView(_ card: CSACard) -> some View {
         GeometryReader {
             let rect = $0.frame(in: .scrollView(axis: .vertical))
             let minY = rect.minY
@@ -165,6 +181,7 @@ struct CSAHomeView: View {
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(15)
+                .offset(y: progress * -25)
             }
             .offset(y: -offset)
             .offset(y: progress * -topValue)
