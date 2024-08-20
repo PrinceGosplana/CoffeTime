@@ -108,6 +108,7 @@ struct CSAHomeView: View {
             }
             .padding(.vertical, 15)
         }
+        .scrollTargetBehavior(CustomScrollBehaviour())
         .onAppear {
             if activeCard == nil {
                 activeCard = CSACard.cards.first?.id
