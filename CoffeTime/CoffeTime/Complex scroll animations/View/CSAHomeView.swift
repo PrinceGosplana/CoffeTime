@@ -90,8 +90,13 @@ struct CSAHomeView: View {
                         }
                 }
                 .background {
-                    GeometryReader { _ in
-                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+
+                    GeometryReader {
+                        let rect = $0.frame(in: .scrollView)
+                        let minY = min(rect.minY - 124, 0)
+                        let progress = max(min(-minY / 25, 1), 0)
+
+                        RoundedRectangle(cornerRadius: 30 * progress, style: .continuous)
                             .fill(scheme == .dark ? .black : .white)
                         /// Limiting background scroll bellow the header
                             .visualEffect { content, proxy in
