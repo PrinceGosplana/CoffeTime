@@ -108,6 +108,7 @@
 		8A4D3FFC2C58DC30002B8549 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */; };
 		8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */; };
 		8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */; };
+		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
 		8A93A06F2C732A5100EC12D9 /* CSACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06E2C732A5100EC12D9 /* CSACard.swift */; };
 		8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */; };
@@ -250,6 +251,7 @@
 		8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
 		8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeContentView.swift; sourceTree = "<group>"; };
 		8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTheme.swift; sourceTree = "<group>"; };
+		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		8A93A06E2C732A5100EC12D9 /* CSACard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSACard.swift; sourceTree = "<group>"; };
 		8A9AC54B2C08ADAD003C3511 /* CoffeTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -827,6 +829,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
+			isa = PBXGroup;
+			children = (
+				8A91A2082C75A603007F7B7F /* MovableGridsView.swift */,
+			);
+			path = "Movable grids";
+			sourceTree = "<group>";
+		};
 		8A93A06A2C73230700EC12D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,11 +873,11 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A316FF62C7492C1008728F4 /* Carousel Slider */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
+				8A316FF62C7492C1008728F4 /* Carousel Slider */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A22E6A62C7322960003345B /* Complex scroll animations */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
@@ -884,6 +894,7 @@
 				8AF41A492C18761000801F63 /* Interactive side menu */,
 				8A0E02012C4CE2E8000E8AF9 /* Lock */,
 				8A1ED12B2C2BF57F0046BDB9 /* Login Flow */,
+				8A91A2072C75A5BE007F7B7F /* Movable grids */,
 				8A13491D2C1B26A000099F7D /* Parallax Scroll Effect */,
 				8A13493D2C1C409000099F7D /* Pixel Art */,
 				8A9AC5542C08ADAF003C3511 /* Preview Content */,
@@ -1121,6 +1132,7 @@
 				8A3389AA2C2D968500245E6C /* CircleView.swift in Sources */,
 				8AAD774F2C6B9EDE004E54D1 /* DIHomeView.swift in Sources */,
 				8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */,
+				8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */,
 				8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
 				8A019B442C26C08000799137 /* BottomActionBar.swift in Sources */,
