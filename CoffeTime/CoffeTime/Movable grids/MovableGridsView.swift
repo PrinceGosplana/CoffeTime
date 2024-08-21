@@ -19,18 +19,36 @@ struct MovableGridsView: View {
 
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(colors, id:\.self) { color in
-                        GeometryReader {
-                            let size = $0.size
+                        GeometryReader { _ in
 
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .fill(color.gradient)
                             /// we can pass any item that conforms to the transferable protocol, such as a string, Data, etc., in the draggable modifier
+                            /// Drag
                                 .draggable(color) {
                                     /// Custom preview view
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(.ultraThinMaterial)
-                                        .frame(width: size.width, height: size.height)
+                                        .frame(width: 1, height: 1)
+                                        .onAppear { draggingItem = color }
                                 }
+                            /// Drop
+                                .dropDestination(for: Color.self) { items, location in
+                                    draggingItem = nil
+                                    return false
+                                } isTargeted: { status in
+                                    /// When the source moves around the target view, the isTargetted callback is called, which allows us to find where the source is actually targeting, and thus, with the help of this, we can move items on the grid
+                                    if let draggingItem, status, draggingItem != color {
+                                        /// Moving Color from source to destination
+                                        if let sourceIndex = colors.firstIndex(of: draggingItem), let destinationIndex = colors.firstIndex(of: color) {
+                                            withAnimation(.bouncy) {
+                                                let sourceItem = colors.remove(at: sourceIndex)
+                                                colors.insert(sourceItem, at: destinationIndex)
+                                            }
+                                        }
+                                    }
+                                }
+
                         }
                         .frame(height: 100)
                     }
