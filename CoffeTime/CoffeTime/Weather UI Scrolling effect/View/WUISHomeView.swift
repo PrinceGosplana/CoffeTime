@@ -19,6 +19,34 @@ struct WUISHomeView: View {
             .ignoresSafeArea()
             /// Blur material
             .overlay(.ultraThinMaterial)
+
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    VStack(alignment: .center, spacing: 5) {
+                        Text("San Jose")
+                            .font(.system(size: 35))
+                            .foregroundStyle(.white)
+                            .shadow(radius: 5)
+
+                        Text(" 98 ")
+                            .font(.system(size: 45))
+                            .foregroundStyle(.white)
+                            .shadow(radius: 5)
+
+                        Text("Cloudy")
+                            .foregroundStyle(.secondary)
+                            .foregroundStyle(.white)
+                            .shadow(radius: 5)
+
+                        Text("H: 103 L:105")
+                            .foregroundStyle(.primary)
+                            .foregroundStyle(.white)
+                            .shadow(radius: 5)
+                    }
+                }
+                .padding(.top, 25)
+                .padding([.horizontal, .bottom])
+            }
         }
     }
 }
