@@ -84,6 +84,8 @@
 		8A135C2E2C350739007AF05B /* CTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A135C2D2C350739007AF05B /* CTabItem.swift */; };
 		8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A135C2F2C350784007AF05B /* CustomTabBar.swift */; };
 		8A135C322C350E9B007AF05B /* CTabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A135C312C350E9B007AF05B /* CTabShape.swift */; };
+		8A1494BC2C83962600657FDC /* WUISContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494BB2C83962600657FDC /* WUISContentView.swift */; };
+		8A1494BE2C83963100657FDC /* WUISHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494BD2C83963100657FDC /* WUISHomeView.swift */; };
 		8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */; };
 		8A1A42FF2C370E0B00809BBA /* SwipeHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */; };
 		8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */; };
@@ -227,6 +229,8 @@
 		8A135C2D2C350739007AF05B /* CTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTabItem.swift; sourceTree = "<group>"; };
 		8A135C2F2C350784007AF05B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8A135C312C350E9B007AF05B /* CTabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTabShape.swift; sourceTree = "<group>"; };
+		8A1494BB2C83962600657FDC /* WUISContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISContentView.swift; sourceTree = "<group>"; };
+		8A1494BD2C83963100657FDC /* WUISHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISHomeView.swift; sourceTree = "<group>"; };
 		8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeContentView.swift; sourceTree = "<group>"; };
 		8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeHomeView.swift; sourceTree = "<group>"; };
 		8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -699,6 +703,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8A1494BA2C83960100657FDC /* Weather UI Scrolling effect */ = {
+			isa = PBXGroup;
+			children = (
+				8A1494C02C83966800657FDC /* Model */,
+				8A1494BF2C83966100657FDC /* View */,
+			);
+			path = "Weather UI Scrolling effect";
+			sourceTree = "<group>";
+		};
+		8A1494BF2C83966100657FDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A1494BB2C83962600657FDC /* WUISContentView.swift */,
+				8A1494BD2C83963100657FDC /* WUISHomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A1494C02C83966800657FDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8A1A42FB2C370DCF00809BBA /* Swipe Actions for scrollview */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,6 +902,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A1494BA2C83960100657FDC /* Weather UI Scrolling effect */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
@@ -1119,6 +1149,7 @@
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */,
 				8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */,
+				8A1494BC2C83962600657FDC /* WUISContentView.swift in Sources */,
 				8AE88A952C5CFD1800C57C4C /* CoverFlowContentView.swift in Sources */,
 				8AAD77522C6BA767004E54D1 /* StackedSpring.swift in Sources */,
 				8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */,
@@ -1225,6 +1256,7 @@
 				8AE9BCDE2C400C610084D4E8 /* View+Ext.swift in Sources */,
 				8A0717FB2C10373B0017E1E8 /* HackerTextView.swift in Sources */,
 				8A325E262C3E641A00E27325 /* AnchorKey.swift in Sources */,
+				8A1494BE2C83963100657FDC /* WUISHomeView.swift in Sources */,
 				8A0718662C12EEEF0017E1E8 /* GTExtendedSpacer.swift in Sources */,
 				8A06CDBE2C37CE9900F60C1A /* SwipeCardView.swift in Sources */,
 				8AEB905B2C3D9EA600F7CD4E /* SourceView.swift in Sources */,
