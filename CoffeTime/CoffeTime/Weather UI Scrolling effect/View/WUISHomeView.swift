@@ -22,6 +22,7 @@ struct WUISHomeView: View {
 
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
+                    /// Weather data
                     VStack(alignment: .center, spacing: 5) {
                         Text("San Jose")
                             .font(.system(size: 35))
@@ -42,6 +43,11 @@ struct WUISHomeView: View {
                             .foregroundStyle(.primary)
                             .foregroundStyle(.white)
                             .shadow(radius: 5)
+                    }
+
+                    /// Custom data view
+                    VStack(spacing: 8) {
+                        
                     }
                 }
                 .padding(.top, 25)
