@@ -46,21 +46,7 @@ struct WUISHomeView: View {
                     }
 
                     /// Custom data view
-                    VStack(spacing: 8) {
-                        WUISCustomStackView {
-                            Label {
-                                Text("Hourly Forecast")
-                            } icon: {
-                                Image(systemName: "clock")
-                            }
-                        } contentView: {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 15) {
-                                    
-                                }
-                            }
-                        }
-                    }
+                    WUISForecastView(time: "12 PM", celcius: 24, imageName: "sun.min")
                 }
                 .padding(.top, 25)
                 .padding([.horizontal, .bottom])
