@@ -1,5 +1,5 @@
 //
-//  WUISCustomerConer.swift
+//  WUISCustomConer.swift
 //  CoffeTime
 //
 //  Created by Oleksandr Isaiev on 31.08.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WUISCustomerCorner: Shape {
+struct WUISCustomCorner: Shape {
     var corners: UIRectCorner
     var radius: CGFloat
 

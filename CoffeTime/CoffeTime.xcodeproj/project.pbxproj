@@ -87,7 +87,7 @@
 		8A1494BC2C83962600657FDC /* WUISContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494BB2C83962600657FDC /* WUISContentView.swift */; };
 		8A1494BE2C83963100657FDC /* WUISHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494BD2C83963100657FDC /* WUISHomeView.swift */; };
 		8A1494C22C83993100657FDC /* WUISCustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494C12C83993000657FDC /* WUISCustomStackView.swift */; };
-		8A1494C42C839A2600657FDC /* WUISCustomerConer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494C32C839A2600657FDC /* WUISCustomerConer.swift */; };
+		8A1494C42C839A2600657FDC /* WUISCustomConer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1494C32C839A2600657FDC /* WUISCustomConer.swift */; };
 		8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */; };
 		8A1A42FF2C370E0B00809BBA /* SwipeHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */; };
 		8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */; };
@@ -234,7 +234,7 @@
 		8A1494BB2C83962600657FDC /* WUISContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISContentView.swift; sourceTree = "<group>"; };
 		8A1494BD2C83963100657FDC /* WUISHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISHomeView.swift; sourceTree = "<group>"; };
 		8A1494C12C83993000657FDC /* WUISCustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISCustomStackView.swift; sourceTree = "<group>"; };
-		8A1494C32C839A2600657FDC /* WUISCustomerConer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISCustomerConer.swift; sourceTree = "<group>"; };
+		8A1494C32C839A2600657FDC /* WUISCustomConer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISCustomConer.swift; sourceTree = "<group>"; };
 		8A1A42FC2C370DFF00809BBA /* SwipeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeContentView.swift; sourceTree = "<group>"; };
 		8A1A42FE2C370E0B00809BBA /* SwipeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeHomeView.swift; sourceTree = "<group>"; };
 		8A1ED12D2C2BF5AB0046BDB9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -722,7 +722,7 @@
 				8A1494BB2C83962600657FDC /* WUISContentView.swift */,
 				8A1494BD2C83963100657FDC /* WUISHomeView.swift */,
 				8A1494C12C83993000657FDC /* WUISCustomStackView.swift */,
-				8A1494C32C839A2600657FDC /* WUISCustomerConer.swift */,
+				8A1494C32C839A2600657FDC /* WUISCustomConer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1169,7 +1169,7 @@
 				8A3389AA2C2D968500245E6C /* CircleView.swift in Sources */,
 				8AAD774F2C6B9EDE004E54D1 /* DIHomeView.swift in Sources */,
 				8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */,
-				8A1494C42C839A2600657FDC /* WUISCustomerConer.swift in Sources */,
+				8A1494C42C839A2600657FDC /* WUISCustomConer.swift in Sources */,
 				8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */,
 				8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
