@@ -12,6 +12,10 @@ struct WUISCustomStackView<Title: View, Content: View>: View {
     var titleView: Title
     var contentView: Content
 
+    /// Offsets
+    @State private var topOffset: CGFloat = 0
+    @State private var bottomOffset: CGFloat = 0
+
     init(@ViewBuilder titleView: @escaping () -> Title, @ViewBuilder contentView: @escaping () -> Content) {
         self.contentView = contentView()
         self.titleView = titleView()
@@ -36,5 +40,17 @@ struct WUISCustomStackView<Title: View, Content: View>: View {
             .background(.ultraThinMaterial, in: WUISCustomCorner(corners: [.bottomLeft, .bottomRight], radius: 12))
         }
         .preferredColorScheme(.dark)
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+        /// Stopping view $120
+        .offset(y: topOffset >= 120 ? 0 : -topOffset + 120)
+        .background {
+            GeometryReader { proxy -> Color in
+                let minY = proxy.frame(in: .global).minY
+                DispatchQueue.main.async {
+                    self.topOffset = minY
+                }
+                return Color.clear
+            }
+        }
     }
 }
