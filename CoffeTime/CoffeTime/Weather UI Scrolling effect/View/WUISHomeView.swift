@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct WUISHomeView: View {
+
+    @State var offset: CGFloat = 0
+    let topEdge: CGFloat
+
     var body: some View {
         ZStack {
             GeometryReader { proxy in
@@ -33,17 +37,23 @@ struct WUISHomeView: View {
                             .font(.system(size: 45))
                             .foregroundStyle(.white)
                             .shadow(radius: 5)
+                            .opacity(getTitleOpacity())
 
                         Text("Cloudy")
                             .foregroundStyle(.secondary)
                             .foregroundStyle(.white)
                             .shadow(radius: 5)
+                            .opacity(getTitleOpacity())
 
                         Text("H: 103 L:105")
                             .foregroundStyle(.primary)
                             .foregroundStyle(.white)
                             .shadow(radius: 5)
+                            .opacity(getTitleOpacity())
                     }
+                    .offset(y: -offset)
+                    /// for bottom drag effect
+                    .offset(y: offset > 0 ? (offset / UIScreen.main.bounds.width) * 100 : 0)
 
                     VStack(spacing: 8) {
                         WUISCustomStackView {
@@ -73,10 +83,41 @@ struct WUISHomeView: View {
 
                     
                 }
-                .padding(.top, 25)
+                .padding(.top, 60)
                 .padding([.horizontal, .bottom])
+                // getting offset
+                .overlay {
+                    // Use Geometry reader
+                    GeometryReader { proxy -> Color in
+                        
+                        let minY = proxy.frame(in: .global).minY
+                        
+                        DispatchQueue.main.async {
+                            self.offset = minY
+                        }
+                        return Color.clear
+                    }
+                }
             }
         }
+    }
+
+    private func getTitleOpacity() -> CGFloat {
+        let titleOffset = -getTitleOffset()
+        let progress = titleOffset / 20
+        return 1 - progress
+    }
+
+    private func getTitleOffset() -> CGFloat {
+        if offset < 0 {
+            /// setting one max height for whole tile...
+            /// consider max as 120
+            let progress = -offset / 120
+            // since top padding is 25...
+            let newOffset = (progress <= 1.0 ? progress : 1) * 20
+            return -newOffset
+        }
+        return 0
     }
 }
 

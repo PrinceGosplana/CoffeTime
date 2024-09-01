@@ -9,7 +9,13 @@ import SwiftUI
 
 struct WUISContentView: View {
     var body: some View {
-        WUISHomeView()
+        // Since Window is deprecated in iOS 15 we get Safe area using Geometry reader
+        GeometryReader { proxy in
+            let topEdge = proxy.safeAreaInsets.top
+            
+            WUISHomeView(topEdge: topEdge)
+                .ignoresSafeArea(.all, edges: .top)
+        }
     }
 }
 
