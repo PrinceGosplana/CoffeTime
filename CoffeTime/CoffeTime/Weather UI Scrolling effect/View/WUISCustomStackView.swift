@@ -23,7 +23,18 @@ struct WUISCustomStackView<Title: View, Content: View>: View {
                 .font(.callout)
                 .lineLimit(2)
                 .frame(height: 38)
-                .background(.ultraThinMaterial, in: WUISCustomerCorner(corners: [.topLeft, .topRight], radius: 12))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+                .background(.ultraThinMaterial, in: WUISCustomCorner(corners: [.topLeft, .topRight], radius: 12))
+
+            VStack {
+                Divider()
+
+                contentView
+                    .padding()
+            }
+            .background(.ultraThinMaterial, in: WUISCustomCorner(corners: [.bottomLeft, .bottomRight], radius: 12))
         }
+        .preferredColorScheme(.dark)
     }
 }
