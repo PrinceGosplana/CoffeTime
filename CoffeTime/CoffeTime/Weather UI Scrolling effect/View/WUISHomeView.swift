@@ -45,8 +45,33 @@ struct WUISHomeView: View {
                             .shadow(radius: 5)
                     }
 
-                    /// Custom data view
-                    WUISForecastView(time: "12 PM", celcius: 24, imageName: "sun.min")
+                    VStack(spacing: 8) {
+                        WUISCustomStackView {
+                            Label {
+                                Text("Hourly Forecast")
+                            } icon: {
+                                Image(systemName: "clock")
+                            }
+                        } contentView: {
+                            ScrollView(.horizontal, showsIndicators: false) {
+
+                                HStack(spacing: 15) {
+                                    /// Custom data view
+                                    WUISForecastView(time: "12 PM", celcius: 24, imageName: "sun.min")
+
+                                    WUISForecastView(time: "1 PM", celcius: 25, imageName: "sun.haze")
+
+                                    WUISForecastView(time: "2 PM", celcius: 26, imageName: "sun.min")
+
+                                    WUISForecastView(time: "3 PM", celcius: 26, imageName: "cloud.sun")
+
+                                    WUISForecastView(time: "4 PM", celcius: 25, imageName: "sun.haze")
+                                }
+                            }
+                        }
+                    }
+
+                    
                 }
                 .padding(.top, 25)
                 .padding([.horizontal, .bottom])
