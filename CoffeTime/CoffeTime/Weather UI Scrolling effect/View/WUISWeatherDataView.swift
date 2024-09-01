@@ -64,6 +64,25 @@ struct WUISWeatherDataView: View {
                 }
             }
             .frame(maxHeight: .infinity)
+
+            WUISCustomStackView {
+                Label {
+                    Text("10-Day Forecast")
+                } icon: {
+                    Image(systemName: "calendar")
+                }
+            } contentView: {
+                VStack(alignment: .leading, spacing: 10) {
+                    ForEach(DayForecast.mock) { cast in
+                        VStack {
+                            WUISCastCell(cast: cast)
+
+                            Divider()
+                        }
+                        .padding(.vertical, 8)
+                    }
+                }
+            }
         }
     }
 }
