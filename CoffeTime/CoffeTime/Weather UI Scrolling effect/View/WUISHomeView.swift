@@ -81,7 +81,8 @@ struct WUISHomeView: View {
                         }
                     }
 
-                    
+                    WUISWeatherDataView()
+
                 }
                 .padding(.top, 60)
                 .padding([.horizontal, .bottom])
