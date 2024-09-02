@@ -119,6 +119,8 @@
 		8A4D3FFC2C58DC30002B8549 /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */; };
 		8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */; };
 		8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */; };
+		8A60EC6E2C85ECFC0076BB57 /* CTBAContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60EC6D2C85ECFC0076BB57 /* CTBAContentView.swift */; };
+		8A60EC702C85ED0C0076BB57 /* CTBAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60EC6F2C85ED0C0076BB57 /* CTBAHomeView.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -274,6 +276,8 @@
 		8A4D3FFB2C58DC30002B8549 /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
 		8A4D3FFD2C58DC3E002B8549 /* ThemeChangeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeContentView.swift; sourceTree = "<group>"; };
 		8A4D3FFF2C58DCB9002B8549 /* TCTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTheme.swift; sourceTree = "<group>"; };
+		8A60EC6D2C85ECFC0076BB57 /* CTBAContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBAContentView.swift; sourceTree = "<group>"; };
+		8A60EC6F2C85ED0C0076BB57 /* CTBAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBAHomeView.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -747,9 +751,9 @@
 			isa = PBXGroup;
 			children = (
 				8A1494BB2C83962600657FDC /* WUISContentView.swift */,
-				8A1494BD2C83963100657FDC /* WUISHomeView.swift */,
 				8A1494C12C83993000657FDC /* WUISCustomStackView.swift */,
 				8A7045532C8444F800E07DAC /* WUISForecastView.swift */,
+				8A1494BD2C83963100657FDC /* WUISHomeView.swift */,
 				8A1C651C2C849CCC00D45D45 /* WUISWeatherDataView.swift */,
 			);
 			path = View;
@@ -781,8 +785,8 @@
 		8A1C65222C84A7DC00D45D45 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8A1494C32C839A2600657FDC /* WUISCustomConer.swift */,
 				8A1C65232C84A98800D45D45 /* WUISCastCell.swift */,
+				8A1494C32C839A2600657FDC /* WUISCustomConer.swift */,
 				8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */,
 				8A0ACE882C85B66A00325AB9 /* WUISRainFallLanding.swift */,
 			);
@@ -904,6 +908,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8A60EC6B2C85ECAA0076BB57 /* Custom TabBar Animation */ = {
+			isa = PBXGroup;
+			children = (
+				8A60EC6C2C85ECE70076BB57 /* View */,
+			);
+			path = "Custom TabBar Animation";
+			sourceTree = "<group>";
+		};
+		8A60EC6C2C85ECE70076BB57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A60EC6D2C85ECFC0076BB57 /* CTBAContentView.swift */,
+				8A60EC6F2C85ED0C0076BB57 /* CTBAHomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
 			isa = PBXGroup;
 			children = (
@@ -948,7 +969,6 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A1494BA2C83960100657FDC /* Weather UI Scrolling effect */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
@@ -959,6 +979,7 @@
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
+				8A60EC6B2C85ECAA0076BB57 /* Custom TabBar Animation */,
 				8AAD774B2C6B9EBC004E54D1 /* Draggable Images */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
 				8A0CA0482C3BC9B400D10CEF /* Extensions */,
@@ -987,6 +1008,7 @@
 				8A23B20B2C58DBB800155D9A /* Theme Switcher UI */,
 				8A0D66AA2C3D26E8005163F9 /* Universal hero effect */,
 				8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */,
+				8A1494BA2C83960100657FDC /* Weather UI Scrolling effect */,
 			);
 			path = CoffeTime;
 			sourceTree = "<group>";
@@ -1230,6 +1252,7 @@
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
 				8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */,
 				8AAD775C2C6CCFA7004E54D1 /* STTab.swift in Sources */,
+				8A60EC702C85ED0C0076BB57 /* CTBAHomeView.swift in Sources */,
 				8A39C0DF2C43FC9F00A7F855 /* HAEDetailView.swift in Sources */,
 				8A0C9C2B2C3AB2DD007487DA /* StickyHeaderHomeView.swift in Sources */,
 				8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */,
@@ -1320,6 +1343,7 @@
 				8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */,
+				8A60EC6E2C85ECFC0076BB57 /* CTBAContentView.swift in Sources */,
 				8A097D962C3195D100F03670 /* ESAHomeView.swift in Sources */,
 				8A019B422C26BED900799137 /* SSHomeView.swift in Sources */,
 				8A0F01CF2C0EF10500B77AB1 /* FindCollectionView.swift in Sources */,
