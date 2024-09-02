@@ -11,6 +11,9 @@ import SwiftUI
 struct WUISHomeView: View {
 
     @State var offset: CGFloat = 0
+    /// to avoid early starting of landing animation
+    @State var showRain = false
+
     let topEdge: CGFloat
 
     var body: some View {
@@ -30,6 +33,7 @@ struct WUISHomeView: View {
                 SpriteView(scene: WUISRainFall(), options: [.allowsTransparency])
             }
             .ignoresSafeArea()
+            .opacity(showRain ? 1 : 0)
 
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
@@ -87,12 +91,12 @@ struct WUISHomeView: View {
                             }
                         }
                     }
-                    .overlay {
+                    .background {
                         GeometryReader { _ in
                             SpriteView(scene: WUISRainFallLanding(), options: [.allowsTransparency])
-                                .offset(y: -5)
+                                .offset(y: -6)
                         }
-                        .offset(y: -(offset + topEdge) > 40 ? -(offset + (40 + topEdge)) : 0)
+                        .offset(y: -(offset + topEdge) > 44 ? -(offset + (44 + topEdge)) : 0)
                     }
                     WUISWeatherDataView()
 
@@ -111,6 +115,13 @@ struct WUISHomeView: View {
                         }
                         return Color.clear
                     }
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                withAnimation {
+                    showRain = true
                 }
             }
         }
