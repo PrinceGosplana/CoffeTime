@@ -47,6 +47,8 @@
 		8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */; };
 		8A0ACE822C8599B500325AB9 /* WUISRainFall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */; };
 		8A0ACE862C859A7100325AB9 /* WUISRainFall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */; };
+		8A0ACE892C85B66A00325AB9 /* WUISRainFallLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0ACE882C85B66A00325AB9 /* WUISRainFallLanding.swift */; };
+		8A0ACE8C2C85B6A400325AB9 /* WUISRainFallLanding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8A0ACE8A2C85B6A400325AB9 /* WUISRainFallLanding.sks */; };
 		8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */; };
 		8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */; };
 		8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */; };
@@ -200,6 +202,8 @@
 		8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOTPVerificationView.swift; sourceTree = "<group>"; };
 		8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISRainFall.swift; sourceTree = "<group>"; };
 		8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WUISRainFall.sks; sourceTree = "<group>"; };
+		8A0ACE882C85B66A00325AB9 /* WUISRainFallLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISRainFallLanding.swift; sourceTree = "<group>"; };
+		8A0ACE8A2C85B6A400325AB9 /* WUISRainFallLanding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WUISRainFallLanding.sks; sourceTree = "<group>"; };
 		8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroItem.swift; sourceTree = "<group>"; };
 		8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
 		8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroProfile.swift; sourceTree = "<group>"; };
@@ -479,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */,
+				8A0ACE8A2C85B6A400325AB9 /* WUISRainFallLanding.sks */,
 			);
 			path = SpriteFiles;
 			sourceTree = "<group>";
@@ -779,6 +784,7 @@
 				8A1494C32C839A2600657FDC /* WUISCustomConer.swift */,
 				8A1C65232C84A98800D45D45 /* WUISCastCell.swift */,
 				8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */,
+				8A0ACE882C85B66A00325AB9 /* WUISRainFallLanding.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1163,6 +1169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0ACE8C2C85B6A400325AB9 /* WUISRainFallLanding.sks in Resources */,
 				8A9AC5562C08ADAF003C3511 /* Preview Assets.xcassets in Resources */,
 				8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */,
 				8A0ACE862C859A7100325AB9 /* WUISRainFall.sks in Resources */,
@@ -1178,6 +1185,7 @@
 			files = (
 				8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */,
 				8A0BF00F2C429688007D0FC1 /* HAEContentVeiw.swift in Sources */,
+				8A0ACE892C85B66A00325AB9 /* WUISRainFallLanding.swift in Sources */,
 				8A93A06F2C732A5100EC12D9 /* CSACard.swift in Sources */,
 				8A1C65212C84A5B700D45D45 /* DayForecast.swift in Sources */,
 				8AAD77AF2C6F3032004E54D1 /* SearchBarHomeView.swift in Sources */,

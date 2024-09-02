@@ -87,7 +87,12 @@ struct WUISHomeView: View {
                             }
                         }
                     }
-
+                    .overlay {
+                        GeometryReader { _ in
+                            SpriteView(scene: WUISRainFallLanding(), options: [.allowsTransparency])
+                                .offset(y: -5)
+                        }
+                    }
                     WUISWeatherDataView()
 
                 }
