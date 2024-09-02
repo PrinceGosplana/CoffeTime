@@ -14,9 +14,10 @@ struct CoffeTimeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HeroWrapper {
-                UHEContentView()
-            }
+            WUISContentView()
+//            HeroWrapper {
+//                UHEContentView()
+//            }
 //            ContentView()
 //            /// in order to run ColorContentView
 //                .modelContainer(for: ColorModel.self)

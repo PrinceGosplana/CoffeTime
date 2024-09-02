@@ -5,6 +5,7 @@
 //  Created by Oleksandr Isaiev on 31.08.2024.
 //
 
+import SpriteKit
 import SwiftUI
 
 struct WUISHomeView: View {
@@ -15,7 +16,7 @@ struct WUISHomeView: View {
     var body: some View {
         ZStack {
             GeometryReader { proxy in
-                Image(.theGreatWave)
+                Image(.waterLiquidAzure)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: proxy.size.width, height: proxy.size.height)
@@ -23,6 +24,12 @@ struct WUISHomeView: View {
             .ignoresSafeArea()
             /// Blur material
             .overlay(.ultraThinMaterial)
+
+            /// Rain fall view
+            GeometryReader { _ in
+                SpriteView(scene: WUISRainFall(), options: [.allowsTransparency])
+            }
+            .ignoresSafeArea()
 
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {

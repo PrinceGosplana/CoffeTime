@@ -13,11 +13,17 @@ class WUISRainFall: SKScene {
         size = UIScreen.main.bounds.size
         scaleMode = .resizeFill
 
+        /// anchor point
+        anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        
         /// background color
         backgroundColor = .clear
 
         /// creating node and adding to scene
         let node = SKEmitterNode(fileNamed: "WUISRainFall.sks")!
         addChild(node)
+
+        /// Full width
+        node.particlePositionRange.dx = UIScreen.main.bounds.width
     }
 }
