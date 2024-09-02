@@ -26,7 +26,11 @@ struct CTBAHomeView: View {
                 }
                 .padding()
                 .padding(.bottom, 60)
+                .modifier(CTBAOffsetModifier())
+                .environmentObject(bottomBarModel)
             }
+            /// to start from 0 just set Coordinate space for scrollview
+            .coordinateSpace(name: "TabScroll")
 
             CTBABottomBar()
                 .environmentObject(bottomBarModel)

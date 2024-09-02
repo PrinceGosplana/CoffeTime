@@ -49,6 +49,7 @@
 		8A0ACE862C859A7100325AB9 /* WUISRainFall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */; };
 		8A0ACE892C85B66A00325AB9 /* WUISRainFallLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0ACE882C85B66A00325AB9 /* WUISRainFallLanding.swift */; };
 		8A0ACE8C2C85B6A400325AB9 /* WUISRainFallLanding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8A0ACE8A2C85B6A400325AB9 /* WUISRainFallLanding.sks */; };
+		8A0BD5DC2C85FE9000CD316D /* CTBAOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BD5DB2C85FE9000CD316D /* CTBAOffsetModifier.swift */; };
 		8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */; };
 		8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */; };
 		8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */; };
@@ -208,6 +209,7 @@
 		8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WUISRainFall.sks; sourceTree = "<group>"; };
 		8A0ACE882C85B66A00325AB9 /* WUISRainFallLanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISRainFallLanding.swift; sourceTree = "<group>"; };
 		8A0ACE8A2C85B6A400325AB9 /* WUISRainFallLanding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WUISRainFallLanding.sks; sourceTree = "<group>"; };
+		8A0BD5DB2C85FE9000CD316D /* CTBAOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBAOffsetModifier.swift; sourceTree = "<group>"; };
 		8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroItem.swift; sourceTree = "<group>"; };
 		8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
 		8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroProfile.swift; sourceTree = "<group>"; };
@@ -494,6 +496,14 @@
 				8A0ACE8A2C85B6A400325AB9 /* WUISRainFallLanding.sks */,
 			);
 			path = SpriteFiles;
+			sourceTree = "<group>";
+		};
+		8A0BD5DA2C85FE5900CD316D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A0BD5DB2C85FE9000CD316D /* CTBAOffsetModifier.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8A0BF0072C429394007D0FC1 /* Progress based hero animation effect */ = {
@@ -915,6 +925,7 @@
 		8A60EC6B2C85ECAA0076BB57 /* Custom TabBar Animation */ = {
 			isa = PBXGroup;
 			children = (
+				8A0BD5DA2C85FE5900CD316D /* Helpers */,
 				8A60EC732C85F6490076BB57 /* ViewModel */,
 				8A60EC6C2C85ECE70076BB57 /* View */,
 			);
@@ -1277,6 +1288,7 @@
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
+				8A0BD5DC2C85FE9000CD316D /* CTBAOffsetModifier.swift in Sources */,
 				8AAD77442C6B86E2004E54D1 /* SHContentView.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */,
