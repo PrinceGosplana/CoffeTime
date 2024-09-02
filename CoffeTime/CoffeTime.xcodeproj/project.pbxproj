@@ -45,6 +45,8 @@
 		8A0A4A0D2C2ED93C001A47CE /* OTPContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A0C2C2ED93C001A47CE /* OTPContentView.swift */; };
 		8A0A4A162C2EE1AF001A47CE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A152C2EE1AF001A47CE /* String+Ext.swift */; };
 		8A0A4A182C2EE94D001A47CE /* LFOTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */; };
+		8A0ACE822C8599B500325AB9 /* WUISRainFall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */; };
+		8A0ACE862C859A7100325AB9 /* WUISRainFall.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */; };
 		8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */; };
 		8A0BF0062C428ED7007D0FC1 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */; };
 		8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */; };
@@ -196,6 +198,8 @@
 		8A0A4A0C2C2ED93C001A47CE /* OTPContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPContentView.swift; sourceTree = "<group>"; };
 		8A0A4A152C2EE1AF001A47CE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		8A0A4A172C2EE94D001A47CE /* LFOTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFOTPVerificationView.swift; sourceTree = "<group>"; };
+		8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISRainFall.swift; sourceTree = "<group>"; };
+		8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WUISRainFall.sks; sourceTree = "<group>"; };
 		8A0BF0032C428BB4007D0FC1 /* HeroItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroItem.swift; sourceTree = "<group>"; };
 		8A0BF0052C428ED7007D0FC1 /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
 		8A0BF0092C42959B007D0FC1 /* HeroProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroProfile.swift; sourceTree = "<group>"; };
@@ -471,6 +475,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8A0ACE832C859A3600325AB9 /* SpriteFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8A0ACE842C859A7100325AB9 /* WUISRainFall.sks */,
+			);
+			path = SpriteFiles;
+			sourceTree = "<group>";
+		};
 		8A0BF0072C429394007D0FC1 /* Progress based hero animation effect */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +730,7 @@
 		8A1494BA2C83960100657FDC /* Weather UI Scrolling effect */ = {
 			isa = PBXGroup;
 			children = (
+				8A0ACE832C859A3600325AB9 /* SpriteFiles */,
 				8A1C65222C84A7DC00D45D45 /* Helpers */,
 				8A1494C02C83966800657FDC /* Model */,
 				8A1494BF2C83966100657FDC /* View */,
@@ -765,6 +778,7 @@
 			children = (
 				8A1494C32C839A2600657FDC /* WUISCustomConer.swift */,
 				8A1C65232C84A98800D45D45 /* WUISCastCell.swift */,
+				8A0ACE812C8599B500325AB9 /* WUISRainFall.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1151,6 +1165,7 @@
 			files = (
 				8A9AC5562C08ADAF003C3511 /* Preview Assets.xcassets in Resources */,
 				8A9AC5532C08ADAF003C3511 /* Assets.xcassets in Resources */,
+				8A0ACE862C859A7100325AB9 /* WUISRainFall.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1277,6 +1292,7 @@
 				8A316FFD2C749396008728F4 /* CarouselSliderHome.swift in Sources */,
 				8AE9BCDC2C4008C90084D4E8 /* HeroLayerViewModifier.swift in Sources */,
 				8A9AC54F2C08ADAD003C3511 /* CoffeTimeApp.swift in Sources */,
+				8A0ACE822C8599B500325AB9 /* WUISRainFall.swift in Sources */,
 				8A09C8E72C2DB5B00097D1DA /* PasswordResetView.swift in Sources */,
 				8A1ED12E2C2BF5AB0046BDB9 /* LoginView.swift in Sources */,
 				8A9AC5602C08AE21003C3511 /* RangeSliderView.swift in Sources */,
