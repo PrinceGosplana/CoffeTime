@@ -92,6 +92,7 @@ struct WUISHomeView: View {
                             SpriteView(scene: WUISRainFallLanding(), options: [.allowsTransparency])
                                 .offset(y: -5)
                         }
+                        .offset(y: -(offset + topEdge) > 40 ? -(offset + (40 + topEdge)) : 0)
                     }
                     WUISWeatherDataView()
 
