@@ -25,6 +25,8 @@ struct CTBAHomeView: View {
                 }
                 .padding()
             }
+
+            CTBABottomBar()
         }
     }
 }
