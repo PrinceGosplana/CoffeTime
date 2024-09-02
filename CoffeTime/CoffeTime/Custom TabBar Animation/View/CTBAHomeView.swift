@@ -10,7 +10,8 @@ import SwiftUI
 struct CTBAHomeView: View {
 
     var proxy: GeometryProxy
-
+    @StateObject var bottomBarModel = CTBABottomBarViewModel()
+    
     var body: some View {
         ZStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -24,9 +25,11 @@ struct CTBAHomeView: View {
                     }
                 }
                 .padding()
+                .padding(.bottom, 60)
             }
 
             CTBABottomBar()
+                .environmentObject(bottomBarModel)
         }
     }
 }

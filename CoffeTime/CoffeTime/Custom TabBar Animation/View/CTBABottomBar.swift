@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CTBABottomBar: View {
+
+    @EnvironmentObject var bottomBarModel: CTBABottomBarViewModel
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -32,15 +35,35 @@ struct CTBABottomBar: View {
                         .tint(.primary)
                 }
 
+                Image(systemName: "magnifyingglass")
+                    .font(.callout)
+                    .foregroundStyle(.primary)
+
+                TextField("", text: $bottomBarModel.searchText)
+
+                Image(systemName: "lock")
+                    .symbolVariant(.fill)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
                 Button {
 
                 } label: {
-                    Image(systemName: "magnifyingglass")
-                        .font(.callout)
+                    Image(systemName: "line.3.horizontal")
+                        .font(.title2)
+                        .tint(.primary)
+                }
+
+                Button {
+
+                } label: {
+                    Image(systemName: "square.on.square")
+                        .font(.title2)
                         .tint(.primary)
                 }
             }
             .preferredColorScheme(.dark)
+            .padding(.horizontal)
         }
         .frame(height: 60)
         .padding([.horizontal])
@@ -50,4 +73,5 @@ struct CTBABottomBar: View {
 
 #Preview {
     CTBABottomBar()
+        .environmentObject(CTBABottomBarViewModel())
 }
