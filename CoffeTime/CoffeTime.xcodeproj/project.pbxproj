@@ -103,6 +103,8 @@
 		8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */; };
 		8A1ED1352C2BF87B0046BDB9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED1342C2BF87B0046BDB9 /* CustomTextField.swift */; };
 		8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1ED1362C2C0CD90046BDB9 /* GradientButton.swift */; };
+		8A1EE50B2C86F6840054355D /* CSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1EE50A2C86F6840054355D /* CSHomeView.swift */; };
+		8A1EE50D2C86F6920054355D /* CSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1EE50C2C86F6920054355D /* CSContentView.swift */; };
 		8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED542C15AA1900D5915D /* DummyColors.swift */; };
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A72C7322B40003345B /* CSAHomeView.swift */; };
@@ -263,6 +265,8 @@
 		8A1ED1322C2BF6AC0046BDB9 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		8A1ED1342C2BF87B0046BDB9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8A1ED1362C2C0CD90046BDB9 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		8A1EE50A2C86F6840054355D /* CSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSHomeView.swift; sourceTree = "<group>"; };
+		8A1EE50C2C86F6920054355D /* CSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSContentView.swift; sourceTree = "<group>"; };
 		8A20ED542C15AA1900D5915D /* DummyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyColors.swift; sourceTree = "<group>"; };
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A22E6A72C7322B40003345B /* CSAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAHomeView.swift; sourceTree = "<group>"; };
@@ -841,6 +845,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8A1EE5082C86F5D50054355D /* Carousel Slider iOS 15 */ = {
+			isa = PBXGroup;
+			children = (
+				8A1EE5092C86F6600054355D /* View */,
+			);
+			path = "Carousel Slider iOS 15";
+			sourceTree = "<group>";
+		};
+		8A1EE5092C86F6600054355D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A1EE50A2C86F6840054355D /* CSHomeView.swift */,
+				8A1EE50C2C86F6920054355D /* CSContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A20ED522C15A9DB00D5915D /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
@@ -999,6 +1020,7 @@
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
 				8A316FF62C7492C1008728F4 /* Carousel Slider */,
+				8A1EE5082C86F5D50054355D /* Carousel Slider iOS 15 */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A22E6A62C7322960003345B /* Complex scroll animations */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
@@ -1264,6 +1286,7 @@
 				8A1349262C1B2CAA00099F7D /* ParallaxImageView.swift in Sources */,
 				8A1494C42C839A2600657FDC /* WUISCustomConer.swift in Sources */,
 				8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */,
+				8A1EE50D2C86F6920054355D /* CSContentView.swift in Sources */,
 				8A1349462C1C6B4A00099F7D /* CarousalItem.swift in Sources */,
 				8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */,
 				8A019B442C26C08000799137 /* BottomActionBar.swift in Sources */,
@@ -1325,6 +1348,7 @@
 				8A0A4A162C2EE1AF001A47CE /* String+Ext.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
+				8A1EE50B2C86F6840054355D /* CSHomeView.swift in Sources */,
 				8A1195202C5BCB7A0071AC11 /* PagingIndicator.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
 				8A1349482C1C6D6200099F7D /* GoogleMovieCarouselView.swift in Sources */,
