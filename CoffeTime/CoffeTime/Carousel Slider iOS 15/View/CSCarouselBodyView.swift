@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CSCarouselBodyView: View {
 
+    @State private var offset: CGFloat = 0
+    
     let previewModel: PreviewSampleModel
 
     var body: some View {
