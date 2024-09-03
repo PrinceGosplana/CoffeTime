@@ -45,17 +45,43 @@ struct CTBAHomeView: View {
 
             /// SearchView
             VStack {
+                HStack {
+                    Button {
 
+                    } label: {
+                        Image(systemName: "book")
+                            .font(.title)
+                            .foregroundStyle(.primary)
+                    }
+
+                    Spacer()
+
+                    Button("Cancel") {
+                        showKeyboard.toggle()
+                    }
+                    .foregroundStyle(.primary)
+                }
+                .frame(height: 40)
+                .padding(.bottom, 70)
+
+                if showKeyboard {
+                    Text("Favorite's")
+                        .font(.title.bold())
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top)
+                }
             }
             .padding(.horizontal)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .background(backgroundColor)
             .opacity(showKeyboard ? 1 : 0)
 
-            CTBABottomBar(showKeyboard: _showKeyboard)
+            CTBABottomBar(showKeyboard: _showKeyboard, bottomEdge: bottomEdge)
                 .environmentObject(bottomBarModel)
+                .padding(.top, 50)
             /// moving down
-                .offset(y: bottomBarModel.tabState == .floating ? 0 : bottomEdge)
+                .offset(y: bottomBarModel.tabState == .floating ? 0 : (bottomEdge == 0 ? 15 : bottomEdge))
+                .padding(.bottom, bottomEdge == 0 ? 15 : 0)
         }
     }
 }

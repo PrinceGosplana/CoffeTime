@@ -14,6 +14,7 @@ struct CTBABottomBar: View {
     @Namespace var animation
     @FocusState var showKeyboard: Bool
     
+    var bottomEdge: CGFloat
     var isFloating: Bool {
         bottomBarModel.tabState == .floating
     }
@@ -67,7 +68,7 @@ struct CTBABottomBar: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
-                .offset(y: isFloating ? 0 : -10)
+                .offset(y: isFloating ? 0 : (bottomEdge == 00 ? 0 : -10))
                 .frame(maxWidth: isFloating ? nil : 200)
 
                 if isFloating {
@@ -105,6 +106,5 @@ struct CTBABottomBar: View {
 }
 
 #Preview {
-    CTBABottomBar()
-        .environmentObject(CTBABottomBarViewModel())
+    CTBAContentView()
 }
