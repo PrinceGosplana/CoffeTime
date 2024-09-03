@@ -14,6 +14,9 @@ struct CTBAHomeView: View {
     
     var body: some View {
         ZStack {
+
+            let bottomEdge = proxy.safeAreaInsets.bottom
+
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 15) {
                     ForEach(1...7, id: \.self) { index in
@@ -34,6 +37,8 @@ struct CTBAHomeView: View {
 
             CTBABottomBar()
                 .environmentObject(bottomBarModel)
+            /// moving down
+                .offset(y: bottomBarModel.tabState == .floating ? 0 : bottomEdge)
         }
     }
 }

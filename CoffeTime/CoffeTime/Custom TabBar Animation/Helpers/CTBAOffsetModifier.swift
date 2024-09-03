@@ -19,11 +19,19 @@ struct CTBAOffsetModifier: ViewModifier {
                     DispatchQueue.main.async {
 
                         if minY > model.offset {
-
+                            withAnimation(.easeInOut.speed(1.5)) {
+                                model.tabState = .expanded
+                            }
+                            /// storing last offset
+                            model.lastStoredOffset = -model.offset
                         }
 
                         if minY < model.offset {
-                            
+                            withAnimation(.easeInOut.speed(1.5)) {
+                                model.tabState = .floating
+                            }
+                            /// storing last offset
+                            model.lastStoredOffset = -model.offset
                         }
                         model.offset = minY
                     }
