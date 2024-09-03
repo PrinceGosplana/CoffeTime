@@ -11,6 +11,9 @@ struct CTBABottomBar: View {
 
     @EnvironmentObject var bottomBarModel: CTBABottomBarViewModel
 
+    @Namespace var animation
+    @FocusState var showKeyboard: Bool
+    
     var isFloating: Bool {
         bottomBarModel.tabState == .floating
     }
@@ -48,13 +51,23 @@ struct CTBABottomBar: View {
                         .font(.callout)
                         .foregroundStyle(.primary)
 
-                    TextField("", text: $bottomBarModel.searchText)
+                    if isFloating {
+                        TextField("", text: $bottomBarModel.searchText)
+                            .matchedGeometryEffect(id: "SearchField", in: animation)
+                            .focused($showKeyboard)
+                        /// Keyboard button
+                            .submitLabel(.go)
+                    } else {
+                        Text(bottomBarModel.searchText)
+                            .matchedGeometryEffect(id: "SearchField", in: animation)
+                    }
 
                     Image(systemName: "lock")
                         .symbolVariant(.fill)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
+                .offset(y: isFloating ? 0 : -10)
                 .frame(maxWidth: isFloating ? nil : 200)
 
                 if isFloating {
@@ -80,7 +93,14 @@ struct CTBABottomBar: View {
         }
         .frame(height: 60)
         .padding([.horizontal], isFloating ? 15 : 0)
-        .frame(maxHeight: .infinity, alignment: .bottom)
+        .frame(maxHeight: .infinity, alignment: showKeyboard ? .top : .bottom)
+        /// When expanded go back to floating
+        .onTapGesture {
+            withAnimation(.easeOut.speed(1.5)) {
+                bottomBarModel.tabState = .floating
+            }
+        }
+        .animation(.easeOut, value: showKeyboard)
     }
 }
 

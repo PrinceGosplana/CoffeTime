@@ -11,7 +11,15 @@ struct CTBAHomeView: View {
 
     var proxy: GeometryProxy
     @StateObject var bottomBarModel = CTBABottomBarViewModel()
-    
+    @Environment(\.colorScheme) var colorScheme
+
+    /// Keyboard focus state
+    @FocusState var showKeyboard: Bool
+
+    var backgroundColor: Color {
+        colorScheme == .dark ? Color.black : Color.white
+    }
+
     var body: some View {
         ZStack {
 
@@ -35,7 +43,16 @@ struct CTBAHomeView: View {
             /// to start from 0 just set Coordinate space for scrollview
             .coordinateSpace(name: "TabScroll")
 
-            CTBABottomBar()
+            /// SearchView
+            VStack {
+
+            }
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .background(backgroundColor)
+            .opacity(showKeyboard ? 1 : 0)
+
+            CTBABottomBar(showKeyboard: _showKeyboard)
                 .environmentObject(bottomBarModel)
             /// moving down
                 .offset(y: bottomBarModel.tabState == .floating ? 0 : bottomEdge)
