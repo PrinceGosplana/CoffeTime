@@ -106,6 +106,7 @@
 		8A1EE50B2C86F6840054355D /* CSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1EE50A2C86F6840054355D /* CSHomeView.swift */; };
 		8A1EE50D2C86F6920054355D /* CSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1EE50C2C86F6920054355D /* CSContentView.swift */; };
 		8A1EE5102C86F9620054355D /* PreviewSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1EE50F2C86F9620054355D /* PreviewSampleModel.swift */; };
+		8A1EE5142C86FCE00054355D /* CSCarouselBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1EE5132C86FCE00054355D /* CSCarouselBodyView.swift */; };
 		8A20ED552C15AA1900D5915D /* DummyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED542C15AA1900D5915D /* DummyColors.swift */; };
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A72C7322B40003345B /* CSAHomeView.swift */; };
@@ -269,6 +270,7 @@
 		8A1EE50A2C86F6840054355D /* CSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSHomeView.swift; sourceTree = "<group>"; };
 		8A1EE50C2C86F6920054355D /* CSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSContentView.swift; sourceTree = "<group>"; };
 		8A1EE50F2C86F9620054355D /* PreviewSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleModel.swift; sourceTree = "<group>"; };
+		8A1EE5132C86FCE00054355D /* CSCarouselBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCarouselBodyView.swift; sourceTree = "<group>"; };
 		8A20ED542C15AA1900D5915D /* DummyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyColors.swift; sourceTree = "<group>"; };
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A22E6A72C7322B40003345B /* CSAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAHomeView.swift; sourceTree = "<group>"; };
@@ -860,6 +862,7 @@
 			isa = PBXGroup;
 			children = (
 				8A1EE50A2C86F6840054355D /* CSHomeView.swift */,
+				8A1EE5132C86FCE00054355D /* CSCarouselBodyView.swift */,
 				8A1EE50C2C86F6920054355D /* CSContentView.swift */,
 			);
 			path = View;
@@ -1419,6 +1422,7 @@
 				8A019B482C26C6FB00799137 /* SSCardView.swift in Sources */,
 				8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */,
 				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
+				8A1EE5142C86FCE00054355D /* CSCarouselBodyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

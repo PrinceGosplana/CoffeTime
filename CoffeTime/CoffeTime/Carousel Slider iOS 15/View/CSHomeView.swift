@@ -27,6 +27,14 @@ struct CSHomeView: View {
             .overlay(.ultraThinMaterial)
             /// Dark effect
             .preferredColorScheme(.dark)
+
+            /// Carousel list
+            TabView(selection: $currentTab) {
+                ForEach(PreviewSampleModel.mocks) { model in
+                    CSCarouselBodyView(previewModel: model)
+                }
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }
     }
 }
