@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CSHomeView: View {
 
-    @State var currentTab = "previewSample1"
+    @State var currentTab = PreviewSampleModel.mocks[0]
 
     var body: some View {
         
@@ -17,7 +17,7 @@ struct CSHomeView: View {
             GeometryReader { proxy in
                 let size = proxy.size
 
-                Image(currentTab)
+                Image(currentTab.name)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: size.width, height: size.height)
