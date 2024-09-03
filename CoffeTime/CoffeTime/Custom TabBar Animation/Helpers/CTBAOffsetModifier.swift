@@ -16,23 +16,28 @@ struct CTBAOffsetModifier: ViewModifier {
                 GeometryReader { proxy -> Color in
                     let minY = proxy.frame(in: .named("TabScroll")).minY
 
+                    let durationOffset: CGFloat = 35
+
                     DispatchQueue.main.async {
 
-                        if minY > model.offset {
-                            withAnimation(.easeInOut.speed(1.5)) {
-                                model.tabState = .expanded
+                        if minY < model.offset {
+                            if model.offset < 0 && -minY > (model.lastStoredOffset + durationOffset) {
+                                withAnimation(.easeInOut.speed(1.5)) {
+                                    model.tabState = .expanded
+                                }
+                                /// storing last offset
+                                model.lastStoredOffset = -model.offset
                             }
-                            /// storing last offset
-                            model.lastStoredOffset = -model.offset
                         }
 
-                        if minY < model.offset {
+                        if minY > model.offset && -minY < (model.lastStoredOffset - durationOffset){
                             withAnimation(.easeInOut.speed(1.5)) {
                                 model.tabState = .floating
                             }
                             /// storing last offset
                             model.lastStoredOffset = -model.offset
                         }
+
                         model.offset = minY
                     }
 

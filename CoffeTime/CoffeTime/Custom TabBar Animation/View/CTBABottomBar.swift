@@ -10,63 +10,76 @@ import SwiftUI
 struct CTBABottomBar: View {
 
     @EnvironmentObject var bottomBarModel: CTBABottomBarViewModel
-    
+
+    var isFloating: Bool {
+        bottomBarModel.tabState == .floating
+    }
+
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
+            RoundedRectangle(cornerRadius: isFloating ? 12 : 0, style: .continuous)
                 .fill(.regularMaterial)
-                .preferredColorScheme(.dark)
+                .preferredColorScheme(isFloating ? .dark : .light)
 
             HStack(spacing: 15) {
-                Button {
 
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.title2)
-                        .tint(.primary)
-                }
-                .padding(.trailing, 10)
+                if isFloating {
+                    Button {
 
-                Button {
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.title2)
+                            .tint(.primary)
+                    }
+                    .padding(.trailing, 10)
 
-                } label: {
-                    Image(systemName: "chevron.right")
-                        .font(.title2)
-                        .tint(.primary)
-                }
+                    Button {
 
-                Image(systemName: "magnifyingglass")
-                    .font(.callout)
-                    .foregroundStyle(.primary)
+                    } label: {
+                        Image(systemName: "chevron.right")
+                            .font(.title2)
+                            .tint(.primary)
+                    }
 
-                TextField("", text: $bottomBarModel.searchText)
-
-                Image(systemName: "lock")
-                    .symbolVariant(.fill)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-
-                Button {
-
-                } label: {
-                    Image(systemName: "line.3.horizontal")
-                        .font(.title2)
-                        .tint(.primary)
                 }
 
-                Button {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .font(.callout)
+                        .foregroundStyle(.primary)
 
-                } label: {
-                    Image(systemName: "square.on.square")
-                        .font(.title2)
-                        .tint(.primary)
+                    TextField("", text: $bottomBarModel.searchText)
+
+                    Image(systemName: "lock")
+                        .symbolVariant(.fill)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                .frame(maxWidth: isFloating ? nil : 200)
+
+                if isFloating {
+                    Button {
+
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .font(.title2)
+                            .tint(.primary)
+                    }
+
+                    Button {
+
+                    } label: {
+                        Image(systemName: "square.on.square")
+                            .font(.title2)
+                            .tint(.primary)
+                    }
                 }
             }
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(isFloating ? .dark : .light)
             .padding(.horizontal)
         }
         .frame(height: 60)
-        .padding([.horizontal])
+        .padding([.horizontal], isFloating ? 15 : 0)
         .frame(maxHeight: .infinity, alignment: .bottom)
     }
 }
