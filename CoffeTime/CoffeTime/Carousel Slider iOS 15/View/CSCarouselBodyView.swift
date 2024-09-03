@@ -10,14 +10,19 @@ import SwiftUI
 struct CSCarouselBodyView: View {
 
     @State private var offset: CGFloat = 0
-    
+
     let previewModel: PreviewSampleModel
+
+    var progress: CGFloat {
+        (-offset / UIScreen.main.bounds.width) * 90
+    }
 
     var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
 
             ZStack {
+
                 Image(previewModel.name)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -94,7 +99,17 @@ struct CSCarouselBodyView: View {
             }
             .frame(width: size.width, height: size.height)
         }
-        .tag(previewModel.name)
+        .tag(previewModel)
+        /// Custom 3D rotation
+        .modifier(CSScrollViewOffsetModifier(anchorPoint: .leading, offset: $offset))
+        /// Rotation
+        .rotation3DEffect(
+            .init(degrees: progress),
+            axis: (x: 0, y: 1, z: 0),
+            anchor: .center,
+            anchorZ: 0,
+            perspective: 1
+        )
     }
 }
 
