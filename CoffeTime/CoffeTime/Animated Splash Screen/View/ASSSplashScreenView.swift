@@ -23,6 +23,8 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
     @State private var imageAnimation = false
     @State private var endAnimation = false
 
+    @Namespace var animation
+
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
@@ -35,6 +37,7 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
 
                 if !imageAnimation {
                     logoView
+                        .matchedGeometryEffect(id: "LOGO", in: animation)
                 }
             }
         }
