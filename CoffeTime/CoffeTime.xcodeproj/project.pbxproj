@@ -34,6 +34,8 @@
 		8A0718682C12EFAA0017E1E8 /* GlitchFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718672C12EFAA0017E1E8 /* GlitchFrame.swift */; };
 		8A07186A2C12F1190017E1E8 /* GlitchFrameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0718692C12F1190017E1E8 /* GlitchFrameBuilder.swift */; };
 		8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */; };
+		8A097B8B2C88879700BA293A /* ASSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097B8A2C88879700BA293A /* ASSHomeView.swift */; };
+		8A097B8D2C88889500BA293A /* ASSTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097B8C2C88889500BA293A /* ASSTabButton.swift */; };
 		8A097D8F2C318CDF00F03670 /* PawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097D8E2C318CDF00F03670 /* PawView.swift */; };
 		8A097D942C3193EE00F03670 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097D932C3193EE00F03670 /* Message.swift */; };
 		8A097D962C3195D100F03670 /* ESAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A097D952C3195D100F03670 /* ESAHomeView.swift */; };
@@ -201,6 +203,8 @@
 		8A0718672C12EFAA0017E1E8 /* GlitchFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchFrame.swift; sourceTree = "<group>"; };
 		8A0718692C12F1190017E1E8 /* GlitchFrameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchFrameBuilder.swift; sourceTree = "<group>"; };
 		8A07186B2C12FE1E0017E1E8 /* GlitchTextAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchTextAnimation.swift; sourceTree = "<group>"; };
+		8A097B8A2C88879700BA293A /* ASSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSHomeView.swift; sourceTree = "<group>"; };
+		8A097B8C2C88889500BA293A /* ASSTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSTabButton.swift; sourceTree = "<group>"; };
 		8A097D8E2C318CDF00F03670 /* PawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawView.swift; sourceTree = "<group>"; };
 		8A097D932C3193EE00F03670 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8A097D952C3195D100F03670 /* ESAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESAHomeView.swift; sourceTree = "<group>"; };
@@ -950,6 +954,8 @@
 			children = (
 				8A2B31C22C88707200B16BA9 /* ASSContentView.swift */,
 				8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */,
+				8A097B8A2C88879700BA293A /* ASSHomeView.swift */,
+				8A097B8C2C88889500BA293A /* ASSTabButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1360,6 +1366,7 @@
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
+				8A097B8D2C88889500BA293A /* ASSTabButton.swift in Sources */,
 				8A0BD5DC2C85FE9000CD316D /* CTBAOffsetModifier.swift in Sources */,
 				8AAD77442C6B86E2004E54D1 /* SHContentView.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
@@ -1446,6 +1453,7 @@
 				8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */,
+				8A097B8B2C88879700BA293A /* ASSHomeView.swift in Sources */,
 				8A60EC6E2C85ECFC0076BB57 /* CTBAContentView.swift in Sources */,
 				8A097D962C3195D100F03670 /* ESAHomeView.swift in Sources */,
 				8A019B422C26BED900799137 /* SSHomeView.swift in Sources */,
