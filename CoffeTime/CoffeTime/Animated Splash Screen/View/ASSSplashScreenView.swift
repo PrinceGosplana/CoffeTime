@@ -18,6 +18,11 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
         self.titleView = titleView()
         self.logoView = logoView()
     }
+
+    @State private var textAnimation = false
+    @State private var imageAnimation = false
+    @State private var endAnimation = false
+
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
@@ -26,9 +31,22 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
                     .ignoresSafeArea()
 
                 titleView
-                    .offset(y: 110)
-                
-                logoView
+                    .offset(y: textAnimation ? 0 : 110)
+
+                if !imageAnimation {
+                    logoView
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                withAnimation(.spring()) {
+                    textAnimation.toggle()
+                }
+
+                withAnimation(.easeIn(duration: 1.5)) {
+                    imageAnimation.toggle()
+                }
             }
         }
     }
