@@ -13,10 +13,13 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
     let titleView: Title
     let logoView: Logo
 
-    init(@ViewBuilder content: @escaping () -> Content, @ViewBuilder titleView: @escaping () -> Title, logoView: @escaping () -> Logo) {
+    let imageSize: CGSize
+
+    init(imageSize: CGSize, @ViewBuilder content: @escaping () -> Content, @ViewBuilder titleView: @escaping () -> Title, logoView: @escaping () -> Logo) {
         self.content = content()
         self.titleView = titleView()
         self.logoView = logoView()
+        self.imageSize = imageSize
     }
 
     @State private var textAnimation = false
@@ -35,9 +38,21 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
                 titleView
                     .offset(y: textAnimation ? 0 : 110)
 
-                if !imageAnimation {
+                if !endAnimation {
                     logoView
+                        .frame(width: imageSize.width, height: imageSize.height)
                         .matchedGeometryEffect(id: "LOGO", in: animation)
+                }
+
+                HStack {
+                    Spacer()
+
+                    if endAnimation {
+                        logoView
+                            .matchedGeometryEffect(id: "LOGO", in: animation)
+                            .frame(width: 30, height: 30)
+                            .padding(.trailing)
+                    }
                 }
             }
         }
@@ -47,8 +62,8 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
                     textAnimation.toggle()
                 }
 
-                withAnimation(.easeIn(duration: 1.5)) {
-                    imageAnimation.toggle()
+                withAnimation(Animation.interactiveSpring(response: 0.6, dampingFraction: 1, blendDuration: 1)) {
+                    endAnimation.toggle()
                 }
             }
         }

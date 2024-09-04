@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ASSContentView: View {
     var body: some View {
-        ASSSplashScreenView {
+        ASSSplashScreenView(imageSize: CGSize(width: 128, height: 128)) {
 
         } titleView: {
             Text("Music")
@@ -19,7 +19,6 @@ struct ASSContentView: View {
             Image(.vinylRecord)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 128, height: 128)
         }
 
     }
