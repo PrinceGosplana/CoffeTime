@@ -112,6 +112,8 @@
 		8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A20ED562C15AC3800D5915D /* ColorContentView.swift */; };
 		8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A72C7322B40003345B /* CSAHomeView.swift */; };
 		8A22E6AA2C7322BD0003345B /* CSAContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A92C7322BD0003345B /* CSAContentView.swift */; };
+		8A2B31C32C88707200B16BA9 /* ASSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C22C88707200B16BA9 /* ASSContentView.swift */; };
+		8A2B31C52C88711200B16BA9 /* ASSSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */; };
 		8A316FF52C748CEC008728F4 /* CustomScrollBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A316FF42C748CEC008728F4 /* CustomScrollBehaviour.swift */; };
 		8A316FF92C749316008728F4 /* CSCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A316FF82C749316008728F4 /* CSCard.swift */; };
 		8A316FFB2C74936F008728F4 /* CarouselSliderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A316FFA2C74936F008728F4 /* CarouselSliderContentView.swift */; };
@@ -277,6 +279,8 @@
 		8A20ED562C15AC3800D5915D /* ColorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorContentView.swift; sourceTree = "<group>"; };
 		8A22E6A72C7322B40003345B /* CSAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAHomeView.swift; sourceTree = "<group>"; };
 		8A22E6A92C7322BD0003345B /* CSAContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAContentView.swift; sourceTree = "<group>"; };
+		8A2B31C22C88707200B16BA9 /* ASSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSContentView.swift; sourceTree = "<group>"; };
+		8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSSplashScreenView.swift; sourceTree = "<group>"; };
 		8A316FF42C748CEC008728F4 /* CustomScrollBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollBehaviour.swift; sourceTree = "<group>"; };
 		8A316FF82C749316008728F4 /* CSCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCard.swift; sourceTree = "<group>"; };
 		8A316FFA2C74936F008728F4 /* CarouselSliderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselSliderContentView.swift; sourceTree = "<group>"; };
@@ -933,6 +937,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8A2B31BF2C88700900B16BA9 /* View */,
+			);
+			path = "Animated Splash Screen";
+			sourceTree = "<group>";
+		};
+		8A2B31BF2C88700900B16BA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A2B31C22C88707200B16BA9 /* ASSContentView.swift */,
+				8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A316FF32C748CD3008728F4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1040,6 +1061,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
@@ -1321,6 +1343,7 @@
 				8A1494C22C83993100657FDC /* WUISCustomStackView.swift in Sources */,
 				8AEB905D2C3D9F2600F7CD4E /* DestinationView.swift in Sources */,
 				8A1349222C1B270900099F7D /* ParallaxScrollEffectContent.swift in Sources */,
+				8A2B31C32C88707200B16BA9 /* ASSContentView.swift in Sources */,
 				8AAD77482C6B8A8B004E54D1 /* SHScrollDetector.swift in Sources */,
 				8A0E02042C4CE33A000E8AF9 /* LockView.swift in Sources */,
 				8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */,
@@ -1341,6 +1364,7 @@
 				8AAD77442C6B86E2004E54D1 /* SHContentView.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */,
+				8A2B31C52C88711200B16BA9 /* ASSSplashScreenView.swift in Sources */,
 				8A07186C2C12FE1E0017E1E8 /* GlitchTextAnimation.swift in Sources */,
 				8A11951B2C5BC0BE0071AC11 /* APIContentView.swift in Sources */,
 				8A1349412C1C40D000099F7D /* PAImageView.swift in Sources */,
