@@ -7,12 +7,33 @@
 
 import SwiftUI
 
-struct ASSSplashScreenView: View {
+struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
+
+    let content: Content
+    let titleView: Title
+    let logoView: Logo
+
+    init(@ViewBuilder content: @escaping () -> Content, @ViewBuilder titleView: @escaping () -> Title, logoView: @escaping () -> Logo) {
+        self.content = content()
+        self.titleView = titleView()
+        self.logoView = logoView()
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0) {
+            ZStack {
+                Color("Moon")
+                    .background(Color.moon)
+                    .ignoresSafeArea()
+
+                titleView
+                    .offset(y: 110)
+                
+                logoView
+            }
+        }
     }
 }
 
 #Preview {
-    ASSSplashScreenView()
+    ASSContentView()
 }

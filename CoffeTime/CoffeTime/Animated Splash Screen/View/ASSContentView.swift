@@ -9,7 +9,19 @@ import SwiftUI
 
 struct ASSContentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ASSSplashScreenView {
+
+        } titleView: {
+            Text("Music")
+                .font(.system(size: 35).bold())
+                .foregroundStyle(.white)
+        } logoView: {
+            Image(.vinylRecord)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 128, height: 128)
+        }
+
     }
 }
 
