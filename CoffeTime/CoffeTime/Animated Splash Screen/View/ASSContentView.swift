@@ -10,7 +10,11 @@ import SwiftUI
 struct ASSContentView: View {
     var body: some View {
         ASSSplashScreenView(imageSize: CGSize(width: 128, height: 128)) {
-
+            Image(.previewSample1)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 250)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         } titleView: {
             Text("Music")
                 .font(.system(size: 35).bold())
@@ -19,6 +23,16 @@ struct ASSContentView: View {
             Image(.vinylRecord)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+        } navButton: {
+            Button {
+
+            } label: {
+                Image(.profile)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 35, height: 35)
+                    .clipShape(Circle())
+            }
         }
 
     }
