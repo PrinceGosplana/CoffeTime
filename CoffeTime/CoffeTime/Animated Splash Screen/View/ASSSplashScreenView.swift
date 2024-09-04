@@ -55,7 +55,10 @@ struct ASSSplashScreenView<Content: View, Title: View, Logo: View>: View {
                     }
                 }
             }
+            /// decreasing size when animation ended
+            .frame(height: endAnimation ? 60 : nil)
         }
+        .frame(maxHeight: .infinity, alignment: .top)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 withAnimation(.spring()) {
