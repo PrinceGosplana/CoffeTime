@@ -12,11 +12,13 @@ struct CCMContextMenuHelper<Content: View, Preview: View>: UIViewRepresentable {
     private var content: Content
     private var preview: Preview
     private var actions: UIMenu
+    private var onEnd: () -> ()
 
-    init(content: Content, preview: Preview, actions: UIMenu) {
+    init(content: Content, preview: Preview, actions: UIMenu, onEnd: @escaping () -> ()) {
         self.content = content
         self.preview = preview
         self.actions = actions
+        self.onEnd = onEnd
     }
     
     func makeUIView(context: Context) -> UIView {
@@ -77,6 +79,7 @@ struct CCMContextMenuHelper<Content: View, Preview: View>: UIViewRepresentable {
         func contextMenuInteraction(_ interaction: UIContextMenuInteraction, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
             animator.addCompletion {
                 print("Complete")
+                self.presenter.onEnd()
             }
         }
     }

@@ -28,6 +28,8 @@ struct CCMHomeView: View {
                     Text("Hello, user!")
                 } actions: {
                     return UIMenu(title: "", children: [])
+                } onEnd: {
+                    print("On end")
                 }
             }
         }

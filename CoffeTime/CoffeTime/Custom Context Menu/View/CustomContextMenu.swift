@@ -12,11 +12,17 @@ struct CustomContextMenu<Content: View, Preview: View>: View {
     private var content: Content
     private var preview: Preview
     private var menu: UIMenu
+    private var onEnd: () -> ()
 
-    init(@ViewBuilder content: @escaping () -> Content, @ViewBuilder preview: @escaping () -> Preview, @ViewBuilder actions: @escaping () -> UIMenu) {
+    init(
+        @ViewBuilder content: @escaping () -> Content,
+        @ViewBuilder preview: @escaping () -> Preview,
+        @ViewBuilder actions: @escaping () -> UIMenu,
+        onEnd: @escaping () -> ()) {
         self.content = content()
         self.preview = preview()
         self.menu = actions()
+        self.onEnd = onEnd
     }
 
     var body: some View {
@@ -24,7 +30,7 @@ struct CustomContextMenu<Content: View, Preview: View>: View {
             content
                 .hidden()
                 .overlay {
-                    CCMContextMenuHelper(content: content, preview: preview, actions: menu)
+                    CCMContextMenuHelper(content: content, preview: preview, actions: menu, onEnd: onEnd)
                 }
 
         }
