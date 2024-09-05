@@ -23,7 +23,7 @@ struct CustomContextMenu<Content: View, Preview: View>: View {
         ZStack {
             content
                 .overlay {
-                    CCMContextMenuHelper(content: content, preview: preview)
+                    CCMContextMenuHelper(content: content, preview: preview, actions: menu)
                 }
 
         }
