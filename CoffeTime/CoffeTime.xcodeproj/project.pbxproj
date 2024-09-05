@@ -115,6 +115,7 @@
 		8A21B5792C89A84B00EA7720 /* CCMContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B5782C89A84B00EA7720 /* CCMContentView.swift */; };
 		8A21B57B2C89A85F00EA7720 /* CCMHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B57A2C89A85F00EA7720 /* CCMHomeView.swift */; };
 		8A21B57D2C89AEC500EA7720 /* CustomContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B57C2C89AEC500EA7720 /* CustomContextMenu.swift */; };
+		8A21B57F2C89B31300EA7720 /* CCMContextMenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B57E2C89B31300EA7720 /* CCMContextMenuHelper.swift */; };
 		8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A72C7322B40003345B /* CSAHomeView.swift */; };
 		8A22E6AA2C7322BD0003345B /* CSAContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A92C7322BD0003345B /* CSAContentView.swift */; };
 		8A2B31C32C88707200B16BA9 /* ASSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C22C88707200B16BA9 /* ASSContentView.swift */; };
@@ -287,6 +288,7 @@
 		8A21B5782C89A84B00EA7720 /* CCMContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMContentView.swift; sourceTree = "<group>"; };
 		8A21B57A2C89A85F00EA7720 /* CCMHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMHomeView.swift; sourceTree = "<group>"; };
 		8A21B57C2C89AEC500EA7720 /* CustomContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContextMenu.swift; sourceTree = "<group>"; };
+		8A21B57E2C89B31300EA7720 /* CCMContextMenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMContextMenuHelper.swift; sourceTree = "<group>"; };
 		8A22E6A72C7322B40003345B /* CSAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAHomeView.swift; sourceTree = "<group>"; };
 		8A22E6A92C7322BD0003345B /* CSAContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAContentView.swift; sourceTree = "<group>"; };
 		8A2B31C22C88707200B16BA9 /* ASSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSContentView.swift; sourceTree = "<group>"; };
@@ -932,6 +934,7 @@
 				8A21B5782C89A84B00EA7720 /* CCMContentView.swift */,
 				8A21B57A2C89A85F00EA7720 /* CCMHomeView.swift */,
 				8A21B57C2C89AEC500EA7720 /* CustomContextMenu.swift */,
+				8A21B57E2C89B31300EA7720 /* CCMContextMenuHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1468,6 +1471,7 @@
 				8AAD77462C6B86EC004E54D1 /* SHHomeView.swift in Sources */,
 				8A0F01C92C0EEE3700B77AB1 /* DummyTab.swift in Sources */,
 				8A4D40002C58DCB9002B8549 /* TCTheme.swift in Sources */,
+				8A21B57F2C89B31300EA7720 /* CCMContextMenuHelper.swift in Sources */,
 				8A06CDC42C37E84900F60C1A /* ActionBuilder.swift in Sources */,
 				8A135C322C350E9B007AF05B /* CTabShape.swift in Sources */,
 				8AE9BCDE2C400C610084D4E8 /* View+Ext.swift in Sources */,
