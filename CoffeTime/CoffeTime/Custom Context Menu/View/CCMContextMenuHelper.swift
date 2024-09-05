@@ -23,6 +23,24 @@ struct CCMContextMenuHelper<Content: View, Preview: View>: UIViewRepresentable {
         let view = UIView()
         view.backgroundColor = .clear
 
+
+
+        /// setting our content view as main interaction view
+        let hostView = UIHostingController(rootView: content)
+
+        /// Setting constraints
+        hostView.view.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            hostView.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            hostView.view.widthAnchor.constraint(equalTo: view.widthAnchor),
+            hostView.view.heightAnchor.constraint(equalTo: view.heightAnchor)
+        ]
+
+        view.addSubview(hostView.view)
+        
         let interaction = UIContextMenuInteraction(delegate: context.coordinator)
         view.addInteraction(interaction)
         return view
