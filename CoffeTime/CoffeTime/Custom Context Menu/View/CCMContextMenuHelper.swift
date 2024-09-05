@@ -40,7 +40,8 @@ struct CCMContextMenuHelper<Content: View, Preview: View>: UIViewRepresentable {
         ]
 
         view.addSubview(hostView.view)
-        
+        view.addConstraints(constraints)
+
         let interaction = UIContextMenuInteraction(delegate: context.coordinator)
         view.addInteraction(interaction)
         return view
@@ -72,5 +73,12 @@ struct CCMContextMenuHelper<Content: View, Preview: View>: UIViewRepresentable {
                 return self.presenter.actions
             }
         }
+        /// Expand context menu
+        func contextMenuInteraction(_ interaction: UIContextMenuInteraction, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
+            animator.addCompletion {
+                print("Complete")
+            }
+        }
     }
+
 }
