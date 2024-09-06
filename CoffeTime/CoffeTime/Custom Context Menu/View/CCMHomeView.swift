@@ -58,6 +58,8 @@ struct CCMHomeView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                     }
                     .ignoresSafeArea(.all, edges: .bottom)
+                    /// removing opacity animation
+                    .transition(.identity)
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button("Close") {
@@ -69,7 +71,8 @@ struct CCMHomeView: View {
                     }
                 }
             }
-            .navigationTitle("Custom Context Menu")
+            .navigationTitle(onEnded ? "Unlocked" : "Custom Context Menu")
+            .navigationBarTitleDisplayMode(onEnded ? .inline : .large)
         }
     }
 }
