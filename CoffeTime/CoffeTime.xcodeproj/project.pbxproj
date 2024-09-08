@@ -118,6 +118,11 @@
 		8A21B57F2C89B31300EA7720 /* CCMContextMenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A21B57E2C89B31300EA7720 /* CCMContextMenuHelper.swift */; };
 		8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A72C7322B40003345B /* CSAHomeView.swift */; };
 		8A22E6AA2C7322BD0003345B /* CSAContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22E6A92C7322BD0003345B /* CSAContentView.swift */; };
+		8A27C9CE2C8DE60500DFAFE1 /* SGHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9CD2C8DE60500DFAFE1 /* SGHomeView.swift */; };
+		8A27C9D02C8DE61000DFAFE1 /* SGContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9CF2C8DE61000DFAFE1 /* SGContentView.swift */; };
+		8A27C9D22C8DE6C600DFAFE1 /* SGStaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */; };
+		8A27C9D52C8DE91B00DFAFE1 /* SGPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9D42C8DE91B00DFAFE1 /* SGPostModel.swift */; };
+		8A27C9D72C8DEBD400DFAFE1 /* SGPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9D62C8DEBD400DFAFE1 /* SGPostCardView.swift */; };
 		8A2B31C32C88707200B16BA9 /* ASSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C22C88707200B16BA9 /* ASSContentView.swift */; };
 		8A2B31C52C88711200B16BA9 /* ASSSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */; };
 		8A316FF52C748CEC008728F4 /* CustomScrollBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A316FF42C748CEC008728F4 /* CustomScrollBehaviour.swift */; };
@@ -291,6 +296,11 @@
 		8A21B57E2C89B31300EA7720 /* CCMContextMenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMContextMenuHelper.swift; sourceTree = "<group>"; };
 		8A22E6A72C7322B40003345B /* CSAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAHomeView.swift; sourceTree = "<group>"; };
 		8A22E6A92C7322BD0003345B /* CSAContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAContentView.swift; sourceTree = "<group>"; };
+		8A27C9CD2C8DE60500DFAFE1 /* SGHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGHomeView.swift; sourceTree = "<group>"; };
+		8A27C9CF2C8DE61000DFAFE1 /* SGContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGContentView.swift; sourceTree = "<group>"; };
+		8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGStaggeredGrid.swift; sourceTree = "<group>"; };
+		8A27C9D42C8DE91B00DFAFE1 /* SGPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGPostModel.swift; sourceTree = "<group>"; };
+		8A27C9D62C8DEBD400DFAFE1 /* SGPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGPostCardView.swift; sourceTree = "<group>"; };
 		8A2B31C22C88707200B16BA9 /* ASSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSContentView.swift; sourceTree = "<group>"; };
 		8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSSplashScreenView.swift; sourceTree = "<group>"; };
 		8A316FF42C748CEC008728F4 /* CustomScrollBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollBehaviour.swift; sourceTree = "<group>"; };
@@ -968,6 +978,34 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8A27C9CB2C8DE5E700DFAFE1 /* Staggered Grid */ = {
+			isa = PBXGroup;
+			children = (
+				8A27C9D32C8DE90700DFAFE1 /* Model */,
+				8A27C9CC2C8DE5F600DFAFE1 /* View */,
+			);
+			path = "Staggered Grid";
+			sourceTree = "<group>";
+		};
+		8A27C9CC2C8DE5F600DFAFE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A27C9CD2C8DE60500DFAFE1 /* SGHomeView.swift */,
+				8A27C9CF2C8DE61000DFAFE1 /* SGContentView.swift */,
+				8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */,
+				8A27C9D62C8DEBD400DFAFE1 /* SGPostCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A27C9D32C8DE90700DFAFE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A27C9D42C8DE91B00DFAFE1 /* SGPostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1094,9 +1132,9 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A21B5762C89A82F00EA7720 /* Custom Context Menu */,
-				8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */,
+				8A27C9CB2C8DE5E700DFAFE1 /* Staggered Grid */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
+				8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
 				8A9AC5522C08ADAF003C3511 /* Assets.xcassets */,
 				8A0A4A082C2ED882001A47CE /* Auto OTP TextField */,
@@ -1107,6 +1145,7 @@
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
+				8A21B5762C89A82F00EA7720 /* Custom Context Menu */,
 				8A60EC6B2C85ECAA0076BB57 /* Custom TabBar Animation */,
 				8AAD774B2C6B9EBC004E54D1 /* Draggable Images */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
@@ -1336,6 +1375,7 @@
 				8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */,
 				8A0BF00F2C429688007D0FC1 /* HAEContentVeiw.swift in Sources */,
 				8A0ACE892C85B66A00325AB9 /* WUISRainFallLanding.swift in Sources */,
+				8A27C9D72C8DEBD400DFAFE1 /* SGPostCardView.swift in Sources */,
 				8A21B57B2C89A85F00EA7720 /* CCMHomeView.swift in Sources */,
 				8A93A06F2C732A5100EC12D9 /* CSACard.swift in Sources */,
 				8A1C65212C84A5B700D45D45 /* DayForecast.swift in Sources */,
@@ -1350,6 +1390,7 @@
 				8A325E222C3E4D5800E27325 /* HeroModel.swift in Sources */,
 				8A21B57D2C89AEC500EA7720 /* CustomContextMenu.swift in Sources */,
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
+				8A27C9D52C8DE91B00DFAFE1 /* SGPostModel.swift in Sources */,
 				8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */,
 				8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */,
 				8A1494BC2C83962600657FDC /* WUISContentView.swift in Sources */,
@@ -1423,9 +1464,11 @@
 				8A135C2C2C35057E007AF05B /* CustomTabbarHomeView.swift in Sources */,
 				8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */,
 				8A1195192C5BC0A80071AC11 /* APIHome.swift in Sources */,
+				8A27C9CE2C8DE60500DFAFE1 /* SGHomeView.swift in Sources */,
 				8A0717FD2C1038370017E1E8 /* HackerTextContentView.swift in Sources */,
 				8A0A4A0D2C2ED93C001A47CE /* OTPContentView.swift in Sources */,
 				8A0C9C2D2C3AB2F0007487DA /* StickyHeaderContentView.swift in Sources */,
+				8A27C9D02C8DE61000DFAFE1 /* SGContentView.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
 				8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */,
 				8AAD77572C6CCF7A004E54D1 /* STContentView.swift in Sources */,
@@ -1485,6 +1528,7 @@
 				8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
 				8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */,
+				8A27C9D22C8DE6C600DFAFE1 /* SGStaggeredGrid.swift in Sources */,
 				8A097B8B2C88879700BA293A /* ASSHomeView.swift in Sources */,
 				8A60EC6E2C85ECFC0076BB57 /* CTBAContentView.swift in Sources */,
 				8A097D962C3195D100F03670 /* ESAHomeView.swift in Sources */,
