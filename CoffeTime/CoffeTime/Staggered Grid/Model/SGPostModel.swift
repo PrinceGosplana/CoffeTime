@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SGPostModel: Identifiable {
+struct SGPostModel: Identifiable, Hashable {
     let id = UUID().uuidString
     let imageURL: String
 }

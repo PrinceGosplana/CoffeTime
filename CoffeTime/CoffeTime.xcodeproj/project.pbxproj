@@ -990,10 +990,10 @@
 		8A27C9CC2C8DE5F600DFAFE1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A27C9CD2C8DE60500DFAFE1 /* SGHomeView.swift */,
 				8A27C9CF2C8DE61000DFAFE1 /* SGContentView.swift */,
-				8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */,
+				8A27C9CD2C8DE60500DFAFE1 /* SGHomeView.swift */,
 				8A27C9D62C8DEBD400DFAFE1 /* SGPostCardView.swift */,
+				8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1132,7 +1132,6 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
-				8A27C9CB2C8DE5E700DFAFE1 /* Staggered Grid */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
@@ -1167,6 +1166,7 @@
 				8AAD77532C6CCEE1004E54D1 /* Scrollable tabs */,
 				8AAD77AB2C6F2EAD004E54D1 /* Search bar */,
 				8A019B3B2C26BD6B00799137 /* Stacked scrollview */,
+				8A27C9CB2C8DE5E700DFAFE1 /* Staggered Grid */,
 				8A0C9C282C3AB285007487DA /* Sticky Header */,
 				8AAD77422C6B86C1004E54D1 /* StickyHeader */,
 				8A20ED522C15A9DB00D5915D /* SwiftData */,
