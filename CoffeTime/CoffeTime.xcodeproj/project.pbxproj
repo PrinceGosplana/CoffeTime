@@ -123,6 +123,7 @@
 		8A27C9D22C8DE6C600DFAFE1 /* SGStaggeredGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */; };
 		8A27C9D52C8DE91B00DFAFE1 /* SGPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9D42C8DE91B00DFAFE1 /* SGPostModel.swift */; };
 		8A27C9D72C8DEBD400DFAFE1 /* SGPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9D62C8DEBD400DFAFE1 /* SGPostCardView.swift */; };
+		8A27C9DB2C908B8900DFAFE1 /* HoneyCombGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27C9DA2C908B8900DFAFE1 /* HoneyCombGridView.swift */; };
 		8A2B31C32C88707200B16BA9 /* ASSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C22C88707200B16BA9 /* ASSContentView.swift */; };
 		8A2B31C52C88711200B16BA9 /* ASSSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */; };
 		8A316FF52C748CEC008728F4 /* CustomScrollBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A316FF42C748CEC008728F4 /* CustomScrollBehaviour.swift */; };
@@ -301,6 +302,7 @@
 		8A27C9D12C8DE6C600DFAFE1 /* SGStaggeredGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGStaggeredGrid.swift; sourceTree = "<group>"; };
 		8A27C9D42C8DE91B00DFAFE1 /* SGPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGPostModel.swift; sourceTree = "<group>"; };
 		8A27C9D62C8DEBD400DFAFE1 /* SGPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGPostCardView.swift; sourceTree = "<group>"; };
+		8A27C9DA2C908B8900DFAFE1 /* HoneyCombGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneyCombGridView.swift; sourceTree = "<group>"; };
 		8A2B31C22C88707200B16BA9 /* ASSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSContentView.swift; sourceTree = "<group>"; };
 		8A2B31C42C88711200B16BA9 /* ASSSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASSSplashScreenView.swift; sourceTree = "<group>"; };
 		8A316FF42C748CEC008728F4 /* CustomScrollBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollBehaviour.swift; sourceTree = "<group>"; };
@@ -1142,6 +1144,7 @@
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A22E6A62C7322960003345B /* Complex scroll animations */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
+				8A27C9DA2C908B8900DFAFE1 /* HoneyCombGridView.swift */,
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A21B5762C89A82F00EA7720 /* Custom Context Menu */,
@@ -1479,6 +1482,7 @@
 				8A0A4A162C2EE1AF001A47CE /* String+Ext.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
+				8A27C9DB2C908B8900DFAFE1 /* HoneyCombGridView.swift in Sources */,
 				8A1EE50B2C86F6840054355D /* CSHomeView.swift in Sources */,
 				8A1195202C5BCB7A0071AC11 /* PagingIndicator.swift in Sources */,
 				8A9AC55E2C08ADE3003C3511 /* RSContent.swift in Sources */,
