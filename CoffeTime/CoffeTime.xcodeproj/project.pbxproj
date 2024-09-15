@@ -143,6 +143,8 @@
 		8A60EC702C85ED0C0076BB57 /* CTBAHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60EC6F2C85ED0C0076BB57 /* CTBAHomeView.swift */; };
 		8A60EC722C85F08B0076BB57 /* CTBABottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60EC712C85F08B0076BB57 /* CTBABottomBar.swift */; };
 		8A60EC752C85F6680076BB57 /* CTBABottomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60EC742C85F6680076BB57 /* CTBABottomBarViewModel.swift */; };
+		8A6E04432C96B44A00E13B88 /* ACHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04422C96B44A00E13B88 /* ACHomeView.swift */; };
+		8A6E04452C96B45500E13B88 /* ACContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04442C96B45500E13B88 /* ACContentView.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -322,6 +324,8 @@
 		8A60EC6F2C85ED0C0076BB57 /* CTBAHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBAHomeView.swift; sourceTree = "<group>"; };
 		8A60EC712C85F08B0076BB57 /* CTBABottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBABottomBar.swift; sourceTree = "<group>"; };
 		8A60EC742C85F6680076BB57 /* CTBABottomBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTBABottomBarViewModel.swift; sourceTree = "<group>"; };
+		8A6E04422C96B44A00E13B88 /* ACHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACHomeView.swift; sourceTree = "<group>"; };
+		8A6E04442C96B45500E13B88 /* ACContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACContentView.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -1090,6 +1094,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8A6E04412C96B41D00E13B88 /* Animated Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E04422C96B44A00E13B88 /* ACHomeView.swift */,
+				8A6E04442C96B45500E13B88 /* ACContentView.swift */,
+			);
+			path = "Animated Carousel";
+			sourceTree = "<group>";
+		};
 		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1147,7 @@
 		8A9AC54D2C08ADAD003C3511 /* CoffeTime */ = {
 			isa = PBXGroup;
 			children = (
+				8A6E04412C96B41D00E13B88 /* Animated Carousel */,
 				8A1195162C5BC07A0071AC11 /* Animated Paging Indicators */,
 				8A2B31BE2C886FF700B16BA9 /* Animated Splash Screen */,
 				8AAD77502C6BA74F004E54D1 /* Animation single examples */,
@@ -1144,7 +1158,6 @@
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
 				8A22E6A62C7322960003345B /* Complex scroll animations */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
-				8A27C9DA2C908B8900DFAFE1 /* HoneyCombGridView.swift */,
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A21B5762C89A82F00EA7720 /* Custom Context Menu */,
@@ -1157,6 +1170,7 @@
 				8A1349422C1C6B0200099F7D /* Google movie carousal */,
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
 				8A0381ED2C3963E5000CAEE0 /* Helpers */,
+				8A27C9DA2C908B8900DFAFE1 /* HoneyCombGridView.swift */,
 				8AF41A492C18761000801F63 /* Interactive side menu */,
 				8A0E02012C4CE2E8000E8AF9 /* Lock */,
 				8A1ED12B2C2BF57F0046BDB9 /* Login Flow */,
@@ -1395,6 +1409,7 @@
 				8AFA1CF12C0E002900EC7A39 /* RotationModifier.swift in Sources */,
 				8A27C9D52C8DE91B00DFAFE1 /* SGPostModel.swift in Sources */,
 				8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */,
+				8A6E04432C96B44A00E13B88 /* ACHomeView.swift in Sources */,
 				8A135C302C350784007AF05B /* CustomTabBar.swift in Sources */,
 				8A1494BC2C83962600657FDC /* WUISContentView.swift in Sources */,
 				8AE88A952C5CFD1800C57C4C /* CoverFlowContentView.swift in Sources */,
@@ -1456,6 +1471,7 @@
 				8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,
 				8A06CDC02C37D1B300F60C1A /* SwipeAction.swift in Sources */,
+				8A6E04452C96B45500E13B88 /* ACContentView.swift in Sources */,
 				8A21B5792C89A84B00EA7720 /* CCMContentView.swift in Sources */,
 				8A135C2A2C35056D007AF05B /* CustomTabbarContentView.swift in Sources */,
 				8A3389AC2C2D9E9600245E6C /* Signup.swift in Sources */,
