@@ -34,9 +34,15 @@ struct ForYou: View {
             .padding()
 
             GeometryReader { proxy in
-                ACVerticalCarouselList {
-                    ForEach(ACMovie.mock) { movie in
 
+                let size = proxy.size
+
+                ACVerticalCarouselList {
+                    VStack(spacing: 0) {
+                        ForEach(ACMovie.mock) {
+                            ACMovieCardView(movie: $0)
+                                .frame(height: size.height)
+                        }
                     }
                 }
             }
