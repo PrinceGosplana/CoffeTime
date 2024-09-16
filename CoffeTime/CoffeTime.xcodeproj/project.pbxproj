@@ -147,6 +147,7 @@
 		8A6E04452C96B45500E13B88 /* ACContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04442C96B45500E13B88 /* ACContentView.swift */; };
 		8A6E04672C9846AC00E13B88 /* ACCustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04662C9846AC00E13B88 /* ACCustomTabBar.swift */; };
 		8A6E046A2C98477E00E13B88 /* ACTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04692C98477E00E13B88 /* ACTabBarButton.swift */; };
+		8A6E046D2C98496C00E13B88 /* ForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E046C2C98496C00E13B88 /* ForYou.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -330,6 +331,7 @@
 		8A6E04442C96B45500E13B88 /* ACContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACContentView.swift; sourceTree = "<group>"; };
 		8A6E04662C9846AC00E13B88 /* ACCustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACCustomTabBar.swift; sourceTree = "<group>"; };
 		8A6E04692C98477E00E13B88 /* ACTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTabBarButton.swift; sourceTree = "<group>"; };
+		8A6E046C2C98496C00E13B88 /* ForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYou.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -1101,6 +1103,7 @@
 		8A6E04412C96B41D00E13B88 /* Animated Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				8A6E046B2C98495800E13B88 /* TabViews */,
 				8A6E04682C98475D00E13B88 /* Helpers */,
 				8A6E04422C96B44A00E13B88 /* ACHomeView.swift */,
 				8A6E04442C96B45500E13B88 /* ACContentView.swift */,
@@ -1115,6 +1118,14 @@
 				8A6E04692C98477E00E13B88 /* ACTabBarButton.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8A6E046B2C98495800E13B88 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E046C2C98496C00E13B88 /* ForYou.swift */,
+			);
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
@@ -1482,6 +1493,7 @@
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A097D942C3193EE00F03670 /* Message.swift in Sources */,
 				8A0381EC2C3961CC000CAEE0 /* CustomTransition.swift in Sources */,
+				8A6E046D2C98496C00E13B88 /* ForYou.swift in Sources */,
 				8A0A4A0B2C2ED91F001A47CE /* OTPVerificationView.swift in Sources */,
 				8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */,
 				8A0718222C1192DF0017E1E8 /* VCCContentView.swift in Sources */,

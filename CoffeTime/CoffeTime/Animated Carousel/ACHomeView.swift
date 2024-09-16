@@ -18,7 +18,7 @@ struct ACHomeView: View {
 
     var body: some View {
         TabView(selection: $currentTab) {
-            Text("For you")
+            ForYou()
                 .tag("For you")
 
             Text("Search")
