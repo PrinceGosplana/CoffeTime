@@ -34,7 +34,11 @@ struct ForYou: View {
             .padding()
 
             GeometryReader { proxy in
-                
+                ACVerticalCarouselList {
+                    ForEach(ACMovie.mock) { movie in
+
+                    }
+                }
             }
         }
     }
