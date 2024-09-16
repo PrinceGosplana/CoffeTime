@@ -30,6 +30,10 @@ struct ACHomeView: View {
             Text("Downloads")
                 .tag("Downloads")
         }
+        .overlay(
+            ACCustomTabBar(currentTab: $currentTab)
+            , alignment: .bottom
+        )
     }
 }
 
