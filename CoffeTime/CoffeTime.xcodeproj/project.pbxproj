@@ -153,6 +153,7 @@
 		8A6E04762C98535900E13B88 /* ACMovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04752C98535900E13B88 /* ACMovieCardView.swift */; };
 		8A6E047A2C99A38200E13B88 /* FSPVHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04792C99A38200E13B88 /* FSPVHomeView.swift */; };
 		8A6E047C2C99A38D00E13B88 /* FSPVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */; };
+		8A6E047F2C99A55D00E13B88 /* FSPVExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E047E2C99A55D00E13B88 /* FSPVExtension.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -342,6 +343,7 @@
 		8A6E04752C98535900E13B88 /* ACMovieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMovieCardView.swift; sourceTree = "<group>"; };
 		8A6E04792C99A38200E13B88 /* FSPVHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVHomeView.swift; sourceTree = "<group>"; };
 		8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVContentView.swift; sourceTree = "<group>"; };
+		8A6E047E2C99A55D00E13B88 /* FSPVExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVExtension.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -1152,6 +1154,7 @@
 		8A6E04772C99A31800E13B88 /* Full Swipe to pop view */ = {
 			isa = PBXGroup;
 			children = (
+				8A6E047D2C99A52400E13B88 /* Helpers */,
 				8A6E04782C99A36600E13B88 /* View */,
 			);
 			path = "Full Swipe to pop view";
@@ -1164,6 +1167,14 @@
 				8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8A6E047D2C99A52400E13B88 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E047E2C99A55D00E13B88 /* FSPVExtension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
@@ -1589,6 +1600,7 @@
 				8A316FFB2C74936F008728F4 /* CarouselSliderContentView.swift in Sources */,
 				8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */,
 				8A06CDC62C37E97800F60C1A /* SwipeDirection.swift in Sources */,
+				8A6E047F2C99A55D00E13B88 /* FSPVExtension.swift in Sources */,
 				8AAD77B22C6F38F3004E54D1 /* SBTab.swift in Sources */,
 				8A135C282C3504B0007AF05B /* CTab.swift in Sources */,
 				8A0718242C1193D00017E1E8 /* VCCCardView.swift in Sources */,

@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct FSPVHomeView: View {
+
+    @State private var show = false
+
     var body: some View {
-        Text("Hello, World!")
+        NavigationStack {
+            List {
+                ForEach(1...25, id: \.self) {
+                    Text("Day \($0) of SwiftUI")
+                }
+            }
+            .listStyle(.insetGrouped)
+            .navigationTitle("Full Swipe pop")
+        }
+        .fullSwipePop(show: $show) {
+            Color.cyan
+        }
     }
 }
 
