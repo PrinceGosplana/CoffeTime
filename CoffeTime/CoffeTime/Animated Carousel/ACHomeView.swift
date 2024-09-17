@@ -18,8 +18,13 @@ struct ACHomeView: View {
 
     var body: some View {
         TabView(selection: $currentTab) {
-            ForYou()
-                .tag("For you")
+            GeometryReader { proxy in
+                let topEdge = proxy.safeAreaInsets.top
+
+                ForYou(topEdge: topEdge)
+                    .padding(.top, topEdge)
+                    .ignoresSafeArea(.all, edges: .top)
+            }
 
             Text("Search")
                 .tag("Search")

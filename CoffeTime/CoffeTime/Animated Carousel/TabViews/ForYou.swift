@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ForYou: View {
+
+    let topEdge: CGFloat
+    let titleViewHeight: CGFloat = 70
+    let spacingHeight: CGFloat = 15
+
     var body: some View {
-        VStack {
+        VStack (spacing: 15) {
             HStack {
                 Text("Today For You")
                     .font(.title.bold())
@@ -40,7 +45,7 @@ struct ForYou: View {
                 ACVerticalCarouselList {
                     VStack(spacing: 0) {
                         ForEach(ACMovie.mock) {
-                            ACMovieCardView(movie: $0)
+                            ACMovieCardView(movie: $0, topOffset: titleViewHeight + spacingHeight + topEdge)
                                 .frame(height: size.height)
                         }
                     }
