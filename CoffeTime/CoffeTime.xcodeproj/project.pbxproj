@@ -151,6 +151,8 @@
 		8A6E046F2C984AD700E13B88 /* ACVerticalCarouselList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E046E2C984AD700E13B88 /* ACVerticalCarouselList.swift */; };
 		8A6E04722C984F5500E13B88 /* ACMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04712C984F5500E13B88 /* ACMovie.swift */; };
 		8A6E04762C98535900E13B88 /* ACMovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04752C98535900E13B88 /* ACMovieCardView.swift */; };
+		8A6E047A2C99A38200E13B88 /* FSPVHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04792C99A38200E13B88 /* FSPVHomeView.swift */; };
+		8A6E047C2C99A38D00E13B88 /* FSPVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -338,6 +340,8 @@
 		8A6E046E2C984AD700E13B88 /* ACVerticalCarouselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACVerticalCarouselList.swift; sourceTree = "<group>"; };
 		8A6E04712C984F5500E13B88 /* ACMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMovie.swift; sourceTree = "<group>"; };
 		8A6E04752C98535900E13B88 /* ACMovieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACMovieCardView.swift; sourceTree = "<group>"; };
+		8A6E04792C99A38200E13B88 /* FSPVHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVHomeView.swift; sourceTree = "<group>"; };
+		8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVContentView.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -1145,6 +1149,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8A6E04772C99A31800E13B88 /* Full Swipe to pop view */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E04782C99A36600E13B88 /* View */,
+			);
+			path = "Full Swipe to pop view";
+			sourceTree = "<group>";
+		};
+		8A6E04782C99A36600E13B88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E04792C99A38200E13B88 /* FSPVHomeView.swift */,
+				8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
 			isa = PBXGroup;
 			children = (
@@ -1208,6 +1229,7 @@
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
 				8A0CA0482C3BC9B400D10CEF /* Extensions */,
 				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
+				8A6E04772C99A31800E13B88 /* Full Swipe to pop view */,
 				8A07185D2C12E97B0017E1E8 /* Glitch Text Effect */,
 				8A1349422C1C6B0200099F7D /* Google movie carousal */,
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
@@ -1433,6 +1455,7 @@
 			files = (
 				8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */,
 				8A0BF00F2C429688007D0FC1 /* HAEContentVeiw.swift in Sources */,
+				8A6E047A2C99A38200E13B88 /* FSPVHomeView.swift in Sources */,
 				8A0ACE892C85B66A00325AB9 /* WUISRainFallLanding.swift in Sources */,
 				8A27C9D72C8DEBD400DFAFE1 /* SGPostCardView.swift in Sources */,
 				8A21B57B2C89A85F00EA7720 /* CCMHomeView.swift in Sources */,
@@ -1595,6 +1618,7 @@
 				8AAD774D2C6B9ED4004E54D1 /* DIContentView.swift in Sources */,
 				8A0BF00A2C42959B007D0FC1 /* HeroProfile.swift in Sources */,
 				8A0F01CD2C0EF08200B77AB1 /* PageOffsetObserver.swift in Sources */,
+				8A6E047C2C99A38D00E13B88 /* FSPVContentView.swift in Sources */,
 				8AE88A932C5CFD0800C57C4C /* CoverFlowView.swift in Sources */,
 				8A27C9D22C8DE6C600DFAFE1 /* SGStaggeredGrid.swift in Sources */,
 				8A097B8B2C88879700BA293A /* ASSHomeView.swift in Sources */,
