@@ -34,6 +34,13 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
                                 }).onEnded({ value in
                                     withAnimation(.linear.speed(2)) {
                                         offset = 0
+
+                                        let translation = value.translation.width
+                                        let maxtranslation = proxy.size.width / 2.5
+
+                                        if translation > maxtranslation {
+                                            show = false
+                                        }
                                     }
                                 }))
                                 .transition(.move(edge: .trailing))
