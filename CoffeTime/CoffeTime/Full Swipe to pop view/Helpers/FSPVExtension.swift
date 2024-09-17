@@ -9,7 +9,7 @@ import SwiftUI
 
 extension View {
     func fullSwipePop<Content: View>(show: Binding<Bool>, content: @escaping () -> Content ) -> some View {
-
-        return self
+        
+        return FSPVFullSwipePopHelper(mainContent: self, content: content(), show: show)
     }
 }
