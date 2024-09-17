@@ -10,12 +10,14 @@ import SwiftUI
 struct FSPVHomeView: View {
 
     @State private var show = false
+    @State var currentDay: Int = 1
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(1...25, id: \.self) { index in
                     Button {
+                        currentDay = index
                         withAnimation {
                             show.toggle()
                         }
@@ -29,7 +31,11 @@ struct FSPVHomeView: View {
             .navigationTitle("Full Swipe pop")
         }
         .fullSwipePop(show: $show) {
-            Color.cyan
+            List {
+                ForEach(1...25, id: \.self) { index in
+                    Text("Course \(index)")
+                }
+            }
         }
     }
 }

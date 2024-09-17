@@ -15,6 +15,8 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
     @GestureState var gestureOffset: CGFloat = 0
     @State private var offset: CGFloat = 0
 
+    @Environment(\.colorScheme) var colorScheme
+
     init(mainContent: MainContent, content: Content, show: Binding<Bool>) {
         self.mainContent = mainContent
         self.content = content
@@ -28,7 +30,11 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
                     ZStack {
                         if show {
                             content
-                                .offset(x: offset)
+                                .background(
+                                    (colorScheme == .dark ? Color.black : Color.white)
+                                        .ignoresSafeArea()
+                                )
+                                .offset(x: max(offset, 0))
                                 .gesture(DragGesture().updating($gestureOffset, body: { value, out, _ in
                                     out = value.translation.width
                                 }).onEnded({ value in
@@ -37,10 +43,9 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
 
                                         let translation = value.translation.width
                                         let maxtranslation = proxy.size.width / 2.5
+                                            
+                                        show = translation < maxtranslation
 
-                                        if translation > maxtranslation {
-                                            show = false
-                                        }
                                     }
                                 }))
                                 .transition(.move(edge: .trailing))
