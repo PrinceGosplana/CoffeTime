@@ -19,6 +19,15 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
     }
 
     var body: some View {
-        mainContent
+        GeometryReader { proxy in
+            mainContent
+                .overlay(
+                    ZStack {
+                        if show {
+                            content
+                        }
+                    }
+                )
+        }
     }
 }

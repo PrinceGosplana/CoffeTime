@@ -14,8 +14,15 @@ struct FSPVHomeView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(1...25, id: \.self) {
-                    Text("Day \($0) of SwiftUI")
+                ForEach(1...25, id: \.self) { index in
+                    Button {
+                        withAnimation {
+                            show.toggle()
+                        }
+                    } label: {
+                        Text("Day \(index) of SwiftUI")
+                    }
+                    .foregroundStyle(.primary)
                 }
             }
             .listStyle(.insetGrouped)
