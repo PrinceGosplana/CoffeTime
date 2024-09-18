@@ -32,8 +32,10 @@ struct FSPVHomeView: View {
         }
         .fullSwipePop(show: $show) {
             List {
-                ForEach(1...25, id: \.self) { index in
-                    Text("Course \(index)")
+                Section(header: Text("Day \(currentDay)")) {
+                    ForEach(1...25, id: \.self) { index in
+                        Text("Course \(index)")
+                    }
                 }
             }
         }

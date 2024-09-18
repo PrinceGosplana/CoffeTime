@@ -26,12 +26,15 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
     var body: some View {
         GeometryReader { proxy in
             mainContent
+            /// Moving main content slightly
+                .offset(x: show && offset >= 0 ? getOffset(size: proxy.size.width) : 0)
                 .overlay(
                     ZStack {
                         if show {
                             content
                                 .background(
                                     (colorScheme == .dark ? Color.black : Color.white)
+                                        .shadow(radius: 1.3)
                                         .ignoresSafeArea()
                                 )
                                 .offset(x: max(offset, 0))
@@ -56,5 +59,16 @@ struct FSPVFullSwipePopHelper<MainContent: View, Content: View>: View {
                     offset = gestureOffset
                 }
         }
+    }
+
+    private func getOffset(size: CGFloat) -> CGFloat {
+        let progress = offset / size
+
+        /// Were slightly moving the view 80 towards left side and getting back to 8 based on user drag
+        let start: CGFloat = -80
+        let progressWidth = (progress * 90) <= 90 ? (progress * 90) : 90
+        let mainOffset = (start + progressWidth) < 0 ? (start + progressWidth) : 0
+
+        return mainOffset
     }
 }
