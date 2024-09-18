@@ -155,6 +155,8 @@
 		8A6E047C2C99A38D00E13B88 /* FSPVContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */; };
 		8A6E047F2C99A55D00E13B88 /* FSPVExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E047E2C99A55D00E13B88 /* FSPVExtension.swift */; };
 		8A6E04812C99A9C000E13B88 /* FSPVFullSwipePopHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04802C99A9C000E13B88 /* FSPVFullSwipePopHelper.swift */; };
+		8A6E04862C9AB0FD00E13B88 /* CASHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04852C9AB0FD00E13B88 /* CASHHomeView.swift */; };
+		8A6E04882C9AB10E00E13B88 /* CASHContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04872C9AB10E00E13B88 /* CASHContentView.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -346,6 +348,8 @@
 		8A6E047B2C99A38D00E13B88 /* FSPVContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVContentView.swift; sourceTree = "<group>"; };
 		8A6E047E2C99A55D00E13B88 /* FSPVExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVExtension.swift; sourceTree = "<group>"; };
 		8A6E04802C99A9C000E13B88 /* FSPVFullSwipePopHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPVFullSwipePopHelper.swift; sourceTree = "<group>"; };
+		8A6E04852C9AB0FD00E13B88 /* CASHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHHomeView.swift; sourceTree = "<group>"; };
+		8A6E04872C9AB10E00E13B88 /* CASHContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHContentView.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -1180,6 +1184,31 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8A6E04822C9AB06400E13B88 /* Collapsable Animated Sticky Header */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E04842C9AB0E300E13B88 /* Model */,
+				8A6E04832C9AB0CA00E13B88 /* View */,
+			);
+			path = "Collapsable Animated Sticky Header";
+			sourceTree = "<group>";
+		};
+		8A6E04832C9AB0CA00E13B88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E04852C9AB0FD00E13B88 /* CASHHomeView.swift */,
+				8A6E04872C9AB10E00E13B88 /* CASHContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A6E04842C9AB0E300E13B88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8A91A2072C75A5BE007F7B7F /* Movable grids */ = {
 			isa = PBXGroup;
 			children = (
@@ -1233,6 +1262,7 @@
 				8A316FF62C7492C1008728F4 /* Carousel Slider */,
 				8A1EE5082C86F5D50054355D /* Carousel Slider iOS 15 */,
 				8A9AC54E2C08ADAD003C3511 /* CoffeTimeApp.swift */,
+				8A6E04822C9AB06400E13B88 /* Collapsable Animated Sticky Header */,
 				8A22E6A62C7322960003345B /* Complex scroll animations */,
 				8A9AC5502C08ADAD003C3511 /* ContentView.swift */,
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
@@ -1468,6 +1498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */,
+				8A6E04862C9AB0FD00E13B88 /* CASHHomeView.swift in Sources */,
 				8A0BF00F2C429688007D0FC1 /* HAEContentVeiw.swift in Sources */,
 				8A6E047A2C99A38200E13B88 /* FSPVHomeView.swift in Sources */,
 				8A0ACE892C85B66A00325AB9 /* WUISRainFallLanding.swift in Sources */,
@@ -1533,6 +1564,7 @@
 				8A1A42FF2C370E0B00809BBA /* SwipeHomeView.swift in Sources */,
 				8AAD77AD2C6F2F3D004E54D1 /* DummyMessageView.swift in Sources */,
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
+				8A6E04882C9AB10E00E13B88 /* CASHContentView.swift in Sources */,
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
