@@ -9,7 +9,12 @@ import SwiftUI
 
 struct CASHContentView: View {
     var body: some View {
-        CASHHomeView()
+        GeometryReader { proxy in
+            let topEdge = proxy.safeAreaInsets.top
+
+            CASHHomeView(topEdge: topEdge)
+                .ignoresSafeArea(.all, edges: .top)
+        }
     }
 }
 
