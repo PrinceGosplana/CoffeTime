@@ -11,19 +11,25 @@ struct CASHHomeView: View {
 
     let maxHeight = UIScreen.main.bounds.height / 2.3
     let topEdge: CGFloat
-    
+    @State private var offset: CGFloat = 0
+
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 15) {
                 GeometryReader { proxy in
-                    TopBar(topEdge: topEdge)
+                    CASHTopBar(topEdge: topEdge, offset: $offset)
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-                        .background(Color.appYellow)
+                        .background(
+                            Color.appYellow ?? .yellow,
+                            in: CASHCustomCorner(corners: [.bottomRight], radius: 50)
+                        )
                 }
                 .frame(height: maxHeight)
             }
+            .modifier(CASHOffsetModifier(offset: $offset))
         }
+        .coordinateSpace(name: "SCROLL")
     }
 }
 
@@ -31,28 +37,3 @@ struct CASHHomeView: View {
     CASHContentView()
 }
 
-struct TopBar: View {
-
-    let topEdge: CGFloat
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            
-            Image(.girl3)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 80, height: 80)
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-            
-            Text("Lidiya")
-                .font(.largeTitle.bold())
-            
-            Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s")
-                .fontWeight(.semibold)
-                .foregroundStyle(.white.opacity(0.8))
-        }
-        .padding()
-        .padding(.bottom)
-
-    }
-}
