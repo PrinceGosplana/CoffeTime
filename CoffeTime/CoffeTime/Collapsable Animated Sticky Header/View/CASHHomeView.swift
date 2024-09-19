@@ -19,13 +19,47 @@ struct CASHHomeView: View {
                 GeometryReader { proxy in
                     CASHTopBar(topEdge: topEdge, offset: $offset)
                         .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                        .frame(maxWidth: .infinity)
+                        /// Stricky effect
+                        .frame(height: maxHeight + offset, alignment: .bottom)
                         .background(
                             Color.appYellow ?? .yellow,
                             in: CASHCustomCorner(corners: [.bottomRight], radius: 50)
                         )
+                        .overlay(
+                            /// top nav view
+                            HStack(spacing: 15) {
+                                Button {
+
+                                } label: {
+                                    Image(systemName: "xmark")
+                                        .font(.body.bold())
+                                }
+
+                                Spacer()
+
+                                Button {
+
+                                } label: {
+                                    Image(systemName: "line.3.horizontal.decrease")
+                                        .font(.body.bold())
+                                }
+                            }
+                                .padding(.horizontal)
+                                .frame(height: 80 + topEdge)
+                                .foregroundStyle(.white)
+                            , alignment: .top
+
+                        )
                 }
                 .frame(height: maxHeight)
+                .offset(y: -offset)
+
+                VStack(spacing: 15){
+                    ForEach(CASHMessage.mock) {
+                        CASHMessageCardView(message: $0)
+                    }
+                }
             }
             .modifier(CASHOffsetModifier(offset: $offset))
         }

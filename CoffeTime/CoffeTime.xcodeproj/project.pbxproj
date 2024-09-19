@@ -160,6 +160,8 @@
 		8A6E048B2C9AB5F200E13B88 /* CASHCustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E048A2C9AB5F200E13B88 /* CASHCustomCorner.swift */; };
 		8A6E048E2C9AB75B00E13B88 /* CASHOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E048D2C9AB75B00E13B88 /* CASHOffsetModifier.swift */; };
 		8A6E04902C9ABCBF00E13B88 /* CASHTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E048F2C9ABCBF00E13B88 /* CASHTopBar.swift */; };
+		8A6E04922C9C4D7A00E13B88 /* CASHMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04912C9C4D7A00E13B88 /* CASHMessage.swift */; };
+		8A6E04942C9C4ED500E13B88 /* CASHMessageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E04932C9C4ED500E13B88 /* CASHMessageCardView.swift */; };
 		8A7045542C8444F800E07DAC /* WUISForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7045532C8444F800E07DAC /* WUISForecastView.swift */; };
 		8A91A2092C75A603007F7B7F /* MovableGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2082C75A603007F7B7F /* MovableGridsView.swift */; };
 		8A93A06C2C73232200EC12D9 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93A06B2C73232200EC12D9 /* Expense.swift */; };
@@ -356,6 +358,8 @@
 		8A6E048A2C9AB5F200E13B88 /* CASHCustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHCustomCorner.swift; sourceTree = "<group>"; };
 		8A6E048D2C9AB75B00E13B88 /* CASHOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHOffsetModifier.swift; sourceTree = "<group>"; };
 		8A6E048F2C9ABCBF00E13B88 /* CASHTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHTopBar.swift; sourceTree = "<group>"; };
+		8A6E04912C9C4D7A00E13B88 /* CASHMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHMessage.swift; sourceTree = "<group>"; };
+		8A6E04932C9C4ED500E13B88 /* CASHMessageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CASHMessageCardView.swift; sourceTree = "<group>"; };
 		8A7045532C8444F800E07DAC /* WUISForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUISForecastView.swift; sourceTree = "<group>"; };
 		8A91A2082C75A603007F7B7F /* MovableGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridsView.swift; sourceTree = "<group>"; };
 		8A93A06B2C73232200EC12D9 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -1206,6 +1210,7 @@
 			children = (
 				8A6E04852C9AB0FD00E13B88 /* CASHHomeView.swift */,
 				8A6E04872C9AB10E00E13B88 /* CASHContentView.swift */,
+				8A6E04932C9C4ED500E13B88 /* CASHMessageCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1213,6 +1218,7 @@
 		8A6E04842C9AB0E300E13B88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A6E04912C9C4D7A00E13B88 /* CASHMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1632,9 +1638,11 @@
 				8A27C9D02C8DE61000DFAFE1 /* SGContentView.swift in Sources */,
 				8A6E04812C99A9C000E13B88 /* FSPVFullSwipePopHelper.swift in Sources */,
 				8A0F01CB2C0EEF3D00B77AB1 /* TabOffsetReaderView.swift in Sources */,
+				8A6E04922C9C4D7A00E13B88 /* CASHMessage.swift in Sources */,
 				8A019B4B2C26EAC100799137 /* SSHeader.swift in Sources */,
 				8AAD77572C6CCF7A004E54D1 /* STContentView.swift in Sources */,
 				8AF41A4B2C18764400801F63 /* SideMenuContentView.swift in Sources */,
+				8A6E04942C9C4ED500E13B88 /* CASHMessageCardView.swift in Sources */,
 				8A06CDC22C37E67C00F60C1A /* Action.swift in Sources */,
 				8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */,
 				8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */,
