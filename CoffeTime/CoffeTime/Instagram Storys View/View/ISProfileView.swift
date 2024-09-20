@@ -11,6 +11,7 @@ struct ISProfileView: View {
 
     @Binding var bundle: ISStoryBundle
     @Environment(\.colorScheme) private var scheme
+    @EnvironmentObject var storyData: ISStoryViewModel
 
     var body: some View {
         Image(bundle.profileImage)
@@ -30,6 +31,10 @@ struct ISProfileView: View {
             .onTapGesture {
                 withAnimation {
                     bundle.isSeen = true
+
+                    /// saving current bundle and toggling story
+                    storyData.currentStory = bundle.id
+                    storyData.showStory = true
                 }
             }
     }

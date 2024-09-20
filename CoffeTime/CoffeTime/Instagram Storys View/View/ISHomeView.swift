@@ -38,6 +38,7 @@ struct ISHomeView: View {
 
                         ForEach($storyData.stories) { $bundle in
                             ISProfileView(bundle: $bundle)
+                                .environmentObject(storyData)
                         }
                     }
                     .padding()
@@ -46,6 +47,10 @@ struct ISHomeView: View {
             }
             .navigationTitle("Instagram")
         }
+        .overlay(
+            ISStoryView()
+                .environmentObject(storyData)
+        )
     }
 }
 

@@ -8,5 +8,7 @@
 import Foundation
 
 final class ISStoryViewModel: ObservableObject {
+    @Published var currentStory: String = ""
+    @Published var showStory: Bool = false
     @Published var stories: [ISStoryBundle] = [ISStoryBundle.yellowUser, ISStoryBundle.darkUser]
 }
