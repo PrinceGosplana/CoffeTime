@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CASHTopBar: View {
 
+    let maxHeight: CGFloat
     let topEdge: CGFloat
     @Binding var offset: CGFloat
     
@@ -30,6 +31,12 @@ struct CASHTopBar: View {
         }
         .padding()
         .padding(.bottom)
+        .opacity(getOpacity())
+    }
 
+    private func getOpacity() -> CGFloat {
+        let progress = -offset / 70
+        let opacity = 1 - progress
+        return offset < 0 ? opacity : 1
     }
 }

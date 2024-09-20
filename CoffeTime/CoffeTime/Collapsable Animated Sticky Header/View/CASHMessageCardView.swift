@@ -16,6 +16,7 @@ struct CASHMessageCardView: View {
             Circle()
                 .fill(message.tintColor)
                 .frame(width: 50, height: 50)
+                .opacity(0.8)
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(message.userName)

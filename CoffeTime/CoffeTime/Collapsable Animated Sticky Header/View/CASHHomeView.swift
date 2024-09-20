@@ -17,11 +17,15 @@ struct CASHHomeView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 15) {
                 GeometryReader { proxy in
-                    CASHTopBar(topEdge: topEdge, offset: $offset)
+                    CASHTopBar(
+                        maxHeight: maxHeight,
+                        topEdge: topEdge,
+                        offset: $offset
+                    )
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
-                        /// Stricky effect
-                        .frame(height: maxHeight + offset, alignment: .bottom)
+                        /// Sticky effect
+                        .frame(height: getHeaderHeight(), alignment: .bottom)
                         .background(
                             Color.appYellow ?? .yellow,
                             in: CASHCustomCorner(corners: [.bottomRight], radius: 50)
@@ -54,16 +58,24 @@ struct CASHHomeView: View {
                 }
                 .frame(height: maxHeight)
                 .offset(y: -offset)
+                .zIndex(1.0)
 
                 VStack(spacing: 15){
                     ForEach(CASHMessage.mock) {
                         CASHMessageCardView(message: $0)
                     }
                 }
+                .padding()
+                .zIndex(0)
             }
             .modifier(CASHOffsetModifier(offset: $offset))
         }
         .coordinateSpace(name: "SCROLL")
+    }
+
+    private func getHeaderHeight() -> CGFloat {
+        let topHeight = maxHeight + offset
+        return topHeight > (80 + topEdge) ? topHeight : (80 + topEdge)
     }
 }
 
