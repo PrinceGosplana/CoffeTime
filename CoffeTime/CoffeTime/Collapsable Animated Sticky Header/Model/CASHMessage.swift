@@ -24,5 +24,9 @@ extension CASHMessage {
         .init(message: "Don't you know it?", userName: "Wanda", tintColor: .cyan),
         .init(message: "Salte mortale vuala", userName: "Fokus", tintColor: .pink),
         .init(message: "Abra kadabra avagadra", userName: "Garry", tintColor: .indigo),
+        .init(message: "Who can go to the park?.", userName: "Jeff", tintColor: .mint),
+        .init(message: "Don't you know it?", userName: "Wanda", tintColor: .cyan),
+        .init(message: "Salte mortale vuala", userName: "Fokus", tintColor: .pink),
+        .init(message: "Abra kadabra avagadra", userName: "Garry", tintColor: .indigo),
     ]
 }

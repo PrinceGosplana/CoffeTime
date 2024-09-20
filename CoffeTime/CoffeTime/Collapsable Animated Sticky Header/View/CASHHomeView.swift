@@ -40,6 +40,19 @@ struct CASHHomeView: View {
                                         .font(.body.bold())
                                 }
 
+                                Image(.girl3)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 35)
+                                    .clipShape(Circle())
+                                    .opacity(topBarTitleOpacity())
+
+                                Text("Lidiya")
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(.white)
+                                    .opacity(topBarTitleOpacity())
+
                                 Spacer()
 
                                 Button {
@@ -50,7 +63,7 @@ struct CASHHomeView: View {
                                 }
                             }
                                 .padding(.horizontal)
-                                .frame(height: 60)
+                                .frame(height: 80)
                                 .foregroundStyle(.white)
                                 .padding(.top, topEdge)
                             , alignment: .top
@@ -84,6 +97,11 @@ struct CASHHomeView: View {
         let value = 1 - progress
         let radius = value  * 50
         return offset < 0 ? radius : 50
+    }
+
+    private func topBarTitleOpacity() -> CGFloat {
+        let progress = -(offset + 60) / (maxHeight - (80 + topEdge))
+        return progress
     }
 }
 
