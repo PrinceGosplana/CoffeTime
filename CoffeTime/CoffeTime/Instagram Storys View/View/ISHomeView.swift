@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ISHomeView: View {
+
+    @StateObject private var storyData = ISStoryViewModel()
+
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -30,6 +33,11 @@ struct ISHomeView: View {
                                         .offset(x: 8, y: 6)
                                     , alignment: .bottomTrailing
                                 )
+                        }
+                        .padding(.trailing, 10)
+
+                        ForEach($storyData.stories) { $bundle in
+                            ISProfileView(bundle: $bundle)
                         }
                     }
                     .padding()

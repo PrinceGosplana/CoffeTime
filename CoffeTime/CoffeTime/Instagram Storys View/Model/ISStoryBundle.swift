@@ -11,7 +11,7 @@ struct ISStoryBundle: Identifiable {
     let id = UUID().uuidString
     let profileName: String
     let profileImage: String
-    let isSeen: Bool = false
+    var isSeen: Bool = false
     let stories: [ISStory]
 }
 

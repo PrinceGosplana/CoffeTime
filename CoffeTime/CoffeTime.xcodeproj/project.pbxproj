@@ -203,6 +203,7 @@
 		8AF700652C9D6027006A2CF1 /* ISStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF700642C9D6027006A2CF1 /* ISStory.swift */; };
 		8AF700672C9D6054006A2CF1 /* ISStoryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF700662C9D6054006A2CF1 /* ISStoryBundle.swift */; };
 		8AF700692C9D6228006A2CF1 /* ISStoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF700682C9D6228006A2CF1 /* ISStoryViewModel.swift */; };
+		8AF7006B2C9D7B95006A2CF1 /* ISProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7006A2C9D7B95006A2CF1 /* ISProfileView.swift */; };
 		8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8629C2C353CD200AEC15A /* CPositionKey.swift */; };
 		8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */; };
 		8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */; };
@@ -407,6 +408,7 @@
 		8AF700642C9D6027006A2CF1 /* ISStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStory.swift; sourceTree = "<group>"; };
 		8AF700662C9D6054006A2CF1 /* ISStoryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStoryBundle.swift; sourceTree = "<group>"; };
 		8AF700682C9D6228006A2CF1 /* ISStoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStoryViewModel.swift; sourceTree = "<group>"; };
+		8AF7006A2C9D7B95006A2CF1 /* ISProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISProfileView.swift; sourceTree = "<group>"; };
 		8AF8629C2C353CD200AEC15A /* CPositionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPositionKey.swift; sourceTree = "<group>"; };
 		8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextView.swift; sourceTree = "<group>"; };
@@ -1444,6 +1446,7 @@
 			children = (
 				8AF7005E2C9D5B91006A2CF1 /* ISHomeView.swift */,
 				8AF700602C9D5BA3006A2CF1 /* ISContentView.swift */,
+				8AF7006A2C9D7B95006A2CF1 /* ISProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1676,6 +1679,7 @@
 				8AF2FB5F2C19B89B00B98D74 /* SideBarButton.swift in Sources */,
 				8A0D66AC2C3D2719005163F9 /* UHEContentView.swift in Sources */,
 				8A019B462C26C4CC00799137 /* StackedCards.swift in Sources */,
+				8AF7006B2C9D7B95006A2CF1 /* ISProfileView.swift in Sources */,
 				8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */,
 				8A135C2C2C35057E007AF05B /* CustomTabbarHomeView.swift in Sources */,
 				8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */,
