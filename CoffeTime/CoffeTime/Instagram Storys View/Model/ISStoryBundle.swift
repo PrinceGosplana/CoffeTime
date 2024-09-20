@@ -14,3 +14,9 @@ struct ISStoryBundle: Identifiable {
     let isSeen: Bool = false
     let stories: [ISStory]
 }
+
+extension ISStoryBundle {
+    static let yellowUser: ISStoryBundle = .init(profileName: "Yellow", profileImage: "user6", stories: ISStory.yellowStories)
+    static let darkUser: ISStoryBundle = .init(profileName: "Dark", profileImage: "user4", stories: ISStory.darkishStories)
+
+}
