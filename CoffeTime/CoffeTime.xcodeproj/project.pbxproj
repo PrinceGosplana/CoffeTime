@@ -200,6 +200,8 @@
 		8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */; };
 		8AF7005F2C9D5B91006A2CF1 /* ISHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7005E2C9D5B91006A2CF1 /* ISHomeView.swift */; };
 		8AF700612C9D5BA3006A2CF1 /* ISContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF700602C9D5BA3006A2CF1 /* ISContentView.swift */; };
+		8AF700652C9D6027006A2CF1 /* ISStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF700642C9D6027006A2CF1 /* ISStory.swift */; };
+		8AF700672C9D6054006A2CF1 /* ISStoryBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF700662C9D6054006A2CF1 /* ISStoryBundle.swift */; };
 		8AF8629D2C353CD200AEC15A /* CPositionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8629C2C353CD200AEC15A /* CPositionKey.swift */; };
 		8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */; };
 		8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */; };
@@ -401,6 +403,8 @@
 		8AF41A4C2C18765900801F63 /* AnimatedSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSideBar.swift; sourceTree = "<group>"; };
 		8AF7005E2C9D5B91006A2CF1 /* ISHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISHomeView.swift; sourceTree = "<group>"; };
 		8AF700602C9D5BA3006A2CF1 /* ISContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISContentView.swift; sourceTree = "<group>"; };
+		8AF700642C9D6027006A2CF1 /* ISStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStory.swift; sourceTree = "<group>"; };
+		8AF700662C9D6054006A2CF1 /* ISStoryBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStoryBundle.swift; sourceTree = "<group>"; };
 		8AF8629C2C353CD200AEC15A /* CPositionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPositionKey.swift; sourceTree = "<group>"; };
 		8AFA1CEC2C0DEAD300EC7A39 /* FlipClockTextEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextEffect.swift; sourceTree = "<group>"; };
 		8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextView.swift; sourceTree = "<group>"; };
@@ -1464,6 +1468,8 @@
 		8AF7005D2C9D5B1B006A2CF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8AF700642C9D6027006A2CF1 /* ISStory.swift */,
+				8AF700662C9D6054006A2CF1 /* ISStoryBundle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1577,6 +1583,7 @@
 				8A1C65212C84A5B700D45D45 /* DayForecast.swift in Sources */,
 				8AAD77AF2C6F3032004E54D1 /* SearchBarHomeView.swift in Sources */,
 				8A0718642C12EA590017E1E8 /* GTTextView.swift in Sources */,
+				8AF700672C9D6054006A2CF1 /* ISStoryBundle.swift in Sources */,
 				8A60EC752C85F6680076BB57 /* CTBABottomBarViewModel.swift in Sources */,
 				8A316FF52C748CEC008728F4 /* CustomScrollBehaviour.swift in Sources */,
 				8A22E6A82C7322B40003345B /* CSAHomeView.swift in Sources */,
@@ -1625,6 +1632,7 @@
 				8A0E02042C4CE33A000E8AF9 /* LockView.swift in Sources */,
 				8A0C9C2F2C3AB3DC007487DA /* StickyHeaderView.swift in Sources */,
 				8A0F01D12C0EF1B400B77AB1 /* UIView+Extension.swift in Sources */,
+				8AF700652C9D6027006A2CF1 /* ISStory.swift in Sources */,
 				8A0BF0042C428BB4007D0FC1 /* HeroItem.swift in Sources */,
 				8AAD775C2C6CCFA7004E54D1 /* STTab.swift in Sources */,
 				8A60EC702C85ED0C0076BB57 /* CTBAHomeView.swift in Sources */,
