@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A00A9DF2C9EA8980042C2FC /* ISStoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9DE2C9EA8980042C2FC /* ISStoryCardView.swift */; };
 		8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3C2C26BD8200799137 /* SSItem.swift */; };
 		8A019B402C26BED100799137 /* SSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3F2C26BED100799137 /* SSContentView.swift */; };
 		8A019B422C26BED900799137 /* SSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B412C26BED900799137 /* SSHomeView.swift */; };
@@ -212,6 +213,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A00A9DE2C9EA8980042C2FC /* ISStoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStoryCardView.swift; sourceTree = "<group>"; };
 		8A019B3C2C26BD8200799137 /* SSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSItem.swift; sourceTree = "<group>"; };
 		8A019B3F2C26BED100799137 /* SSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSContentView.swift; sourceTree = "<group>"; };
 		8A019B412C26BED900799137 /* SSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeView.swift; sourceTree = "<group>"; };
@@ -1450,6 +1452,7 @@
 				8AF7005E2C9D5B91006A2CF1 /* ISHomeView.swift */,
 				8AF7006A2C9D7B95006A2CF1 /* ISProfileView.swift */,
 				8AF7006C2C9D91BF006A2CF1 /* ISStoryView.swift */,
+				8A00A9DE2C9EA8980042C2FC /* ISStoryCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1778,6 +1781,7 @@
 				8A4D3FFE2C58DC3E002B8549 /* ThemeChangeContentView.swift in Sources */,
 				8A07181D2C11918A0017E1E8 /* Card.swift in Sources */,
 				8AF700692C9D6228006A2CF1 /* ISStoryViewModel.swift in Sources */,
+				8A00A9DF2C9EA8980042C2FC /* ISStoryCardView.swift in Sources */,
 				8A1EE5142C86FCE00054355D /* CSCarouselBodyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
