@@ -31,6 +31,33 @@ struct ISStoryCardView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .overlay(
+                HStack {
+                    Rectangle()
+                        .fill(.black.opacity(0.01))
+                        .onTapGesture {
+                            /// checking and updating
+                            if (timerProgress - 1) < 0 {
+                                updateStory(forward: false)
+                            } else {
+                                timerProgress = CGFloat(Int(timerProgress - 1))
+                            }
+                        }
+
+                    Rectangle()
+                        .fill(.black.opacity(0.01))
+                        .onTapGesture {
+                            /// Checking and updating to next
+                            if (timerProgress + 1) > CGFloat(bundle.stories.count) {
+                                /// update to next bundle
+                                updateStory()
+                            } else {
+                                /// update to next story
+                                timerProgress = CGFloat(Int(timerProgress + 1))
+                            }
+                        }
+                }
+            )
+            .overlay(
                 HStack(spacing: 13) {
 
                     Image(bundle.profileImage)
@@ -112,6 +139,20 @@ struct ISStoryCardView: View {
         let index = min(Int(timerProgress), bundle.stories.count - 1)
         let story = bundle.stories[index]
 
+        if !forward {
+            /// it its not first then moving backward else set timer to 0
+            if let first = storyData.stories.first, first.id != bundle.id {
+                let bundleIndex = storyData.stories.firstIndex { currentBundle in
+                    return bundle.id == currentBundle.id
+                } ?? 0
+
+                withAnimation {
+                    storyData.currentStory = storyData.stories[bundleIndex - 1].id
+                }
+            } else {
+                timerProgress = 0
+            }
+        }
         if let last = bundle.stories.last, last.id == story.id {
             /// if there is another story then move to that else close view
             if let lastBundle = storyData.stories.last, lastBundle.id == bundle.id {
