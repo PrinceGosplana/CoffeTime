@@ -21,14 +21,29 @@ struct ISStoryCardView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .overlay(
-                Button {
-                    withAnimation {
-                        storyData.showStory = false
-                    }
-                } label: {
-                    Image(systemName: "xmark")
-                        .font(.title2)
+                HStack(spacing: 13) {
+
+                    Image(bundle.profileImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 35, height: 35)
+                        .clipShape(Circle())
+
+                    Text(bundle.profileImage)
+                        .fontWeight(.bold)
                         .foregroundStyle(.white)
+
+                    Spacer()
+                    
+                    Button {
+                        withAnimation {
+                            storyData.showStory = false
+                        }
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.title2)
+                            .foregroundStyle(.white)
+                    }
                 }
                     .padding()
                 , alignment: .topTrailing

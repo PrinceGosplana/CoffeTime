@@ -16,7 +16,7 @@ struct ISStoryBundle: Identifiable {
 }
 
 extension ISStoryBundle {
-    static let yellowUser: ISStoryBundle = .init(profileName: "Yellow", profileImage: "user6", stories: ISStory.yellowStories)
-    static let darkUser: ISStoryBundle = .init(profileName: "Dark", profileImage: "user4", stories: ISStory.darkishStories)
+    static let yellowUser: ISStoryBundle = .init(profileName: "Yellow", profileImage: "Armanda", stories: ISStory.yellowStories)
+    static let darkUser: ISStoryBundle = .init(profileName: "Dark", profileImage: "Klaus", stories: ISStory.darkishStories)
 
 }
