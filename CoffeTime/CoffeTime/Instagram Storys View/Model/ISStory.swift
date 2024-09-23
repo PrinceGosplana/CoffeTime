@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ISStory: Identifiable {
+struct ISStory: Identifiable, Hashable {
     let id = UUID().uuidString
     let imageURL: String
 }

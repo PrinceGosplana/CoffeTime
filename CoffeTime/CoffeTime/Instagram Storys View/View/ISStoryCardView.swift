@@ -21,9 +21,13 @@ struct ISStoryCardView: View {
     var body: some View {
         GeometryReader { proxy in
             ZStack {
-                Image(bundle.stories[0].imageURL)
+                let index = min(Int(timerProgress), bundle.stories.count - 1)
+                let story = bundle.stories[index]
+
+                Image(story.imageURL)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .overlay(
@@ -40,7 +44,7 @@ struct ISStoryCardView: View {
                         .foregroundStyle(.white)
 
                     Spacer()
-                    
+
                     Button {
                         withAnimation {
                             storyData.showStory = false
@@ -56,20 +60,36 @@ struct ISStoryCardView: View {
             )
             .overlay(
                 HStack(spacing: 5) {
-                    ForEach(bundle.stories) { _ in
-                        Capsule()
-                            .fill(.gray.opacity(0.5))
+                    ForEach(bundle.stories.indices) { index in
+                        GeometryReader { proxy in
+                            let width = proxy.size.width
+                            let progress = timerProgress - CGFloat(index)
+                            let perfectProgress = min(max(progress, 0), 1)
+
+                            Capsule()
+                                .fill(.gray.opacity(0.5))
+                                .overlay(
+                                    Capsule()
+                                        .fill(.white)
+                                        .frame(width: width * progress)
+                                    , alignment: .leading
+                                )
+                        }
                     }
                 }
                     .frame(height: 1.4)
                     .padding(.horizontal)
-                )
+                , alignment: .top
+            )
             .rotation3DEffect(
                 getAngle(proxy: proxy),
-                                      axis: (x: 0.0, y: 1.0, z: 0.0),
-                                      anchor: proxy.frame(in: .global).minX > 0 ? .leading : .trailing,
-                                      perspective: 2.5
+                axis: (x: 0.0, y: 1.0, z: 0.0),
+                anchor: proxy.frame(in: .global).minX > 0 ? .leading : .trailing,
+                perspective: 2.5
             )
+            .onAppear(perform: {
+                timerProgress = 0
+            })
             .onReceive(timer) { _ in
                 /// updating seen status on realtime
                 if storyData.currentStory == bundle.id {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ISStoryBundle: Identifiable {
+struct ISStoryBundle: Identifiable, Hashable {
     let id = UUID().uuidString
     let profileName: String
     let profileImage: String
