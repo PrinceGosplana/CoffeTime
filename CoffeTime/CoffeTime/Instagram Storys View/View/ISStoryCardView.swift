@@ -100,7 +100,31 @@ struct ISStoryCardView: View {
                     /// updating timer
                     if timerProgress < CGFloat(bundle.stories.count) {
                         timerProgress += 0.03
+                    } else {
+                        updateStory()
                     }
+                }
+            }
+        }
+    }
+
+    private func updateStory(forward: Bool = true) {
+        let index = min(Int(timerProgress), bundle.stories.count - 1)
+        let story = bundle.stories[index]
+
+        if let last = bundle.stories.last, last.id == story.id {
+            /// if there is another story then move to that else close view
+            if let lastBundle = storyData.stories.last, lastBundle.id == bundle.id {
+                withAnimation {
+                    storyData.showStory = false
+                }
+            } else {
+                let bundleIndeex = storyData.stories.firstIndex { currentBundle in
+                    return bundle.id == currentBundle.id
+                } ?? 0
+
+                withAnimation {
+                    storyData.currentStory = storyData.stories[bundleIndeex + 1].id
                 }
             }
         }
