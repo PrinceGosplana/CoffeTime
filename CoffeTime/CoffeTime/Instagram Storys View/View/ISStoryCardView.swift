@@ -12,6 +12,12 @@ struct ISStoryCardView: View {
     @Binding var bundle: ISStoryBundle
     @EnvironmentObject var storyData: ISStoryViewModel
 
+    /// Time and changing stories based on timer
+    @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+
+    /// Progress
+    @State var timerProgress: CGFloat = 0
+
     var body: some View {
         GeometryReader { proxy in
             ZStack {
@@ -48,12 +54,35 @@ struct ISStoryCardView: View {
                     .padding()
                 , alignment: .topTrailing
             )
+            .overlay(
+                HStack(spacing: 5) {
+                    ForEach(bundle.stories) { _ in
+                        Capsule()
+                            .fill(.gray.opacity(0.5))
+                    }
+                }
+                    .frame(height: 1.4)
+                    .padding(.horizontal)
+                )
             .rotation3DEffect(
                 getAngle(proxy: proxy),
                                       axis: (x: 0.0, y: 1.0, z: 0.0),
                                       anchor: proxy.frame(in: .global).minX > 0 ? .leading : .trailing,
                                       perspective: 2.5
             )
+            .onReceive(timer) { _ in
+                /// updating seen status on realtime
+                if storyData.currentStory == bundle.id {
+                    if !bundle.isSeen {
+                        bundle.isSeen = true
+                    }
+
+                    /// updating timer
+                    if timerProgress < CGFloat(bundle.stories.count) {
+                        timerProgress += 0.03
+                    }
+                }
+            }
         }
     }
 
