@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SCSHomeView: View {
+
+    @State private var currentIndex: Int = 0
+    @State private var posts = SCSPost.mock
+
     var body: some View {
         VStack(spacing: 15) {
             VStack(alignment: .leading, spacing: 12) {
@@ -30,8 +34,23 @@ struct SCSHomeView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
+
+            /// Snap carousel
+            SCSSnapCarouselView(items: posts, index: $currentIndex) { post in
+                GeometryReader { proxy in
+                    let size = proxy.size
+
+                    Image(post.postImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: size.width)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+            }
+            .padding(.vertical, 40)
         }
         .frame(maxHeight: .infinity, alignment: .top)
+        
     }
 }
 
