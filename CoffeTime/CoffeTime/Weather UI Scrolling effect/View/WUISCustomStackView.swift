@@ -55,7 +55,7 @@ struct WUISCustomStackView<Title: View, Content: View>: View {
                 let minY = proxy.frame(in: .global).minY
                 let maxY = proxy.frame(in: .global).maxY
 
-                DispatchQueue.main.async {
+                Task { @MainActor in
                     self.topOffset = minY
                     self.bottomOffset = maxY - 120
                 }

@@ -1451,8 +1451,8 @@
 				8AF700602C9D5BA3006A2CF1 /* ISContentView.swift */,
 				8AF7005E2C9D5B91006A2CF1 /* ISHomeView.swift */,
 				8AF7006A2C9D7B95006A2CF1 /* ISProfileView.swift */,
-				8AF7006C2C9D91BF006A2CF1 /* ISStoryView.swift */,
 				8A00A9DE2C9EA8980042C2FC /* ISStoryCardView.swift */,
+				8AF7006C2C9D91BF006A2CF1 /* ISStoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

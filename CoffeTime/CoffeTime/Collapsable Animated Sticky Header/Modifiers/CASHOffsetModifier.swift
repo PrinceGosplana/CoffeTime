@@ -17,7 +17,7 @@ struct CASHOffsetModifier: ViewModifier {
                 GeometryReader { proxy -> Color in
                     let minY = proxy.frame(in: .named("SCROLL")).minY
 
-                    DispatchQueue.main.async {
+                    Task { @MainActor in
                         self.offset = minY
                     }
                     return .clear

@@ -31,7 +31,7 @@ struct GoogleMovieCarouselView: View {
                                 .contentShape(Rectangle())
                                 .id(item.id)
                                 .onTapGesture {
-                                    DispatchQueue.main.async {
+                                    Task { @MainActor in
                                         withAnimation(.snappy(duration: 0.4)) {
                                             selectedItem = selectedItem?.id == item.id ? nil : item
                                         }

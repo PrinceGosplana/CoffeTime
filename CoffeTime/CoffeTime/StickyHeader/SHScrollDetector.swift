@@ -23,7 +23,7 @@ struct ScrollDetector: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        DispatchQueue.main.async {
+        Task { @MainActor in
             if let scrollView = uiView.superview?.superview?.superview as? UIScrollView {
                 scrollView.delegate = context.coordinator
                 context.coordinator.isDelegateAdded = true

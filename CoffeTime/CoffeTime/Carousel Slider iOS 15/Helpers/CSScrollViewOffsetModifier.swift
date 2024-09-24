@@ -18,7 +18,7 @@ struct CSScrollViewOffsetModifier: ViewModifier {
                 GeometryReader { proxy -> Color in
                     let frame = proxy.frame(in: .global)
 
-                    DispatchQueue.main.async {
+                    Task { @MainActor in
                         switch anchorPoint {
                         case .top: offset = frame.minY
                         case .bottom: offset = frame.maxY

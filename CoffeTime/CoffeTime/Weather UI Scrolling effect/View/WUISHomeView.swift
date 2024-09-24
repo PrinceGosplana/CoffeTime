@@ -110,7 +110,7 @@ struct WUISHomeView: View {
                         
                         let minY = proxy.frame(in: .global).minY
                         
-                        DispatchQueue.main.async {
+                        Task { @MainActor in
                             self.offset = minY
                         }
                         return Color.clear
