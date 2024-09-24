@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A00A9DF2C9EA8980042C2FC /* ISStoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9DE2C9EA8980042C2FC /* ISStoryCardView.swift */; };
+		8A00A9E82CA2D2A20042C2FC /* SCSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9E72CA2D2A20042C2FC /* SCSHomeView.swift */; };
+		8A00A9EA2CA2D2AF0042C2FC /* SCSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9E92CA2D2AF0042C2FC /* SCSContentView.swift */; };
 		8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3C2C26BD8200799137 /* SSItem.swift */; };
 		8A019B402C26BED100799137 /* SSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3F2C26BED100799137 /* SSContentView.swift */; };
 		8A019B422C26BED900799137 /* SSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B412C26BED900799137 /* SSHomeView.swift */; };
@@ -214,6 +216,8 @@
 
 /* Begin PBXFileReference section */
 		8A00A9DE2C9EA8980042C2FC /* ISStoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISStoryCardView.swift; sourceTree = "<group>"; };
+		8A00A9E72CA2D2A20042C2FC /* SCSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSHomeView.swift; sourceTree = "<group>"; };
+		8A00A9E92CA2D2AF0042C2FC /* SCSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSContentView.swift; sourceTree = "<group>"; };
 		8A019B3C2C26BD8200799137 /* SSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSItem.swift; sourceTree = "<group>"; };
 		8A019B3F2C26BED100799137 /* SSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSContentView.swift; sourceTree = "<group>"; };
 		8A019B412C26BED900799137 /* SSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeView.swift; sourceTree = "<group>"; };
@@ -430,6 +434,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A00A9E52CA2CDF00042C2FC /* Snap carousel slider */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9E62CA2D27A0042C2FC /* View */,
+			);
+			path = "Snap carousel slider";
+			sourceTree = "<group>";
+		};
+		8A00A9E62CA2D27A0042C2FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9E72CA2D2A20042C2FC /* SCSHomeView.swift */,
+				8A00A9E92CA2D2AF0042C2FC /* SCSContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8A019B3B2C26BD6B00799137 /* Stacked scrollview */ = {
 			isa = PBXGroup;
 			children = (
@@ -1338,6 +1359,7 @@
 				8A9AC55C2C08ADC9003C3511 /* RangeSlider */,
 				8AAD77532C6CCEE1004E54D1 /* Scrollable tabs */,
 				8AAD77AB2C6F2EAD004E54D1 /* Search bar */,
+				8A00A9E52CA2CDF00042C2FC /* Snap carousel slider */,
 				8A019B3B2C26BD6B00799137 /* Stacked scrollview */,
 				8A27C9CB2C8DE5E700DFAFE1 /* Staggered Grid */,
 				8A0C9C282C3AB285007487DA /* Sticky Header */,
@@ -1657,11 +1679,13 @@
 				8A9AC5622C08B674003C3511 /* Interpolation.swift in Sources */,
 				8A6E04882C9AB10E00E13B88 /* CASHContentView.swift in Sources */,
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
+				8A00A9E82CA2D2A20042C2FC /* SCSHomeView.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
 				8A097B8D2C88889500BA293A /* ASSTabButton.swift in Sources */,
 				8A0BD5DC2C85FE9000CD316D /* CTBAOffsetModifier.swift in Sources */,
 				8AAD77442C6B86E2004E54D1 /* SHContentView.swift in Sources */,
+				8A00A9EA2CA2D2AF0042C2FC /* SCSContentView.swift in Sources */,
 				8A07185F2C12E9A50017E1E8 /* GlitchTextContentView.swift in Sources */,
 				8A1A42FD2C370DFF00809BBA /* SwipeContentView.swift in Sources */,
 				8A2B31C52C88711200B16BA9 /* ASSSplashScreenView.swift in Sources */,
