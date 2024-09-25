@@ -65,9 +65,27 @@ struct GMHomeView: View {
             VStack {
 
                 Spacer(minLength: 10)
+
+                ZStack {
+                    Circle()
+                        .fill(.brown)
+                        .blur(radius: 20)
+                        .frame(width: 100, height: 100)
+                        .offset(x: 120, y: -80)
+
+                    Circle()
+                        .fill(Color.appLightBrown ?? .brown)
+                        .blur(radius: 40)
+                        .frame(width: 100, height: 100)
+                        .offset(x: -120, y: 100)
+
+                    GMGlassMorphicCard()
+                }
+
+                Spacer(minLength: 10)
                 
                 Text("Known Everything\nabout the weather")
-                    .font(.system(size: 40, weight: .bold))
+                    .font(.system(size: UIScreen.main.bounds.height < 750 ? 30 : 40, weight: .bold))
 
                 Text(getAttributedString())
                     .fontWeight(.semibold)
