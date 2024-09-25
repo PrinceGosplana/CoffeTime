@@ -10,7 +10,9 @@ import SwiftUI
 struct SCSHomeView: View {
 
     @State private var currentIndex: Int = 0
+    @State private var currentTab = "Slide Show"
     @State private var posts = SCSPost.mock
+    @Namespace private var animation
 
     var body: some View {
         VStack(spacing: 15) {
@@ -34,6 +36,14 @@ struct SCSHomeView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
+
+            /// Segment control
+            HStack(spacing: 0) {
+                SCSTabButton(animation: animation, title: "Slide Show", currentTab: $currentTab)
+                SCSTabButton(animation: animation, title: "List", currentTab: $currentTab)
+            }
+            .background(Color.black.opacity(0.04), in: RoundedRectangle(cornerRadius: 20))
+            .padding(.horizontal)
 
             /// Snap carousel
             SCSSnapCarouselView(items: posts, index: $currentIndex) { post in
@@ -59,6 +69,7 @@ struct SCSHomeView: View {
                         .animation(.spring(), value: currentIndex == index )
                 }
             }
+            .padding(.bottom, 40)
         }
         .frame(maxHeight: .infinity, alignment: .top)
         

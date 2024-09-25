@@ -12,6 +12,7 @@
 		8A00A9EA2CA2D2AF0042C2FC /* SCSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9E92CA2D2AF0042C2FC /* SCSContentView.swift */; };
 		8A00A9EC2CA2F6590042C2FC /* SCSSnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9EB2CA2F6590042C2FC /* SCSSnapCarouselView.swift */; };
 		8A00A9EF2CA2F9A80042C2FC /* SCSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9EE2CA2F9A80042C2FC /* SCSPost.swift */; };
+		8A00A9F22CA415D90042C2FC /* SCSTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F12CA415D90042C2FC /* SCSTabButton.swift */; };
 		8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3C2C26BD8200799137 /* SSItem.swift */; };
 		8A019B402C26BED100799137 /* SSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3F2C26BED100799137 /* SSContentView.swift */; };
 		8A019B422C26BED900799137 /* SSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B412C26BED900799137 /* SSHomeView.swift */; };
@@ -222,6 +223,7 @@
 		8A00A9E92CA2D2AF0042C2FC /* SCSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSContentView.swift; sourceTree = "<group>"; };
 		8A00A9EB2CA2F6590042C2FC /* SCSSnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSSnapCarouselView.swift; sourceTree = "<group>"; };
 		8A00A9EE2CA2F9A80042C2FC /* SCSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSPost.swift; sourceTree = "<group>"; };
+		8A00A9F12CA415D90042C2FC /* SCSTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSTabButton.swift; sourceTree = "<group>"; };
 		8A019B3C2C26BD8200799137 /* SSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSItem.swift; sourceTree = "<group>"; };
 		8A019B3F2C26BED100799137 /* SSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSContentView.swift; sourceTree = "<group>"; };
 		8A019B412C26BED900799137 /* SSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeView.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 		8A00A9E52CA2CDF00042C2FC /* Snap carousel slider */ = {
 			isa = PBXGroup;
 			children = (
+				8A00A9F02CA415C70042C2FC /* Helpers */,
 				8A00A9ED2CA2F9960042C2FC /* Model */,
 				8A00A9E62CA2D27A0042C2FC /* View */,
 			);
@@ -463,6 +466,14 @@
 				8A00A9EE2CA2F9A80042C2FC /* SCSPost.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8A00A9F02CA415C70042C2FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9F12CA415D90042C2FC /* SCSTabButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8A019B3B2C26BD6B00799137 /* Stacked scrollview */ = {
@@ -1729,6 +1740,7 @@
 				8AF7006B2C9D7B95006A2CF1 /* ISProfileView.swift in Sources */,
 				8A1349242C1B29CB00099F7D /* DummySection.swift in Sources */,
 				8A135C2C2C35057E007AF05B /* CustomTabbarHomeView.swift in Sources */,
+				8A00A9F22CA415D90042C2FC /* SCSTabButton.swift in Sources */,
 				8A1ED1332C2BF6AC0046BDB9 /* View+Extensions.swift in Sources */,
 				8A6E048B2C9AB5F200E13B88 /* CASHCustomCorner.swift in Sources */,
 				8A1195192C5BC0A80071AC11 /* APIHome.swift in Sources */,
