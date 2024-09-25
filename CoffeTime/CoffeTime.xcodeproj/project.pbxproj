@@ -13,6 +13,8 @@
 		8A00A9EC2CA2F6590042C2FC /* SCSSnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9EB2CA2F6590042C2FC /* SCSSnapCarouselView.swift */; };
 		8A00A9EF2CA2F9A80042C2FC /* SCSPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9EE2CA2F9A80042C2FC /* SCSPost.swift */; };
 		8A00A9F22CA415D90042C2FC /* SCSTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F12CA415D90042C2FC /* SCSTabButton.swift */; };
+		8A00A9F62CA42CAF0042C2FC /* GMContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F52CA42CAF0042C2FC /* GMContentView.swift */; };
+		8A00A9F82CA42CBC0042C2FC /* GMHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F72CA42CBC0042C2FC /* GMHomeView.swift */; };
 		8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3C2C26BD8200799137 /* SSItem.swift */; };
 		8A019B402C26BED100799137 /* SSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3F2C26BED100799137 /* SSContentView.swift */; };
 		8A019B422C26BED900799137 /* SSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B412C26BED900799137 /* SSHomeView.swift */; };
@@ -224,6 +226,8 @@
 		8A00A9EB2CA2F6590042C2FC /* SCSSnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSSnapCarouselView.swift; sourceTree = "<group>"; };
 		8A00A9EE2CA2F9A80042C2FC /* SCSPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSPost.swift; sourceTree = "<group>"; };
 		8A00A9F12CA415D90042C2FC /* SCSTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSTabButton.swift; sourceTree = "<group>"; };
+		8A00A9F52CA42CAF0042C2FC /* GMContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMContentView.swift; sourceTree = "<group>"; };
+		8A00A9F72CA42CBC0042C2FC /* GMHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMHomeView.swift; sourceTree = "<group>"; };
 		8A019B3C2C26BD8200799137 /* SSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSItem.swift; sourceTree = "<group>"; };
 		8A019B3F2C26BED100799137 /* SSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSContentView.swift; sourceTree = "<group>"; };
 		8A019B412C26BED900799137 /* SSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeView.swift; sourceTree = "<group>"; };
@@ -474,6 +478,23 @@
 				8A00A9F12CA415D90042C2FC /* SCSTabButton.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8A00A9F32CA42BED0042C2FC /* Glass Morphism */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9F42CA42C9C0042C2FC /* View */,
+			);
+			path = "Glass Morphism";
+			sourceTree = "<group>";
+		};
+		8A00A9F42CA42C9C0042C2FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9F52CA42CAF0042C2FC /* GMContentView.swift */,
+				8A00A9F72CA42CBC0042C2FC /* GMHomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8A019B3B2C26BD6B00799137 /* Stacked scrollview */ = {
@@ -1367,6 +1388,7 @@
 				8A0CA0482C3BC9B400D10CEF /* Extensions */,
 				8AFA1CEA2C0DEA9100EC7A39 /* Flip Clock Text Effect */,
 				8A6E04772C99A31800E13B88 /* Full Swipe to pop view */,
+				8A00A9F32CA42BED0042C2FC /* Glass Morphism */,
 				8A07185D2C12E97B0017E1E8 /* Glitch Text Effect */,
 				8A1349422C1C6B0200099F7D /* Google movie carousal */,
 				8A0717F92C1037180017E1E8 /* Hacker Text Effect */,
@@ -1759,6 +1781,7 @@
 				8A06CDC22C37E67C00F60C1A /* Action.swift in Sources */,
 				8AF2FB592C19A43E00B98D74 /* SideBarMenuView.swift in Sources */,
 				8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */,
+				8A00A9F62CA42CAF0042C2FC /* GMContentView.swift in Sources */,
 				8A0A4A162C2EE1AF001A47CE /* String+Ext.swift in Sources */,
 				8A20ED572C15AC3800D5915D /* ColorContentView.swift in Sources */,
 				8AF2FB5B2C19A77A00B98D74 /* SideMenuTabs.swift in Sources */,
@@ -1783,6 +1806,7 @@
 				8A1EE5172C8704C30054355D /* CSScrollViewOffsetModifier.swift in Sources */,
 				8A9AC5512C08ADAD003C3511 /* ContentView.swift in Sources */,
 				8A316FFB2C74936F008728F4 /* CarouselSliderContentView.swift in Sources */,
+				8A00A9F82CA42CBC0042C2FC /* GMHomeView.swift in Sources */,
 				8AF41A4D2C18765900801F63 /* AnimatedSideBar.swift in Sources */,
 				8A06CDC62C37E97800F60C1A /* SwipeDirection.swift in Sources */,
 				8A6E048E2C9AB75B00E13B88 /* CASHOffsetModifier.swift in Sources */,
