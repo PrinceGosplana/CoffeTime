@@ -16,6 +16,9 @@
 		8A00A9F62CA42CAF0042C2FC /* GMContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F52CA42CAF0042C2FC /* GMContentView.swift */; };
 		8A00A9F82CA42CBC0042C2FC /* GMHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F72CA42CBC0042C2FC /* GMHomeView.swift */; };
 		8A00A9FA2CA46AFF0042C2FC /* GMGlassMorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9F92CA46AFF0042C2FC /* GMGlassMorphicCard.swift */; };
+		8A00A9FF2CA582020042C2FC /* WPIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00A9FE2CA582020042C2FC /* WPIntro.swift */; };
+		8A00AA012CA5821A0042C2FC /* WPContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00AA002CA5821A0042C2FC /* WPContentView.swift */; };
+		8A00AA032CA583FB0042C2FC /* WPHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00AA022CA583FB0042C2FC /* WPHomeView.swift */; };
 		8A019B3D2C26BD8200799137 /* SSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3C2C26BD8200799137 /* SSItem.swift */; };
 		8A019B402C26BED100799137 /* SSContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B3F2C26BED100799137 /* SSContentView.swift */; };
 		8A019B422C26BED900799137 /* SSHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A019B412C26BED900799137 /* SSHomeView.swift */; };
@@ -230,6 +233,9 @@
 		8A00A9F52CA42CAF0042C2FC /* GMContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMContentView.swift; sourceTree = "<group>"; };
 		8A00A9F72CA42CBC0042C2FC /* GMHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMHomeView.swift; sourceTree = "<group>"; };
 		8A00A9F92CA46AFF0042C2FC /* GMGlassMorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMGlassMorphicCard.swift; sourceTree = "<group>"; };
+		8A00A9FE2CA582020042C2FC /* WPIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPIntro.swift; sourceTree = "<group>"; };
+		8A00AA002CA5821A0042C2FC /* WPContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPContentView.swift; sourceTree = "<group>"; };
+		8A00AA022CA583FB0042C2FC /* WPHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPHomeView.swift; sourceTree = "<group>"; };
 		8A019B3C2C26BD8200799137 /* SSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSItem.swift; sourceTree = "<group>"; };
 		8A019B3F2C26BED100799137 /* SSContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSContentView.swift; sourceTree = "<group>"; };
 		8A019B412C26BED900799137 /* SSHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHomeView.swift; sourceTree = "<group>"; };
@@ -498,6 +504,32 @@
 				8A00A9F92CA46AFF0042C2FC /* GMGlassMorphicCard.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8A00A9FB2CA581A30042C2FC /* Walkthrough Page */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9FD2CA581EA0042C2FC /* Model */,
+				8A00A9FC2CA581CB0042C2FC /* View */,
+			);
+			path = "Walkthrough Page";
+			sourceTree = "<group>";
+		};
+		8A00A9FC2CA581CB0042C2FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A00AA002CA5821A0042C2FC /* WPContentView.swift */,
+				8A00AA022CA583FB0042C2FC /* WPHomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A00A9FD2CA581EA0042C2FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A00A9FE2CA582020042C2FC /* WPIntro.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8A019B3B2C26BD6B00799137 /* Stacked scrollview */ = {
@@ -1420,6 +1452,7 @@
 				8A23B20B2C58DBB800155D9A /* Theme Switcher UI */,
 				8A0D66AA2C3D26E8005163F9 /* Universal hero effect */,
 				8A07181A2C11915C0017E1E8 /* Vertical Circular Carousel */,
+				8A00A9FB2CA581A30042C2FC /* Walkthrough Page */,
 				8A1494BA2C83960100657FDC /* Weather UI Scrolling effect */,
 			);
 			path = CoffeTime;
@@ -1694,6 +1727,7 @@
 				8A00A9EF2CA2F9A80042C2FC /* SCSPost.swift in Sources */,
 				8A1ED1302C2BF5C10046BDB9 /* LoginContentView.swift in Sources */,
 				8A135C2E2C350739007AF05B /* CTabItem.swift in Sources */,
+				8A00AA032CA583FB0042C2FC /* WPHomeView.swift in Sources */,
 				8A22E6AA2C7322BD0003345B /* CSAContentView.swift in Sources */,
 				8A0BF00D2C42967C007D0FC1 /* HAEHomeView.swift in Sources */,
 				8A097D992C319B5E00F03670 /* OffsetHelpers.swift in Sources */,
@@ -1731,6 +1765,7 @@
 				8A6E04882C9AB10E00E13B88 /* CASHContentView.swift in Sources */,
 				8A09C8E52C2DAEAC0097D1DA /* ForgotPassword.swift in Sources */,
 				8A00A9E82CA2D2A20042C2FC /* SCSHomeView.swift in Sources */,
+				8A00AA012CA5821A0042C2FC /* WPContentView.swift in Sources */,
 				8A1ED1372C2C0CD90046BDB9 /* GradientButton.swift in Sources */,
 				8AFA1CED2C0DEAD300EC7A39 /* FlipClockTextEffect.swift in Sources */,
 				8A097B8D2C88889500BA293A /* ASSTabButton.swift in Sources */,
@@ -1747,6 +1782,7 @@
 				8AFA1CEF2C0DEC2600EC7A39 /* FlipClockTextView.swift in Sources */,
 				8A097D942C3193EE00F03670 /* Message.swift in Sources */,
 				8A0381EC2C3961CC000CAEE0 /* CustomTransition.swift in Sources */,
+				8A00A9FF2CA582020042C2FC /* WPIntro.swift in Sources */,
 				8A6E046D2C98496C00E13B88 /* ForYou.swift in Sources */,
 				8A0A4A0B2C2ED91F001A47CE /* OTPVerificationView.swift in Sources */,
 				8A09C8E92C2DB79B0097D1DA /* OTPView.swift in Sources */,
