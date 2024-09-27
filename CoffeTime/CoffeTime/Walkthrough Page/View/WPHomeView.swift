@@ -8,8 +8,53 @@
 import SwiftUI
 
 struct WPHomeView: View {
+
+    let screenSize: CGSize
+    @State var offset: CGFloat = 0
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+
+            Button {
+
+            } label: {
+                Image(.pacmanBlack128)
+                    .resizable()
+                    .renderingMode(.template)
+                    .foregroundStyle(.white)
+                    .frame(width: 30, height: 30)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding()
+
+            WPOffsetPageTabView(offset: $offset) {
+
+                HStack(spacing: 0) {
+                    ForEach(WPIntro.mocks) { intro in
+                        VStack {
+                            Image(intro.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: screenSize.height / 3)
+
+                            VStack(alignment: .leading, spacing: 22) {
+                                Text(intro.title)
+                                    .font(.largeTitle.bold())
+
+                                Text(intro.description)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.top, 50)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .padding()
+                        .frame(width: screenSize.width)
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 

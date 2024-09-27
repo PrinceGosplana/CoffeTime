@@ -9,7 +9,13 @@ import SwiftUI
 
 struct WPContentView: View {
     var body: some View {
-        WPHomeView()
+        GeometryReader { proxy in
+
+            let size = proxy.size
+
+            WPHomeView(screenSize: size)
+                .preferredColorScheme(.dark)
+        }
     }
 }
 
