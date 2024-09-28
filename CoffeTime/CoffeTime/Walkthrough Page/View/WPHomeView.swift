@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct WPHomeView: View {
-
+    
     let screenSize: CGSize
     @State var offset: CGFloat = 0
-
+    
+    /// Expanding index based on
+    private var getIndex: Int {
+        Int(round(offset / screenSize.width))
+    }
+    
     var body: some View {
         VStack {
-
+            
             Button {
-
+                
             } label: {
                 Image(.pacmanBlack128)
                     .resizable()
@@ -26,9 +31,9 @@ struct WPHomeView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-
+            
             WPOffsetPageTabView(offset: $offset) {
-
+                
                 HStack(spacing: 0) {
                     ForEach(WPIntro.mocks) { intro in
                         VStack {
@@ -36,11 +41,11 @@ struct WPHomeView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: screenSize.height / 3)
-
+                            
                             VStack(alignment: .leading, spacing: 22) {
                                 Text(intro.title)
                                     .font(.largeTitle.bold())
-
+                                
                                 Text(intro.description)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.secondary)
@@ -53,6 +58,25 @@ struct WPHomeView: View {
                     }
                 }
             }
+            
+            /// Animated indicator
+            HStack(alignment: .bottom) {
+                Spacer()
+                
+                Button {
+                    
+                } label: {
+                    Image(systemName: "chevron.right")
+                        .font(.title2.bold())
+                        .foregroundStyle(.white)
+                        .padding(20)
+                        .background(
+                            WPIntro.mocks[getIndex].color,
+                            in: Circle()
+                        )
+                }
+            }
+            .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
