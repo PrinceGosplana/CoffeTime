@@ -8,20 +8,28 @@
 import SwiftUI
 
 struct WPHomeView: View {
-    
+
     let screenSize: CGSize
     @State var offset: CGFloat = 0
-    
+
     /// Expanding index based on
     private var getIndex: Int {
-        Int(round(offset / screenSize.width))
+        let progress = round(offset / screenSize.width)
+        return min(Int(progress), WPIntro.mocks.count - 1)
     }
-    
+
+    /// Offset for indicator
+    private var getIndicatorOffset: CGFloat {
+        let progress = offset / screenSize.width
+        let maxWidth: CGFloat = 12 + 7
+        return progress * maxWidth
+    }
+
     var body: some View {
         VStack {
-            
+
             Button {
-                
+
             } label: {
                 Image(.pacmanBlack128)
                     .resizable()
@@ -31,9 +39,9 @@ struct WPHomeView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-            
+
             WPOffsetPageTabView(offset: $offset) {
-                
+
                 HStack(spacing: 0) {
                     ForEach(WPIntro.mocks) { intro in
                         VStack {
@@ -41,11 +49,11 @@ struct WPHomeView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: screenSize.height / 3)
-                            
+
                             VStack(alignment: .leading, spacing: 22) {
                                 Text(intro.title)
                                     .font(.largeTitle.bold())
-                                
+
                                 Text(intro.description)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.secondary)
@@ -58,13 +66,33 @@ struct WPHomeView: View {
                     }
                 }
             }
-            
+
             /// Animated indicator
             HStack(alignment: .bottom) {
+
+                /// Indicators
+                HStack(spacing: 12) {
+                    ForEach(WPIntro.mocks.indices, id: \.self) { index in
+                        Capsule()
+                            .fill(.white)
+                            // increasing width for only current index
+                            .frame(width: getIndex == index ? 20 : 7, height: 7)
+                    }
+                }
+                .overlay(
+                    Capsule()
+                        .fill(.white)
+                        .frame(width: 20, height: 7)
+                        .offset(x: getIndicatorOffset)
+                    , alignment: .leading
+                )
+                .offset(x: 10, y: -15)
+
+
                 Spacer()
-                
+
                 Button {
-                    
+                    updateOffset()
                 } label: {
                     Image(systemName: "chevron.right")
                         .font(.title2.bold())
@@ -77,8 +105,15 @@ struct WPHomeView: View {
                 }
             }
             .padding()
+            .offset(y: -20)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .animation(.easeInOut, value: getIndex)
+    }
+
+    private func updateOffset() {
+        let index = min(getIndex + 1, WPIntro.mocks.count - 1)
+        offset = CGFloat(index) * screenSize.width
     }
 }
 

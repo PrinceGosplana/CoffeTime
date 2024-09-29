@@ -48,7 +48,10 @@ struct WPOffsetPageTabView<Content: View>: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIScrollView, context: Context) {
-        
+        let currentOffset = uiView.contentOffset.x
+        if currentOffset != offset {
+            uiView.setContentOffset(CGPoint(x: offset, y: 0), animated: true)
+        }
     }
     
     /// Pager offset
