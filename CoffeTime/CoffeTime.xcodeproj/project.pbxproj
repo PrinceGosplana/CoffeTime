@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -442,6 +442,10 @@
 		8AFA1CEE2C0DEC2600EC7A39 /* FlipClockTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipClockTextView.swift; sourceTree = "<group>"; };
 		8AFA1CF02C0E002900EC7A39 /* RotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		956C9B952CB586C6004898DB /* Custom page scroll */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom page scroll"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8A9AC5482C08ADAD003C3511 /* Frameworks */ = {
@@ -1420,6 +1424,7 @@
 				8A1195212C5CFC720071AC11 /* Cover Flow */,
 				8A135C242C350462007AF05B /* Curved custom tabbar */,
 				8A21B5762C89A82F00EA7720 /* Custom Context Menu */,
+				956C9B952CB586C6004898DB /* Custom page scroll */,
 				8A60EC6B2C85ECAA0076BB57 /* Custom TabBar Animation */,
 				8AAD774B2C6B9EBC004E54D1 /* Draggable Images */,
 				8A097D902C31938000F03670 /* Elastic Scroll Animation */,
@@ -1634,6 +1639,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				956C9B952CB586C6004898DB /* Custom page scroll */,
 			);
 			name = CoffeTime;
 			productName = CoffeTime;
