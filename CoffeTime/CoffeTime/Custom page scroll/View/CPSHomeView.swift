@@ -51,6 +51,13 @@ struct CPSHomeView: View {
             }
             .padding(.horizontal, -15)
             .frame(height: 250)
+            
+            /// Page TabView
+            TabView {
+                ForEach(albums) { album in
+                    AlbumCardView(album: album)
+                }
+            }
         }
         .padding(15)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -95,6 +102,20 @@ struct CPSHomeView: View {
             }
         }
         .frame(height: 100)
+    }
+    
+    /// Album card view for page
+    @ViewBuilder
+    func AlbumCardView(album: CPSAlbum) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .background(
+            
+            )
     }
 }
 
