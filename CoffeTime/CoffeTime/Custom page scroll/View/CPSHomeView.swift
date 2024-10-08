@@ -9,6 +9,10 @@ import SwiftUI
 
 struct CPSHomeView: View {
     
+    @State var albums: [CPSAlbum] = CPSAlbum.mocks
+    @State var currentIndex: Int = 0
+    @State var currentAlbum: CPSAlbum = CPSAlbum.mocks.first!
+    
     private var titleString: AttributedString {
         var attString = AttributedString(stringLiteral: "My Library")
         if let range = attString.range(of: "Library") {
@@ -40,7 +44,10 @@ struct CPSHomeView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             VStack {
+                AlbumArtworkScroller()
+                    .zIndex(1)
                 standView
+                    .zIndex(0)
             }
             .padding(.horizontal, -15)
             .frame(height: 250)
@@ -48,6 +55,46 @@ struct CPSHomeView: View {
         .padding(15)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color("BG"), ignoresSafeAreaEdges: .all)
+    }
+    
+    /// Custom stroller animated view
+    @ViewBuilder
+    func AlbumArtworkScroller() -> some View {
+        GeometryReader { proxy in
+            let size = proxy.size
+            
+            LazyHStack(spacing: 0) {
+                ForEach($albums) { $album in
+                    HStack(spacing: 0) {
+                        Image(album.albumImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 160, height: 160)
+                            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 10)
+                            .offset(y: -20)
+                            .zIndex(1)
+                        
+                        Image("vinylRecord")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 140, height: 140)
+                            .overlay {
+                                Image(album.albumImage)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
+                            }
+                            .padding(.leading, -170)
+                            .offset(y: -10)
+                            .zIndex(0)
+                    }
+                    .frame(width: size.width)
+                }
+            }
+        }
+        .frame(height: 100)
     }
 }
 
